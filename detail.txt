@@ -1,0 +1,2275 @@
+Packages parsed: 933
+  LIKELY    16
+  CHECK     10
+  LOW       165
+  NONE      741
+  UNSCANNED 1
+
+== LIKELY
+  hwinfo                       rules:35 unguarded rm
+  libzeem                      rules:20 unguarded rm
+  llvm-toolchain-17            rules:1119 unguarded rm
+  llvm-toolchain-18            rules:1173 unguarded rm
+  llvm-toolchain-19            rules:1431 unguarded rm
+  llvm-toolchain-20            rules:1475 unguarded rm
+  llvm-toolchain-21            rules:1557 unguarded rm
+  llvm-toolchain-22            rules:1471 unguarded rm
+  maloc                        rules:9 unguarded rm
+  orthanc                      rules:88 unguarded rm
+  ppl                          rules:84 unguarded rm
+  python-fhs                   rules:11 unguarded rm
+  python-network               rules:11 unguarded rm
+  python-websocketd            rules:11 unguarded rm
+  reglookup                    rules:35 unguarded rm
+  taglib                       rules:60 unguarded rm
+
+== CHECK
+  cubeb                        debputy.manifest:40 debputy/linktree handling of missing source
+  efl                          rules:92 guard/condition, check exit status
+  imagemagick                  scripts/dh_doxygen:128 other reference in build file
+  libcomps                     rules:33 other reference in build file
+  libdap                       rules:35 guard/condition, check exit status
+  libhmsbeagle                 libhmsbeagle-dev.linktrees:1 debputy/linktree handling of missing source
+  librepo                      rules:30 other reference in build file
+  librostlab-blast             linktrees:5 debputy/linktree handling of missing source
+  libstxxl                     rules:3 path held in a variable
+  trilinos                     rules:264 other reference in build file
+
+== DETAIL (LIKELY, CHECK, LOW)
+
+== hwinfo [LIKELY]
+  rules:35  [LIKELY] unguarded rm
+         32 | DOCDIR=debian/libhd-doc/usr/share/doc/libhd-doc/html
+         33 | override_dh_install-indep:
+         34 | 	dh_install
+    >    35 | 	rm $(DOCDIR)/jquery.js
+    >    36 | 	ln -s /usr/share/javascript/jquery/jquery.js $(DOCDIR)/jquery.js
+         37 | 
+         38 | gen-upstream-changelog:
+
+  rules:36  [LOW] ln (creates link, no failure on missing target)
+      (shown in the block above)
+
+== libzeem [LIKELY]
+  libzeem-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/zeem/_static/jquery.js
+
+  rules:20  [LIKELY] unguarded rm
+         17 | 		-DBUILD_TESTING=OFF
+         18 | 
+         19 | execute_after_dh_auto_install:
+    >    20 | 	rm debian/tmp/usr/share/doc/zeem/_static/jquery.js
+         21 | 
+         22 | execute_after_dh_clean:
+         23 | 	rm -rf doc/html doc/mxml/.buildinfo docs/api
+
+
+== llvm-toolchain-17 [LIKELY]
+  rules:1098  [LOW] rm -f
+       1095 | 
+       1096 | # Remove the copy of jquery. See bug #701087
+       1097 | 	for d in $(TARGET_BUILD_STAGE2)/docs/html/_static/ $(TARGET_BUILD_STAGE2)/tools/clang/docs/html/_static/ $(TARGET_BUILD_STAGE2)/tools/clang/tools/extra/docs/html/_static/; do \
+    >  1098 | 		cd $$d && rm -f jquery.js && ln -s /usr/share/javascript/jquery/jquery.js && cd -; \
+       1099 | 		cd $$d && rm -f underscore.js && ln -s /usr/share/javascript/underscore/underscore.js && cd -; \
+       1100 | 	done
+       1101 | 
+
+  rules:1119  [LIKELY] unguarded rm
+       1116 | 
+       1117 | 	if test "$(OPENMP_ENABLE)" = yes; then \
+       1118 | 		cd openmp/runtime && doxygen doc/doxygen/config; cd -; \
+    >  1119 | 		cd openmp/runtime/doc/doxygen/generated/html/ && rm jquery.js && ln -s /usr/share/javascript/jquery/jquery.js; \
+       1120 | 	fi
+       1121 | 	touch $@
+       1122 | 
+
+
+== llvm-toolchain-18 [LIKELY]
+  rules:1152  [LOW] rm -f
+       1149 | 
+       1150 | # Remove the copy of jquery. See bug #701087
+       1151 | 	for d in $(TARGET_BUILD_STAGE2)/docs/html/_static/ $(TARGET_BUILD_STAGE2)/tools/clang/docs/html/_static/ $(TARGET_BUILD_STAGE2)/tools/clang/tools/extra/docs/html/_static/; do \
+    >  1152 | 		cd $$d && rm -f jquery.js && ln -s /usr/share/javascript/jquery/jquery.js && cd -; \
+       1153 | 		cd $$d && rm -f underscore.js && ln -s /usr/share/javascript/underscore/underscore.js && cd -; \
+       1154 | 	done
+       1155 | 
+
+  rules:1173  [LIKELY] unguarded rm
+       1170 | 
+       1171 | 	if test "$(OPENMP_ENABLE)" = yes; then \
+       1172 | 		cd openmp/runtime && doxygen doc/doxygen/config; cd -; \
+    >  1173 | 		cd openmp/runtime/doc/doxygen/generated/html/ && rm jquery.js && ln -s /usr/share/javascript/jquery/jquery.js; \
+       1174 | 	fi
+       1175 | 	touch $@
+       1176 | endif
+
+
+== llvm-toolchain-19 [LIKELY]
+  rules:1410  [LOW] rm -f
+       1407 | 
+       1408 | # Remove the copy of jquery. See bug #701087
+       1409 | 	for d in $(TARGET_BUILD_STAGE2)/docs/html/_static/ $(TARGET_BUILD_STAGE2)/tools/clang/docs/html/_static/ $(TARGET_BUILD_STAGE2)/tools/clang/tools/extra/docs/html/_static/; do \
+    >  1410 | 		cd $$d && rm -f jquery.js && ln -s /usr/share/javascript/jquery/jquery.js && cd -; \
+       1411 | 		cd $$d && rm -f underscore.js && ln -s /usr/share/javascript/underscore/underscore.js && cd -; \
+       1412 | 	done
+       1413 | 
+
+  rules:1431  [LIKELY] unguarded rm
+       1428 | 
+       1429 | 	if test "$(OPENMP_ENABLE)" = yes; then \
+       1430 | 		cd openmp/runtime && doxygen doc/doxygen/config; cd -; \
+    >  1431 | 		cd openmp/runtime/doc/doxygen/generated/html/ && rm jquery.js && ln -s /usr/share/javascript/jquery/jquery.js; \
+       1432 | 	fi
+       1433 | 	touch $@
+       1434 | endif
+
+
+== llvm-toolchain-20 [LIKELY]
+  rules:1454  [LOW] rm -f
+       1451 | 
+       1452 | # Remove the copy of jquery. See bug #701087
+       1453 | 	for d in $(TARGET_BUILD_STAGE2)/docs/html/_static/ $(TARGET_BUILD_STAGE2)/tools/clang/docs/html/_static/ $(TARGET_BUILD_STAGE2)/tools/clang/tools/extra/docs/html/_static/; do \
+    >  1454 | 		cd $$d && rm -f jquery.js && ln -s /usr/share/javascript/jquery/jquery.js && cd -; \
+       1455 | 		cd $$d && rm -f underscore.js && ln -s /usr/share/javascript/underscore/underscore.js && cd -; \
+       1456 | 	done
+       1457 | 
+
+  rules:1475  [LIKELY] unguarded rm
+       1472 | 
+       1473 | 	if test "$(OPENMP_ENABLE)" = yes; then \
+       1474 | 		cd openmp/runtime && doxygen doc/doxygen/config; cd -; \
+    >  1475 | 		cd openmp/runtime/doc/doxygen/generated/html/ && rm jquery.js && ln -s /usr/share/javascript/jquery/jquery.js; \
+       1476 | 	fi
+       1477 | 	touch $@
+       1478 | endif
+
+
+== llvm-toolchain-21 [LIKELY]
+  rules:1536  [LOW] rm -f
+       1533 | 
+       1534 | # Remove the copy of jquery. See bug #701087
+       1535 | 	for d in $(TARGET_BUILD_STAGE2)/docs/html/_static/ $(TARGET_BUILD_STAGE2)/tools/clang/docs/html/_static/ $(TARGET_BUILD_STAGE2)/tools/clang/tools/extra/docs/html/_static/; do \
+    >  1536 | 		cd $$d && rm -f jquery.js && ln -s /usr/share/javascript/jquery/jquery.js && cd -; \
+       1537 | 		cd $$d && rm -f underscore.js && ln -s /usr/share/javascript/underscore/underscore.js && cd -; \
+       1538 | 	done
+       1539 | 
+
+  rules:1557  [LIKELY] unguarded rm
+       1554 | 
+       1555 | 	if test "$(OPENMP_ENABLE)" = yes; then \
+       1556 | 		cd openmp/runtime && doxygen doc/doxygen/config; cd -; \
+    >  1557 | 		cd openmp/runtime/doc/doxygen/generated/html/ && rm jquery.js && ln -s /usr/share/javascript/jquery/jquery.js; \
+       1558 | 	fi
+       1559 | 	touch $@
+       1560 | endif
+
+
+== llvm-toolchain-22 [LIKELY]
+  rules:1449  [LOW] rm -f
+       1446 | 
+       1447 | # Remove the copy of jquery. See bug #701087
+       1448 | 	for d in $(TARGET_BUILD_STAGE2)/docs/html/_static/ $(TARGET_BUILD_STAGE2)/tools/clang/docs/html/_static/ $(TARGET_BUILD_STAGE2)/tools/clang/tools/extra/docs/html/_static/; do \
+    >  1449 | 		rm -f $$d/jquery.js $$d/underscore.js; \
+    >  1450 | 		ln -s /usr/share/javascript/jquery/jquery.js $$d/jquery.js; \
+       1451 | 		ln -s /usr/share/javascript/underscore/underscore.js $$d/underscore.js; \
+       1452 | 	done
+
+  rules:1450  [LOW] ln (creates link, no failure on missing target)
+      (shown in the block above)
+  rules:1471  [LIKELY] unguarded rm
+       1468 | 
+       1469 | 	if test "$(OPENMP_ENABLE)" = yes; then \
+       1470 | 		cd openmp/runtime && doxygen doc/doxygen/config; cd -; \
+    >  1471 | 		cd openmp/runtime/doc/doxygen/generated/html/ && rm jquery.js && ln -s /usr/share/javascript/jquery/jquery.js; \
+       1472 | 	fi
+       1473 | 	touch $@
+       1474 | endif
+
+
+== maloc [LIKELY]
+  rules:9  [LIKELY] unguarded rm
+          6 | 	dh $@
+          7 | 
+          8 | execute_after_dh_installdocs:
+    >     9 | 	rm debian/libmaloc-dev/usr/share/doc/libmaloc-dev/html/jquery.js
+    >    10 | 	ln -s /usr/share/javascript/jquery/jquery.js debian/libmaloc-dev/usr/share/doc/libmaloc-dev/html/jquery.js
+         11 | 
+         12 | execute_after_dh_clean:
+
+  rules:10  [LOW] ln (creates link, no failure on missing target)
+      (shown in the block above)
+
+== orthanc [LIKELY]
+  rules:87  [LOW] commented out
+         84 | 	dh_auto_build --builddirectory=BuildServer
+         85 | 
+         86 |         # Fix the lintian warning: "orthanc-doc: embedded-javascript-library
+    >    87 |         # usr/share/doc/orthanc/OrthancPlugin/jquery.js please use libjs-jquery"
+    >    88 | 	rm BuildServer/OrthancPluginDocumentation/doc/jquery.js
+    >    89 | 	ln -s /usr/share/javascript/jquery/jquery.min.js BuildServer/OrthancPluginDocumentation/doc/jquery.js
+         90 | 
+
+  rules:88  [LIKELY] unguarded rm
+      (shown in the block above)
+  rules:89  [LOW] ln (creates link, no failure on missing target)
+      (shown in the block above)
+
+== ppl [LIKELY]
+  libppl-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/libppl-doc/html/user-manual/jquery.js
+
+  rules:84  [LIKELY] unguarded rm
+         81 | 	mv $(DOC_DIR)/ppl-user-$(PPL_VERSION)-html $(DOC_DIR)/html/user-manual
+         82 | 	mv $(DOC_DIR)/ppl-user-$(PPL_VERSION).pdf $(DOC_DIR)/ppl-user-browse.pdf
+         83 | 	mv $(DOC_DIR)/ppl-user-$(PPL_VERSION).ps.gz $(DOC_DIR)/ppl-user-print.ps.gz
+    >    84 | 	rm $(DOC_DIR)/html/user-manual/jquery.js
+         85 | 	dh_install -i
+         86 | 
+         87 | override_dh_install-arch:
+
+
+== python-fhs [LIKELY]
+  rules:11  [LIKELY] unguarded rm
+          8 | override_dh_auto_build:
+          9 | 	dh_auto_build
+         10 | 	doxygen config.doxygen
+    >    11 | 	rm doxygen-output/html/jquery.js
+    >    12 | 	ln -s /usr/share/javascript/jquery/jquery.js doxygen-output/html/
+         13 | 
+         14 | override_dh_auto_clean:
+
+  rules:12  [LOW] ln (creates link, no failure on missing target)
+      (shown in the block above)
+
+== python-network [LIKELY]
+  rules:11  [LIKELY] unguarded rm
+          8 | override_dh_auto_build:
+          9 | 	dh_auto_build
+         10 | 	doxygen config.doxygen
+    >    11 | 	rm doxygen-output/html/jquery.js
+    >    12 | 	ln -s /usr/share/javascript/jquery/jquery.js doxygen-output/html/
+         13 | 
+         14 | 
+
+  rules:12  [LOW] ln (creates link, no failure on missing target)
+      (shown in the block above)
+
+== python-websocketd [LIKELY]
+  rules:11  [LIKELY] unguarded rm
+          8 | override_dh_auto_build:
+          9 | 	dh_auto_build
+         10 | 	doxygen config.doxygen
+    >    11 | 	rm doxygen-output/html/jquery.js
+    >    12 | 	ln -s /usr/share/javascript/jquery/jquery.js doxygen-output/html/
+         13 | 
+         14 | override_dh_auto_clean:
+
+  rules:12  [LOW] ln (creates link, no failure on missing target)
+      (shown in the block above)
+
+== reglookup [LIKELY]
+  reglookup-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/reglookup-doc/pyregfi/jquery.js
+
+  rules:35  [LIKELY] unguarded rm
+         32 | 	# Using jdupes to convert duplicate files in softlinks
+         33 | 	jdupes -rl $(DOCPATH)
+         34 | 	# Avoid an embedded javascript library
+    >    35 | 	rm $(DOCPATH)/pyregfi/jquery.js
+         36 | 
+         37 | override_dh_auto_test:
+
+
+== taglib [LIKELY]
+  rules:60  [LIKELY] unguarded rm
+         57 | 	# build-indep gets invoked in buildds as well...
+         58 | 	if [ -x /usr/bin/doxygen ]; then \
+         59 | 	    dh_auto_build --buildsystem=makefile --builddirectory=builddir -- docs; \
+    >    60 | 	    rm builddir/doc/html/jquery.js; \
+    >    61 | 	    ln -s /usr/share/javascript/jquery/jquery.js builddir/doc/html; \
+         62 | 	fi
+         63 | 
+
+  rules:61  [LOW] ln (creates link, no failure on missing target)
+      (shown in the block above)
+
+== cubeb [CHECK]
+  debputy.manifest:40  [CHECK] debputy/linktree handling of missing source
+         37 |   libcubeb-doc:
+         38 |     transformations:
+         39 |     - create-symlink:
+    >    40 |         path: usr/share/doc/libcubeb-doc/cubeb/jquery.js
+    >    41 |         target: /usr/share/javascript/jquery/jquery.js
+
+  debputy.manifest:41  [CHECK] debputy/linktree handling of missing source
+      (shown in the block above)
+
+== efl [CHECK]
+  rules:91  [LOW] rm -f
+         88 | 
+         89 | execute_after_dh_install:
+         90 | 	# remove unused file, fail otherwise
+    >    91 | 	rm -f obj-$(DEB_HOST_GNU_TYPE)/html/jquery.js
+    >    92 | 	if grep -qr jquery.js obj-$(DEB_HOST_GNU_TYPE)/html/ ; \
+         93 | 		then echo jquery is used ; false ; fi
+         94 | 	# this is shipped under /usr/share/docs
+
+  rules:92  [CHECK] guard/condition, check exit status
+      (shown in the block above)
+
+== imagemagick [CHECK]
+  scripts/dh_doxygen:128  [CHECK] other reference in build file
+        125 | {
+        126 |     my %deps = ();
+        127 |     my ($path) = @_;
+    >   128 |     if(-f "$path/jquery.js") {
+    >   129 |         ln_sf("/usr/share/javascript/jquery/jquery.js", "$path/jquery.js");
+        130 |         $deps{"libjs-jquery"} = 1;
+        131 |     }
+
+  scripts/dh_doxygen:129  [CHECK] other reference in build file
+      (shown in the block above)
+
+== libcomps [CHECK]
+  libcomps-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/libcomps-doc/html/jquery.js
+
+  python-libcomps-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/python-libcomps-doc/html/_static/jquery.js
+          2 | usr/share/javascript/underscore/underscore.js usr/share/doc/python-libcomps-doc/html/_static/underscore.js
+
+  rules:31  [LOW] rm -f
+         28 | 	rm -rfv 'build/src/python/docs/html/.doctrees' 'build/docs/libcomps-doc/html/.doctrees'
+         29 | 
+         30 | 	# Use system-provided files.
+    >    31 | 	rm -fv 'build/src/python/docs/html/_static/jquery.js' \
+         32 | 		   'build/src/python/docs/html/_static/underscore.js' \
+    >    33 | 		   'build/docs/libcomps-doc/jquery.js' \
+         34 | 		   'build/src/python/docs/html/_static/doctools.js' \
+
+  rules:33  [CHECK] other reference in build file
+      (shown in the block above)
+
+== libdap [CHECK]
+  rules:35  [CHECK] guard/condition, check exit status
+         32 | 
+         33 | override_dh_installdocs:
+         34 | 	dh_installdocs
+    >    35 | 	[ -f debian/libdap-doc/usr/share/doc/libdap-doc/html/jquery.js ] && ( \
+    >    36 | 		rm debian/libdap-doc/usr/share/doc/libdap-doc/html/jquery.js ; \
+    >    37 | 		ln -sf /usr/share/javascript/jquery/jquery.js debian/libdap-doc/usr/share/doc/libdap-doc/html/jquery.js ) \
+         38 | 		|| echo "Skipped; no jquery"
+
+  rules:36  [CHECK] rm inside [ -f ] guard, check exit status
+      (shown in the block above)
+  rules:37  [LOW] ln (creates link, no failure on missing target)
+      (shown in the block above)
+
+== libhmsbeagle [CHECK]
+  libhmsbeagle-dev.linktrees:1  [CHECK] debputy/linktree handling of missing source
+    >     1 | replace usr/share/javascript/jquery/jquery.js usr/share/doc/libhmsbeagle-dev/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== librepo [CHECK]
+  librepo-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/librepo-doc/html/jquery.js
+
+  python3-librepo-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/python3-librepo-doc/_static/jquery.js
+          2 | usr/share/javascript/underscore/underscore.js usr/share/doc/python3-librepo-doc/_static/underscore.js
+
+  rules:28  [LOW] rm -f
+         25 | 	dh_auto_install --builddirectory=build
+         26 | 
+         27 | 	# Use system-provides files.
+    >    28 | 	rm -fv 'build/doc/python/_static/jquery.js' \
+         29 | 	       'build/doc/python/_static/underscore.js' \
+    >    30 | 	       'build/doc/c/html/jquery.js' \
+         31 | 	       'build/doc/python/_static/doctools.js' \
+
+  rules:30  [CHECK] other reference in build file
+      (shown in the block above)
+
+== librostlab-blast [CHECK]
+  librostlab-blast-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js	usr/share/doc/librostlab-blast-doc/html/jquery.js
+
+  linktrees:5  [CHECK] debputy/linktree handling of missing source
+          2 | #  dpkg-query: error: --search needs at least one file name pattern argument
+          3 | #  Use --help for help about querying packages.
+          4 | #  dh_linktree: Fehler: Fehler-Exitstatus von dpkg --search --  war 2
+    >     5 | replace /usr/share/javascript/jquery/jquery.js	/usr/share/doc/librostlab-blast-doc/html/jquery.js
+
+  rules:35  [LOW] find -delete/-exec
+         32 | 		$(DINSTALLDOC)/librostlab-blast.tag
+         33 | 
+         34 | override_dh_link:
+    >    35 | 	find debian -name jquery.js -delete
+         36 | 	dh_link
+         37 | 
+         38 | override_dh_compress:
+
+
+== libstxxl [CHECK]
+  rules:3  [CHECK] path held in a variable
+          1 | #!/usr/bin/make -f
+          2 | #location of stxxl's built-in jquery
+    >     3 | JQUERY_STXXL_TARGET=/usr/share/doc/libstxxl-doc/html/html/jquery.js
+          4 | #Location of debian jquery
+    >     5 | JQUERY_SYS_TARGET=/usr/share/javascript/jquery/jquery.js
+          6 | %:
+
+  rules:5  [CHECK] path held in a variable
+      (shown in the block above)
+
+== trilinos [CHECK]
+  rules:264  [CHECK] other reference in build file
+        261 | 	fi
+        262 | 	find debian/trilinos-doc -type f -name *.html -print0 | xargs -0 \
+        263 | 		sed -i -e 's_http\(s\|\)://cdn.mathjax.org/mathjax/latest_/usr/share/javascript/mathjax_g' \
+    >   264 | 		       -e 's#jquery\.js#/usr/share/javascript/jquery/jquery.js#'; \
+    >   265 | 	find debian/trilinos-doc/usr/share -name jquery.js -delete; \
+        266 | 	touch $@
+        267 | 
+
+  rules:265  [LOW] find -delete/-exec
+      (shown in the block above)
+
+== alsa-lib [LOW]
+  libasound2-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/libasound2/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== angelscript [LOW]
+  doxygen/source/new_header.html:11  [LOW] non-build file
+          8 | <!--BEGIN PROJECT_NAME--><title>$projectname: $title</title><!--END PROJECT_NAME-->
+          9 | <!--BEGIN !PROJECT_NAME--><title>$title</title><!--END !PROJECT_NAME-->
+         10 | <link href="$relpath^tabs.css" rel="stylesheet" type="text/css"/>
+    >    11 | <script type="text/javascript" src="$relpath^jquery.js"></script>
+         12 | <script type="text/javascript" src="$relpath^dynsections.js"></script>
+         13 | <script type="test/javascript" src="$relpath^touch.js"></script>
+         14 | $treeview
+
+
+== apophenia [LOW]
+  apophenia-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/apophenia-doc/html/jquery.js
+          2 | usr/share/doc/apophenia-doc/examples/build.sh usr/share/doc/apophenia-doc/examples/clean.sh
+          3 | usr/share/doc/apophenia-doc/examples usr/share/doc/apophenia-doc/eg
+
+  patches/debianization-documentation.patch:11  [LOW] non-build file
+          8 | --- a/docs/head.html
+          9 | +++ b/docs/head.html
+         10 | @@ -11,13 +11,7 @@
+    >    11 |  <script type="text/javascript" src="$relpath^jquery.js"></script>
+         12 |  <script type="text/javascript" src="$relpath^dynsections.js"></script>
+         13 |  
+         14 | -<!-- Google is watching. -->
+
+  patches/debianization.patch:17  [LOW] non-build file
+         14 |  	$(abs_top_srcdir)/docs/adjust
+         15 | +	rdfind -outputname /dev/null -makesymlinks true html
+         16 | +	symlinks -r -c -s -v html
+    >    17 | +	-rm -f html/jquery.js
+         18 | +	-rm -f html/formula.repository
+         19 | +	-rm -f html/_formulas.tex html/_formulas.log
+         20 | +	-rm -f html/_formulas_dark.tex html/_formulas_dark.log
+
+
+== argagg [LOW]
+  argagg-dev-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/argagg/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== aubio [LOW]
+  libaubio-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js /usr/share/doc/libaubio-dev/api/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== bamtools [LOW]
+  rules:39  [LOW] rm -f
+         36 | 
+         37 | override_dh_install-indep:
+         38 | 	dh_install --indep
+    >    39 | 	rm -f debian/libbamtools-doc/usr/share/doc/libbamtools-dev/html/jquery.js
+    >    40 | 	ln -s /usr/share/javascript/jquery/jquery.js debian/libbamtools-doc/usr/share/doc/libbamtools-dev/html/jquery.js
+         41 | 
+         42 | describe-current-version:
+
+  rules:40  [LOW] ln (creates link, no failure on missing target)
+      (shown in the block above)
+
+== bitwuzla [LOW]
+  rules:36  [LOW] $(RM) = rm -f
+         33 | 	done
+         34 | 	cd $(CURDIR)/debian/tmp && LD_LIBRARY_PATH=usr/lib/$(DEB_HOST_MULTIARCH) help2man -n "SMT solver for bit vectors and arrays" usr/bin/bitwuzla >bitwuzla.1
+         35 | 	find $(DOCS_DIR) -name '*kind.html' | xargs -r sed -i -e '/cdn.jsdelivr.net.*mathjax.*js/ { s_<script_<!--script_; s_/script>_/script-->_ }'
+    >    36 | 	$(RM) -rf $(DOCS_DIR)/cli_usage.txt $(DOCS_DIR)/static/fonts $(DOCS_DIR)/static/jquery.js
+         37 | 
+         38 | execute_after_dh_auto_clean:
+         39 | 	set -e; for py in $(PY_VERS); do dh_auto_clean -Bbuild-$$py; done
+
+
+== bliss [LOW]
+  adhoc/Makefile:37  [LOW] rm -f
+         34 | 		$(ABS_DOCDIR)/Doxyfile
+         35 | 	cd $(<D) && $(DOXYGEN) $(ABS_DOCDIR)/Doxyfile
+         36 | 	cd $(ABS_DOCDIR)/html && { \
+    >    37 | 		rm -f *.md5 jquery.js ; \
+         38 | 		rdfind -outputname /dev/null -makesymlinks true . ; \
+         39 | 		symlinks -r -c -s -v . ; \
+    >    40 | 		ln -sf /usr/share/javascript/jquery/jquery.js ; \
+
+  adhoc/Makefile:40  [LOW] ln (creates link, no failure on missing target)
+      (shown in the block above)
+
+== bornagain [LOW]
+  bornagain-doc.links:4  [LOW] non-build file
+          1 | /usr/share/javascript/bootstrap5/css/bootstrap.css /usr/share/doc/bornagain/html/css/bootstrap.css
+          2 | /usr/share/javascript/bootstrap5/css/bootstrap.css.map /usr/share/doc/bornagain/html/css/bootstrap.css.map
+          3 | /usr/share/javascript/bootstrap5/js/bootstrap.js /usr/share/doc/bornagain/html/js/bootstrap.js
+    >     4 | /usr/share/javascript/jquery/jquery.js /usr/share/doc/bornagain/html/js/jquery.js
+          5 | /usr/share/nodejs/popper.js/dist/popper.min.js /usr/share/doc/bornagain/html/js/popper.min.js
+
+  patches/0008-Use-local-rather-than-hosted-assets-in-HTML-docs.patch:108  [LOW] non-build file
+        105 | +</style>
+        106 |  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel='stylesheet'  type='text/css'>
+        107 |  
+    >   108 |  <script src="/js/jquery.js"></script>
+
+  patches/0009-Remove-version-switch-code-in-HTML-docs.patch:16  [LOW] non-build file
+         13 | @@ -94,7 +94,6 @@
+         14 |  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel='stylesheet'  type='text/css'>
+         15 |  
+    >    16 |  <script src="/js/jquery.js"></script>
+         17 | -<script src="https://bornagainproject.org/js/version_switch.js"></script>
+         18 |  
+         19 |  <script>
+
+
+== box2d [LOW]
+  libbox2d-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/libbox2d-doc/html/jquery.js
+          2 | 
+
+
+== brickos [LOW]
+  rules:44  [LOW] $(RM) = rm -f
+         41 | 	# system jquery
+         42 | 	[ ! -d $(CURDIR)/debian/brickos-doc/usr/share/doc/brickos/html/ ] || \
+         43 | 		for l in c++ c kern ; do \
+    >    44 | 			$(RM) $(CURDIR)/debian/brickos-doc/usr/share/doc/brickos/html/html-$$l/jquery.js ; \
+    >    45 | 			ln -s /usr/share/javascript/jquery/jquery.js \
+    >    46 | 				$(CURDIR)/debian/brickos-doc/usr/share/doc/brickos/html/html-$$l/jquery.js ; \
+         47 | 		done
+
+  rules:45  [LOW] ln (creates link, no failure on missing target)
+      (shown in the block above)
+  rules:46  [LOW] continuation of a tolerant command
+      (shown in the block above)
+
+== brltty [LOW]
+  rules:73  [LOW] rm -f
+         70 | 	rm -f aclocal.m4
+         71 | 	rm -f configure
+         72 | 	rm -f debian/initramfs/hooks/brltty
+    >    73 | 	rm -f Documents/BrlAPIref/html/jquery.js
+         74 | 
+         75 | 	dh_clean
+         76 | 
+
+
+== bullet [LOW]
+  libbullet-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/libbullet-doc/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== casacore [LOW]
+  rules:38  [LOW] rm -f
+         35 | 
+         36 | override_dh_auto_build-indep:
+         37 | 	doxygen doxygen.cfg
+    >    38 | 	rm -f doc/html/jquery.js
+         39 | 
+         40 | override_dh_auto_test-indep override_dh_auto_install-indep:
+         41 | 
+
+
+== cassiopee [LOW]
+  libcassie-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/cassiopee/html/jquery.js
+
+  rules:19  [LOW] rm -f
+         16 | 	dh_auto_configure -- -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+         17 | 
+         18 | override_dh_install:
+    >    19 | 	rm -f doc/html/jquery.js
+         20 | 	dh_install
+
+
+== cctools [LOW]
+  coop-computing-tools-doc.links:3  [LOW] non-build file
+          1 | /usr/share/doc/coop-computing-tools/api /usr/share/doc/coop-computing-tools-doc/api
+          2 | /usr/share/doc/coop-computing-tools/manual /usr/share/doc/coop-computing-tools-doc/manual
+    >     3 | /usr/share/javascript/jquery/jquery.js /usr/share/doc/coop-computing-tools/api/jquery.js
+
+
+== cimg [LOW]
+  cimg-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js	/usr/share/doc/cimg-dev/html/jquery.js
+          2 | 
+
+
+== cmocka [LOW]
+  links:8  [LOW] other
+          5 | usr/share/doxygen-awesome-css/doxygen-awesome-interactive-toc.js	usr/share/doc/cmocka-doc/html/doxygen-awesome-interactive-toc.js
+          6 | usr/share/doxygen-awesome-css/doxygen-awesome-paragraph-link.js		usr/share/doc/cmocka-doc/html/doxygen-awesome-paragraph-link.js
+          7 | usr/share/doxygen-awesome-css/doxygen-awesome.css			usr/share/doc/cmocka-doc/html/doxygen-awesome.css
+    >     8 | usr/share/javascript/jquery/jquery.min.js				usr/share/doc/cmocka-doc/html/jquery.js
+
+
+== coinor-ipopt [LOW]
+  coinor-libipopt-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js usr/share/doc/coinor-libipopt-doc/html/jquery.js
+
+  rules:56  [LOW] commented out
+         53 | endif
+         54 | 
+         55 | execute_before_dh_link:
+    >    56 | 	# Removing the installed jquery.js file, a symlink will be created by dh_link
+         57 | 	# from the libjs-jquery package
+    >    58 | 	find debian/ -name "jquery.js" -delete
+
+  rules:58  [LOW] find -delete/-exec
+      (shown in the block above)
+
+== colobot [LOW]
+  colobot-dev-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/colobot/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== cpl [LOW]
+  rules:19  [LOW] -X exclusion
+         16 | 	(cd libcext; doxygen Doxyfile)
+         17 | 
+         18 | override_dh_installdocs:
+    >    19 | 	dh_installdocs -Xjquery.js
+
+
+== cwidget [LOW]
+  libcwidget-doc.links:2  [LOW] non-build file
+          1 | usr/share/javascript/jquery/jquery.min.js usr/share/doc/libcwidget-doc/html/ikiwiki/jquery.min.js
+    >     2 | usr/share/javascript/jquery/jquery.js usr/share/doc/libcwidget-doc/html/documentation/api/jquery.js
+
+  rules:28  [LOW] -X exclusion
+         25 | 
+         26 | override_dh_auto_install-indep:
+         27 | 	$(MAKE) -C doc install
+    >    28 | 	dh_install -i -Xjquery.min.js -Xjquery.js
+         29 | 
+         30 | override_dh_installchangelogs:
+         31 | 	dh_installchangelogs -- NEWS
+
+
+== dcmtk [LOW]
+  rules:109  [LOW] link/rewrite only, no failure on missing file
+        106 | override_dh_installdocs:
+        107 | 	dh_installdocs
+        108 | 	# do the doxygen / jquery fix:
+    >   109 | 	dh_link -pdcmtk-doc usr/share/javascript/jquery/jquery.js usr/share/doc/dcmtk-doc/html/jquery.js
+        110 | 
+        111 | override_dh_install-arch:
+        112 | 	dh_install # --list-missing
+
+
+== dolfin [LOW]
+  index.html:26  [LOW] non-build file
+         23 |   
+         24 |     
+         25 |       <script type="text/javascript" id="documentation_options" data-url_root="./" src="python/_static/documentation_options.js"></script>
+    >    26 |         <script src="python/_static/jquery.js"></script>
+         27 |         <script src="python/_static/underscore.js"></script>
+         28 |         <script src="python/_static/doctools.js"></script>
+         29 |         <script src="python/_static/language_data.js"></script>
+
+
+== eccodes [LOW]
+  libeccodes-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js /usr/share/doc/libeccodes-doc/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== editorconfig-core [LOW]
+  editorconfig-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/editorconfig-doc/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== eigen3 [LOW]
+  libeigen3-doc.links:2  [LOW] non-build file
+          1 | usr/share/fonts/truetype/freefont/FreeSans.ttf usr/share/doc/libeigen3-doc/html/unsupported/FreeSans.ttf
+    >     2 | usr/share/javascript/jquery/jquery.js usr/share/doc/libeigen3-doc/html/jquery.js
+    >     3 | usr/share/javascript/jquery/jquery.js usr/share/doc/libeigen3-doc/html/unsupported/jquery.js
+          4 | 
+
+  libeigen3-doc.links:3  [LOW] non-build file
+      (shown in the block above)
+
+== esys-particle [LOW]
+  esys-particle.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js usr/share/doc/esys-particle/Doc/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== exiv2 [LOW]
+  rules:35  [LOW] find -delete/-exec
+         32 | 
+         33 | override_dh_installdocs:
+         34 | 	dh_installdocs -A -Xcmd.txt -XMakefile -Xtemplates -XChangeLog
+    >    35 | 	find $(CURDIR)/debian -name jquery.js -exec ln -sfv /usr/share/javascript/jquery/jquery.js {} \;
+         36 | 	find $(CURDIR)/debian \( -name '*.map' -o -name '*.md5' \) -delete
+         37 | 
+         38 | override_dh_installchangelogs:
+
+
+== fastcdr [LOW]
+  rules:27  [LOW] ln (creates link, no failure on missing target)
+         24 | 	mv debian/tmp/usr/include/fastcdr/config.h debian/tmp/usr/include/$(DEB_HOST_MULTIARCH)/fastcdr/config.h
+         25 | 
+         26 | execute_after_dh_installdocs-indep:
+    >    27 | 	ln -sf /usr/share/javascript/jquery/jquery.min.js debian/libfastcdr-doc/usr/share/doc/libfastcdr-dev/api_reference/jquery.js
+
+
+== fastdds [LOW]
+  rules:70  [LOW] ln (creates link, no failure on missing target)
+         67 | 	mkdir -p debian/tmp/usr/include/$(DEB_HOST_MULTIARCH)/fastdds
+         68 | 	mv debian/tmp/usr/include/fastdds/config.hpp debian/tmp/usr/include/$(DEB_HOST_MULTIARCH)/fastdds
+         69 | ifeq (,$(filter nodoc,$(DEB_BUILD_OPTIONS)))
+    >    70 | 	ln -sf /usr/share/javascript/jquery/jquery.min.js debian/tmp/usr/share/doc/libfastdds-dev/api_reference/jquery.js
+         71 | endif
+         72 | 	mv debian/tmp/usr/tools/fastdds/* debian/tmp/usr/share/fastdds
+         73 | 	sed -i -e '1 s+^!#.*+#!/usr/bin/python3+' debian/tmp/usr/share/fastdds/fastdds.py
+
+
+== fastjet [LOW]
+  fastjet-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/fastjet-doc/html/jquery.js
+
+  rules:18  [LOW] $(RM) = rm -f
+         15 | override_dh_auto_build-indep:
+         16 | 	dh_auto_build
+         17 | 	doxygen
+    >    18 | 	$(RM) -v html/jquery.js
+         19 | 	find $(CURDIR)/html -name '*.md5' -print0 | xargs -0r  rm -v
+         20 | 
+         21 | %:
+
+
+== fcml [LOW]
+  libfcml-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/libfcml-doc/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== fenics-dolfinx [LOW]
+  index.html:26  [LOW] non-build file
+         23 |   
+         24 |     
+         25 |       <script type="text/javascript" id="documentation_options" data-url_root="./" src="python/_static/documentation_options.js"></script>
+    >    26 |         <script src="python/_static/jquery.js"></script>
+         27 |         <script src="python/_static/underscore.js"></script>
+         28 |         <script src="python/_static/doctools.js"></script>
+         29 |         <script src="python/_static/language_data.js"></script>
+
+
+== ffmpeg [LOW]
+  ffmpeg-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.min.js usr/share/doc/ffmpeg/api/jquery.js
+          2 | usr/share/bootstrap-html/css/bootstrap.min.css usr/share/doc/ffmpeg/manual/bootstrap.min.css
+
+
+== field3d [LOW]
+  field3d-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/field3d-doc/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== fosfat [LOW]
+  fosfat-dev.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js	usr/share/doc/fosfat-dev/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== freecontact [LOW]
+  README.source:10  [LOW] non-build file
+          7 | [1] http://www.eyrie.org/~eagle/journal/2012-02/001.html
+          8 | 
+          9 | 
+    >    10 | libfreecontact-doc: embedded-javascript-library usr/share/doc/libfreecontact-doc/html/jquery.js
+         11 | -----------------------------------------------------------------------------------------------
+         12 | Laszlo Kajan <lkajan@debian.org>:
+    >    13 | This jquery.js is copied into the html documentation by the doxygen
+
+  README.source:13  [LOW] non-build file
+      (shown in the block above)
+  README.source:15  [LOW] non-build file
+         12 | Laszlo Kajan <lkajan@debian.org>:
+    >    13 | This jquery.js is copied into the html documentation by the doxygen
+         14 | version currently in unstable (1.7.6.1). Earlier versions of Doxygen
+    >    15 | (e.g. i n stable) do not copy a jquery.js there.  The jquery.js copied
+         16 | by doxygen is much earlier (1.3.2) than the current version in unstable
+    >    17 | (1.7.2-1). The jquery.js from doxygen actually is a minified bundle of
+         18 | several things:
+
+  README.source:17  [LOW] non-build file
+      (shown in the block above)
+  README.source:30  [LOW] non-build file
+         27 | Out of these Sizzle is not packaged for Debian, neither is the hashchange
+         28 | event or jQuery.ScrollTo, as far as I can tell.
+         29 | 
+    >    30 | Therefore, it is necessary to keep this jquery.js instead of linking to the
+         31 | file with the same name from libjs-jquery.
+         32 | 
+         33 | 
+
+  libfreecontact-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js	/usr/share/doc/libfreecontact-doc/html/jquery.js
+
+  rules:56  [LOW] find -delete/-exec
+         53 | 
+         54 | override_dh_installdocs:
+         55 | 	dh_installdocs
+    >    56 | 	find debian -name jquery.js -delete
+         57 | 
+         58 | override_dh_auto_clean:
+         59 | 	rm -f build-indep-stamp
+
+
+== freeimage [LOW]
+  libfreeimageplus-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js usr/share/doc/libfreeimageplus-doc/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== frei0r [LOW]
+  frei0r-plugins-doc.lintian-overrides:1  [LOW] non-build file
+    >     1 | # the jquery.js is generated during build by doxygen
+          2 | # so the problem should be fixed in doxygen
+    >     3 | frei0r-plugins-doc: embedded-javascript-library usr/share/doc/frei0r-plugins-dev/html/jquery.js
+
+  frei0r-plugins-doc.lintian-overrides:3  [LOW] non-build file
+      (shown in the block above)
+
+== gammu [LOW]
+  gammu-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/sphinxdoc/1.0/jquery.js usr/share/doc/gammu/html/_static/jquery.js
+          2 | /usr/share/javascript/sphinxdoc/1.0/underscore.js usr/share/doc/gammu/html/_static/underscore.js
+
+
+== gcc-11 [LOW]
+  rules.d/binary-libstdcxx.mk:516  [LOW] commented out
+        513 | 		| xargs -r rm -f
+        514 | 
+        515 | # Broken docs ... see #766499
+    >   516 | #	rm -f $(d_libd)/$(docdir)/$(p_base)/libstdc++/*/jquery.js
+        517 | #	dh_link -p$(p_libd) \
+    >   518 | #		/usr/share/javascript/jquery/jquery.js \
+    >   519 | #		/$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+
+  rules.d/binary-libstdcxx.mk:518  [LOW] commented out
+      (shown in the block above)
+  rules.d/binary-libstdcxx.mk:519  [LOW] commented out
+      (shown in the block above)
+  rules.d/binary-libstdcxx.mk:520  [LOW] commented out
+        517 | #	dh_link -p$(p_libd) \
+    >   518 | #		/usr/share/javascript/jquery/jquery.js \
+    >   519 | #		/$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+    >   520 | #		/usr/share/javascript/jquery/jquery.js \
+    >   521 | #		/$(docdir)/$(p_base)/libstdc++/user/jquery.js
+        522 | 
+        523 | 	: FIXME: depending on the doxygen version
+
+  rules.d/binary-libstdcxx.mk:521  [LOW] commented out
+      (shown in the block above)
+
+== gcc-12 [LOW]
+  rules.d/binary-libstdcxx.mk:516  [LOW] commented out
+        513 | 		| xargs -r rm -f
+        514 | 
+        515 | # Broken docs ... see #766499
+    >   516 | #	rm -f $(d_libd)/$(docdir)/$(p_base)/libstdc++/*/jquery.js
+        517 | #	dh_link -p$(p_libd) \
+    >   518 | #		/usr/share/javascript/jquery/jquery.js \
+    >   519 | #		/$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+
+  rules.d/binary-libstdcxx.mk:518  [LOW] commented out
+      (shown in the block above)
+  rules.d/binary-libstdcxx.mk:519  [LOW] commented out
+      (shown in the block above)
+  rules.d/binary-libstdcxx.mk:520  [LOW] commented out
+        517 | #	dh_link -p$(p_libd) \
+    >   518 | #		/usr/share/javascript/jquery/jquery.js \
+    >   519 | #		/$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+    >   520 | #		/usr/share/javascript/jquery/jquery.js \
+    >   521 | #		/$(docdir)/$(p_base)/libstdc++/user/jquery.js
+        522 | 
+        523 | 	: FIXME: depending on the doxygen version
+
+  rules.d/binary-libstdcxx.mk:521  [LOW] commented out
+      (shown in the block above)
+
+== gcc-13 [LOW]
+  rules.d/binary-libstdcxx.mk:526  [LOW] commented out
+        523 | 		| xargs -r rm -f
+        524 | 
+        525 | # Broken docs ... see #766499
+    >   526 | #	rm -f $(d_libd)/$(docdir)/$(p_base)/libstdc++/*/jquery.js
+        527 | #	dh_link -p$(p_libd) \
+    >   528 | #		/usr/share/javascript/jquery/jquery.js \
+    >   529 | #		/$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+
+  rules.d/binary-libstdcxx.mk:528  [LOW] commented out
+      (shown in the block above)
+  rules.d/binary-libstdcxx.mk:529  [LOW] commented out
+      (shown in the block above)
+  rules.d/binary-libstdcxx.mk:530  [LOW] commented out
+        527 | #	dh_link -p$(p_libd) \
+    >   528 | #		/usr/share/javascript/jquery/jquery.js \
+    >   529 | #		/$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+    >   530 | #		/usr/share/javascript/jquery/jquery.js \
+    >   531 | #		/$(docdir)/$(p_base)/libstdc++/user/jquery.js
+        532 | 
+        533 | 	: FIXME: depending on the doxygen version
+
+  rules.d/binary-libstdcxx.mk:531  [LOW] commented out
+      (shown in the block above)
+
+== gcc-14 [LOW]
+  rules.d/binary-libstdcxx.mk:479  [LOW] commented out
+        476 | 		| xargs -r rm -f
+        477 | 
+        478 | # Broken docs ... see #766499
+    >   479 | #	rm -f $(d_libd)/$(docdir)/$(p_base)/libstdc++/*/jquery.js
+        480 | #	dh_link -p$(p_libd) \
+    >   481 | #		/usr/share/javascript/jquery/jquery.js \
+    >   482 | #		/$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+
+  rules.d/binary-libstdcxx.mk:481  [LOW] commented out
+      (shown in the block above)
+  rules.d/binary-libstdcxx.mk:482  [LOW] commented out
+      (shown in the block above)
+  rules.d/binary-libstdcxx.mk:483  [LOW] commented out
+        480 | #	dh_link -p$(p_libd) \
+    >   481 | #		/usr/share/javascript/jquery/jquery.js \
+    >   482 | #		/$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+    >   483 | #		/usr/share/javascript/jquery/jquery.js \
+    >   484 | #		/$(docdir)/$(p_base)/libstdc++/user/jquery.js
+        485 | 
+        486 | 	: FIXME: depending on the doxygen version
+
+  rules.d/binary-libstdcxx.mk:484  [LOW] commented out
+      (shown in the block above)
+
+== gcc-15 [LOW]
+  rules.d/binary-libstdcxx.mk:494  [LOW] commented out
+        491 | 		| xargs -r rm -f
+        492 | 
+        493 | # Broken docs ... see #766499
+    >   494 | #	rm -f $(d_libd)/$(docdir)/$(p_base)/libstdc++/*/jquery.js
+        495 | #	dh_link -p$(p_libd) \
+    >   496 | #		/usr/share/javascript/jquery/jquery.js \
+    >   497 | #		/$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+
+  rules.d/binary-libstdcxx.mk:496  [LOW] commented out
+      (shown in the block above)
+  rules.d/binary-libstdcxx.mk:497  [LOW] commented out
+      (shown in the block above)
+  rules.d/binary-libstdcxx.mk:498  [LOW] commented out
+        495 | #	dh_link -p$(p_libd) \
+    >   496 | #		/usr/share/javascript/jquery/jquery.js \
+    >   497 | #		/$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+    >   498 | #		/usr/share/javascript/jquery/jquery.js \
+    >   499 | #		/$(docdir)/$(p_base)/libstdc++/user/jquery.js
+        500 | 
+        501 | 	: FIXME: depending on the doxygen version
+
+  rules.d/binary-libstdcxx.mk:499  [LOW] commented out
+      (shown in the block above)
+
+== gcc-16 [LOW]
+  rules.d/binary-libstdcxx.mk:505  [LOW] commented out
+        502 | 		| xargs -r rm -f
+        503 | 
+        504 | # Broken docs ... see #766499
+    >   505 | #	rm -f $(d_libd)/$(docdir)/$(p_base)/libstdc++/*/jquery.js
+        506 | #	dh_link -p$(p_libd) \
+    >   507 | #		/usr/share/javascript/jquery/jquery.js \
+    >   508 | #		/$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+
+  rules.d/binary-libstdcxx.mk:507  [LOW] commented out
+      (shown in the block above)
+  rules.d/binary-libstdcxx.mk:508  [LOW] commented out
+      (shown in the block above)
+  rules.d/binary-libstdcxx.mk:509  [LOW] commented out
+        506 | #	dh_link -p$(p_libd) \
+    >   507 | #		/usr/share/javascript/jquery/jquery.js \
+    >   508 | #		/$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+    >   509 | #		/usr/share/javascript/jquery/jquery.js \
+    >   510 | #		/$(docdir)/$(p_base)/libstdc++/user/jquery.js
+        511 | 
+        512 | 	: FIXME: depending on the doxygen version
+
+  rules.d/binary-libstdcxx.mk:510  [LOW] commented out
+      (shown in the block above)
+
+== gcc-snapshot [LOW]
+  rules.d/binary-libstdcxx.mk:505  [LOW] commented out
+        502 | 		| xargs -r rm -f
+        503 | 
+        504 | # Broken docs ... see #766499
+    >   505 | #	rm -f $(d_libd)/$(docdir)/$(p_base)/libstdc++/*/jquery.js
+        506 | #	dh_link -p$(p_libd) \
+    >   507 | #		/usr/share/javascript/jquery/jquery.js \
+    >   508 | #		/$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+
+  rules.d/binary-libstdcxx.mk:507  [LOW] commented out
+      (shown in the block above)
+  rules.d/binary-libstdcxx.mk:508  [LOW] commented out
+      (shown in the block above)
+  rules.d/binary-libstdcxx.mk:509  [LOW] commented out
+        506 | #	dh_link -p$(p_libd) \
+    >   507 | #		/usr/share/javascript/jquery/jquery.js \
+    >   508 | #		/$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+    >   509 | #		/usr/share/javascript/jquery/jquery.js \
+    >   510 | #		/$(docdir)/$(p_base)/libstdc++/user/jquery.js
+        511 | 
+        512 | 	: FIXME: depending on the doxygen version
+
+  rules.d/binary-libstdcxx.mk:510  [LOW] commented out
+      (shown in the block above)
+
+== gdcm [LOW]
+  gdcm-doc.lintian-overrides:1  [LOW] non-build file
+    >     1 | # The embedded jquery.js is generated by Doxygen and can not be replaced 
+          2 | # by the one provided by libjs-jquery.  
+          3 | # For a rationale please see src::Doxygen/debian/README.jquery. 
+          4 | 
+
+
+== gecode [LOW]
+  rules:35  [LOW] rm -f
+         32 | 
+         33 | override_dh_installdocs-indep:
+         34 | 	dh_installdocs
+    >    35 | 	rm -f $(CURDIR)/debian/libgecode-doc/usr/share/doc/libgecode-dev/html/jquery.js
+         36 | 
+         37 | override_dh_install-arch:
+         38 | 	dh_install
+
+
+== geographiclib [LOW]
+  patches/privacy.patch:3  [LOW] non-build file
+          1 | Description: Fix privacy breaches detected by lintian
+          2 |  Altered doxyfile*.in files to use the packaged version of MathJax,
+    >     3 |  and to disable the search function and avoid copies of jquery.js
+          4 |  being installed. The manual is available online if full search
+          5 |  functionality is required:
+          6 |  https://geographiclib.sourceforge.io/html/index.html
+
+
+== glm [LOW]
+  libglm-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js usr/share/doc/libglm-doc/api/jquery.js
+          2 | usr/share/doc/libglm-doc/manual/logo-mini.png usr/share/doc/libglm-doc/api/logo-mini.png
+
+
+== gr-gsm [LOW]
+  gr-gsm.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.min.js /usr/share/doc/gr-gsm/html/jquery.js
+
+  rules:17  [LOW] rm -f
+         14 | 	rm -f debian/gr-gsm/usr/lib/python3/dist-packages/grgsm/*py[co]
+         15 | 	rm -f debian/gr-gsm/usr/lib/python3/dist-packages/grgsm/trx/*py[co]
+         16 | 	# This file is fetched from libjs-jquery instead, see gr-gsm.links
+    >    17 | 	rm -f debian/gr-gsm/usr/share/doc/gr-gsm/html/jquery.js
+         18 | 	# Deter anyone from using the shared library directly
+         19 | 	rm -rf debian/gr-gsm/usr/include
+         20 | 	# Cut XML docs
+
+
+== grass [LOW]
+  grass-dev-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/grass-dev-doc/programming-manual/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== gridtools [LOW]
+  source/lintian-overrides:1  [LOW] non-build file
+    >     1 | gridtools source: source-is-missing docs/_static/jquery.js line length is 32033 characters (>512)
+          2 | gridtools source: source-is-missing docs/_static/underscore.js line length is 519 characters (>512)
+          3 | gridtools source: source-is-missing docs/_static/js/modernizr.min.js
+          4 | gridtools source: source-is-missing docs/_static/js/theme.js line length is 4336 characters (>512)
+
+
+== groonga [LOW]
+  groonga-bin.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/groonga/html/admin/assets/jquery.js
+          2 | usr/share/javascript/jquery-ui/jquery-ui.js usr/share/groonga/html/admin/assets/jquery-ui.js
+          3 | usr/share/javascript/jquery-ui/themes/base/jquery-ui.min.css usr/share/groonga/html/admin/assets/jquery-ui.min.css
+          4 | usr/share/javascript/jquery-ui/themes/base/images usr/share/groonga/html/admin/assets/images
+
+  groonga-doc.links:9  [LOW] non-build file
+          6 | usr/share/javascript/sphinxdoc/1.0/language_data.js usr/share/doc/groonga-doc/ja/html/_static/language_data.js
+          7 | 
+          8 | # jquery
+    >     9 | usr/share/javascript/jquery/jquery.js usr/share/doc/groonga-doc/en/html/_static/jquery.js
+    >    10 | usr/share/javascript/jquery/jquery.js usr/share/doc/groonga-doc/ja/html/_static/jquery.js
+         11 | 
+         12 | # underscore.js
+
+  groonga-doc.links:10  [LOW] non-build file
+      (shown in the block above)
+  patches/use-libjs-jquery.patch:49  [LOW] non-build file
+         46 | -<script type="text/javascript" src="assets/flot-4.2.1/source/jquery.flot.composeImages.js"></script>
+         47 | -<script type="text/javascript" src="assets/flot-4.2.1/source/jquery.flot.legend.js"></script>
+         48 | +<link rel="stylesheet" type="text/css" href="assets/jquery-ui.min.css">
+    >    49 | +<script type="text/javascript" src="assets/jquery.js"></script>
+         50 | +<script type="text/javascript" src="assets/jquery-ui.js"></script>
+         51 | +<script type="text/javascript" src="assets/jquery.flot.js"></script>
+         52 | +<script type="text/javascript" src="assets/jquery.flot.saturated.js"></script>
+
+  patches/use-libjs-jquery.patch:108  [LOW] non-build file
+        105 | -<script type="text/javascript" src="assets/flot-4.2.1/source/jquery.flot.composeImages.js"></script>
+        106 | -<script type="text/javascript" src="assets/flot-4.2.1/source/jquery.flot.legend.js"></script>
+        107 | +<link rel="stylesheet" type="text/css" href="assets/jquery-ui.min.css">
+    >   108 | +<script type="text/javascript" src="assets/jquery.js"></script>
+        109 | +<script type="text/javascript" src="assets/jquery-ui.js"></script>
+        110 | +<script type="text/javascript" src="assets/jquery.flot.js"></script>
+        111 | +<script type="text/javascript" src="assets/jquery.flot.saturated.js"></script>
+
+
+== gsoap [LOW]
+  patches/gsoap-doxygen-tabs.patch:10  [LOW] non-build file
+          7 |  <title>Genivia - $title</title>
+          8 | -<link href="genivia_tabs.css" rel="stylesheet" type="text/css"/>
+          9 | +<link href="tabs.css" rel="stylesheet" type="text/css"/>
+    >    10 |  <script type="text/javascript" src="jquery.js"></script>
+         11 |  <script type="text/javascript" src="dynsections.js"></script>
+         12 |  <link href="$relpath$doxygen.css" rel="stylesheet" type="text/css">
+
+
+== gutenprint [LOW]
+  libgutenprint-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.min.js	usr/share/doc/libgutenprint-doc/reference/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== harp [LOW]
+  source/lintian-overrides:1  [LOW] non-build file
+    >     1 | #harp source: source-is-missing doc/html/_static/jquery.js *
+          2 | #harp source: source-is-missing doc/html/_static/underscore.js *
+          3 | #harp source: source-is-missing doc/html/_static/js/theme.js *
+
+
+== hwloc [LOW]
+  README.source:3  [LOW] non-build file
+          1 | The dfsg tree is the upstream tarball, minus:
+          2 | 
+    >     3 | doc/doxygen-doc/html/jquery.js
+          4 | doc/doxygen-doc/html/menu.js
+          5 | utils/netloc/draw/visdist/vis.min.js
+          6 | utils/netloc/draw/visdist/vis.min.css
+
+  libhwloc-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js /usr/share/doc/libhwloc-doc/html/jquery.js
+
+
+== id3lib3.8.3 [LOW]
+  rules:27  [LOW] rm -f
+         24 | # so it does not waste buildd resources during arch-only builds.
+         25 | execute_after_dh_auto_build-indep:
+         26 | 	cd doc && doxygen
+    >    27 | 	rm -f doc/api/jquery.js
+         28 | 
+         29 | # Comment out dependency_libs in the .la file to avoid overlinking.
+         30 | override_dh_install:
+
+
+== iipimage [LOW]
+  README.source:4  [LOW] non-build file
+          1 | The iipimage package contains a convenient copy of fcgi library
+          2 | Since the building of package allow using a system installed fcgi, we are using it.
+          3 | 
+    >     4 | It comes with a minified jquery.js source, I downloaded the original code using:
+          5 | 
+    >     6 | wget -O debian/missing-sources/jquery.js http://code.jquery.com/jquery-1.3.2.js
+          7 | 
+
+  README.source:6  [LOW] non-build file
+      (shown in the block above)
+
+== imath [LOW]
+  libimath-doc.links:2  [LOW] non-build file
+          1 | usr/share/sphinx/themes/basic/static/doctools.js usr/share/doc/libimath-doc/html/_static/doctools.js
+    >     2 | usr/share/sphinx/themes/basic/static/jquery.js usr/share/doc/libimath-doc/html/_static/jquery.js
+          3 | usr/share/sphinx/themes/basic/static/language_data.js_t usr/share/doc/libimath-doc/html/_static/language_data.js
+          4 | usr/share/sphinx/themes/basic/static/searchtools.js usr/share/doc/libimath-doc/html/_static/searchtools.js
+          5 | usr/share/sphinx/themes/basic/static/underscore.js usr/share/doc/libimath-doc/html/_static/underscore.js
+
+  rules:45  [LOW] rm -f
+         42 | 
+         43 | override_dh_install-indep:
+         44 | 	rm -f $(INSTDIR)/usr/share/doc/Imath/sphinx/_static/doctools.js
+    >    45 | 	rm -f $(INSTDIR)/usr/share/doc/Imath/sphinx/_static/jquery.js
+         46 | 	rm -f $(INSTDIR)/usr/share/doc/Imath/sphinx/_static/language_data.js
+         47 | 	rm -f $(INSTDIR)/usr/share/doc/Imath/sphinx/_static/searchtools.js
+         48 | 	rm -f $(INSTDIR)/usr/share/doc/Imath/sphinx/_static/underscore.js
+
+
+== iniparser [LOW]
+  libiniparser-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/libiniparser-doc/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== janus [LOW]
+  patches/2003_use_packaged_javascript.patch:186  [LOW] non-build file
+        183 | @@ -6,9 +6,9 @@
+        184 |  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        185 |  <title>Janus WebRTC Server: Documentation</title>
+    >   186 |  <script type="text/javascript" src="jquery.js" ></script>
+        187 | -<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+        188 | -<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.min.js"></script>
+        189 | -<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.2/cerulean/bootstrap.min.css" type="text/css"/>
+
+
+== jaula [LOW]
+  libjaula-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js usr/share/doc/jaula/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== json-c [LOW]
+  clean:1  [LOW] non-build file
+    >     1 | doc/html/jquery.js
+
+  libjson-c-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js usr/share/doc/libjson-c-dev/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== krb5 [LOW]
+  rules:68  [LOW] ln (creates link, no failure on missing target)
+         65 | build-indep-stamp:  build-arch
+         66 | ifeq (,$(findstring nodoc,$(DEB_BUILD_OPTIONS)))
+         67 | 	cd build/doc && make PYTHON=python3 substhtml substpdf
+    >    68 | 	ln -sf /usr/share/javascript/jquery/jquery.js build/doc/html_subst/_static/jquery.js
+         69 | 	ln -sf /usr/share/javascript/underscore/underscore.js build/doc/html_subst/_static/underscore.js
+         70 | 	ln -sf /usr/share/javascript/sphinxdoc/1.0/doctools.js build/doc/html_subst/_static/doctools.js
+         71 | 	ln -sf /usr/share/javascript/sphinxdoc/1.0/searchtools.js build/doc/html_subst/_static/searchtools.js
+
+
+== lammps [LOW]
+  lammps-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/lammps/html/_static/jquery.js
+          2 | usr/share/javascript/underscore/underscore.js usr/share/doc/lammps/html/_static/underscore.js
+
+
+== lcm [LOW]
+  liblcm-doc.links:4  [LOW] non-build file
+          1 | usr/share/javascript/jquery/jquery.min.js usr/share/doc/liblcm-dev/_build/javadocs/script-dir/jquery-3.6.1.min.js
+          2 | usr/share/javascript/jquery-ui/themes/base/jquery-ui.min.css usr/share/doc/liblcm-dev/_build/javadocs/script-dir/jquery-ui.min.css
+          3 | usr/share/javascript/jquery-ui/jquery-ui.min.js usr/share/doc/liblcm-dev/_build/javadocs/script-dir/jquery-ui.min.js
+    >     4 | usr/share/javascript/jquery-ui/jquery.js usr/share/doc/liblcm-dev/_build/javadocs/jquery/external/jquery/jquery.js
+
+
+== libaccounts-qt [LOW]
+  rules:24  [LOW] find -delete/-exec
+         21 | override_dh_auto_install:
+         22 | 	dh_auto_install --builddirectory=build-qt5
+         23 | 	dh_auto_install --builddirectory=build-qt6
+    >    24 | 	find debian/tmp -name jquery.js -exec ln -sfv /usr/share/javascript/jquery/jquery.js {} \;
+         25 | 	# test stuff
+         26 | 	rm debian/tmp/usr/bin/accountstest
+         27 | 
+
+
+== libambix [LOW]
+  libambix-doc.lintian-overrides:1  [LOW] non-build file
+    >     1 | # the jquery.js is generated during build by doxygen
+          2 | # so the problem should be fixed in doxygen
+          3 | embedded-javascript-library
+
+
+== libbrahe [LOW]
+  libbrahe-dev.links.in:2  [LOW] non-build file
+          1 | usr/lib/@DEB_HOST_MULTIARCH@/libbrahe-1.3.so.3.0.1 usr/lib/@DEB_HOST_MULTIARCH@/libbrahe-1.3.so
+    >     2 | usr/share/javascript/jquery/jquery.js usr/share/doc/libbrahe-dev/html/jquery.js
+
+  rules:27  [LOW] rm -f
+         24 | 	dh_auto_configure -- --enable-docgen
+         25 | 
+         26 | override_dh_auto_install:
+    >    27 | 	rm -f $(CURDIR)/tmp/usr/share/doc/libbrahe/api/jquery.js
+         28 | 	dh_auto_install
+
+
+== libcamera [LOW]
+  libcamera-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js /usr/share/doc/libcamera-doc/api-html/jquery.js
+    >     2 | /usr/share/javascript/jquery/jquery.js /usr/share/doc/libcamera-doc/html/_static/jquery.js
+          3 | /usr/share/javascript/sphinxdoc/1.0/doctools.js /usr/share/doc/libcamera-doc/html/_static/doctools.js
+          4 | /usr/share/javascript/sphinxdoc/1.0/language_data.js /usr/share/doc/libcamera-doc/html/_static/language_data.js
+
+  libcamera-doc.links:2  [LOW] non-build file
+      (shown in the block above)
+
+== libcgicc [LOW]
+  rules:30  [LOW] rm -f
+         27 | override_dh_auto_install:
+         28 | 	dh_auto_install
+         29 | 	# work around doxygen bug - embeds copy of jquery unnecessarily
+    >    30 | 	rm -f $(CURDIR)/debian/tmp/usr/share/doc/libcgicc-doc/html/jquery.js
+         31 | 	# Remove unwanted libtool .la file
+         32 | 	$(RM) debian/tmp/usr/lib/*/libcgicc.la
+         33 | 	# Remove the debug-prefix-map and file-prefix-map compiler
+
+
+== libclaw [LOW]
+  libclaw-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js usr/share/doc/libclaw1/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== libcoap3 [LOW]
+  libcoap3-doc.links:2  [LOW] non-build file
+          1 | # source                                    # target
+    >     2 | /usr/share/javascript/jquery/jquery.min.js  usr/share/doc/libcoap3-doc/html/jquery.js
+
+
+== libcrypto++ [LOW]
+  libcrypto++-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js /usr/share/doc/libcrypto++-doc/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== libcypher-parser [LOW]
+  libcypher-parser-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.min.js usr/share/doc/libcypher-parser/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== libdatrie [LOW]
+  libdatrie-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/libdatrie1/html/jquery.js
+
+  rules:40  [LOW] -X exclusion
+         37 | endif
+         38 | 
+         39 | override_dh_installdocs-indep:
+    >    40 | 	dh_installdocs -plibdatrie-doc --doc-main-package=libdatrie1 -Xjquery.js
+         41 | 
+         42 | override_dh_auto_install-arch:
+         43 | 	$(MAKE) -C datrie install DESTDIR=$(CURDIR)/debian/tmp
+
+
+== libdnf [LOW]
+  python3-hawkey-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/python3-hawkey-doc/html/_static/jquery.js
+          2 | usr/share/javascript/underscore/underscore.js usr/share/doc/python3-hawkey-doc/html/_static/underscore.js
+
+  rules:36  [LOW] rm -f
+         33 | 	rm -rfv 'build/docs/hawkey/html/.doctrees'
+         34 | 
+         35 | 	# Use system-provides files.
+    >    36 | 	rm -fv 'build/docs/hawkey/html/_static/jquery.js' \
+         37 | 	       'build/docs/hawkey/html/_static/underscore.js' \
+         38 | 	       'build/docs/hawkey/html/_static/doctools.js' \
+         39 | 	       'build/docs/hawkey/html/_static/language_data.js' \
+
+
+== libemf [LOW]
+  libemf-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js /usr/share/doc/libemf-dev/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== libevdev [LOW]
+  patches/remove-remote-resources.patch:12  [LOW] non-build file
+          9 |          <meta name="generator" content="Doxygen $doxygenversion"/>
+         10 |  
+         11 | -        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    >    12 | +        <script type="text/javascript" src="$relpath^jquery.js"></script>
+         13 |  
+         14 |          <!--BEGIN PROJECT_NAME--><title>$projectname: $title</title><!--END PROJECT_NAME-->
+         15 |          <!--BEGIN !PROJECT_NAME--><title>$title</title><!--END !PROJECT_NAME-->
+
+
+== libgadu [LOW]
+  TODO:1  [LOW] non-build file
+    >     1 | libgadu-doc: embedded-javascript-library usr/share/doc/libgadu-doc/api/jquery.js
+          2 | - perhaps should be symlinked by doxygen? Filed Bug#630982.
+
+  libgadu-doc.lintian-overrides:1  [LOW] non-build file
+    >     1 | # The jquery.js file is installed by doxygen. Judging from source of doxygen
+          2 | # 1.8.1.1, it is NOT simply one of the files distributed in libjs-jquery*
+          3 | # packages, but instead a few pieces of the library embedded into doxygen and
+          4 | # emitted by it at runtime selectively, depending on the runtime options.  As
+
+  libgadu-doc.lintian-overrides:10  [LOW] non-build file
+          7 | # Also, see #630982 against doxygen to have some kind of infrastructure to get
+          8 | # rid of spurious copies in case doxygen ever transitions to actually using
+          9 | # jquery proper.
+    >    10 | libgadu-doc binary: embedded-javascript-library usr/share/doc/libgadu-doc/api/jquery.js please use libjs-jquery
+
+
+== libgig [LOW]
+  rules:16  [LOW] ln (creates link, no failure on missing target)
+         13 | 
+         14 | override_dh_auto_build-indep:
+         15 | 	$(MAKE) docs
+    >    16 | 	ln -sf /usr/share/javascript/jquery/jquery.js doc/html/jquery.js
+         17 | 
+         18 | override_dh_auto_install:
+         19 | 	dh_auto_install
+
+
+== libiio [LOW]
+  rules:26  [LOW] rm -f
+         23 | 	cd debian/tmp/usr/share/doc/libiio0-doc/v0.26/python/_static/ && ln -s /usr/share/javascript/sphinxdoc/1.0/language_data.js language_data.js
+         24 | 	rm -f debian/tmp/usr/share/doc/libiio0-doc/v0.26/python/_static/searchtools.js
+         25 | 	cd debian/tmp/usr/share/doc/libiio0-doc/v0.26/python/_static/ && ln -s /usr/share/javascript/sphinxdoc/1.0/searchtools.js searchtools.js
+    >    26 | 	rm -f debian/tmp/usr/share/doc/libiio0-doc/v0.26/python/_static/jquery.js
+    >    27 | 	cd debian/tmp/usr/share/doc/libiio0-doc/v0.26/python/_static/ && ln -s /usr/share/javascript/jquery/jquery.js jquery.js
+         28 | 	rm -f debian/tmp/usr/share/doc/libiio0-doc/v0.26/python/_static/underscore.js
+         29 | 	cd debian/tmp/usr/share/doc/libiio0-doc/v0.26/python/_static/ && ln -s /usr/share/javascript/underscore/underscore.js underscore.js
+
+  rules:27  [LOW] ln (creates link, no failure on missing target)
+      (shown in the block above)
+
+== libimobiledevice [LOW]
+  libimobiledevice-doc.links:2  [LOW] non-build file
+          1 | # Override embedded copy of jquery
+    >     2 | /usr/share/javascript/jquery/jquery.js /usr/share/doc/libimobiledevice-doc/libimobiledevice/jquery.js
+
+  rules:21  [LOW] commented out
+         18 | override_dh_auto_build-indep:
+         19 | 	dh_auto_build
+         20 | 	make docs
+    >    21 | 	# remove doxygen jquery.js, we link to doxygen-provided file
+    >    22 | 	rm -f $(CURDIR)/docs/html/jquery.js
+         23 | 
+         24 | override_dh_install:
+
+  rules:22  [LOW] rm -f
+      (shown in the block above)
+
+== libitpp [LOW]
+  libitpp-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/libitpp-dev/html/jquery.js
+          2 | 
+
+
+== libmongo-client [LOW]
+  libmongo-client-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js usr/share/doc/libmongo-client0/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== libmsnumpress [LOW]
+  libmsnumpress-dev.links:2  [LOW] non-build file
+          1 | usr/lib/libmsnumpress.so.1.0.0          usr/lib/libmsnumpress.so
+    >     2 | /usr/share/javascript/jquery/jquery.js /usr/share/doc/libmsnumpress-dev/html/jquery.js
+
+  rules:38  [LOW] rm -f
+         35 | 	find debian/build/doxygen/html -name "*.md5" | xargs rm -f
+         36 | 	find debian/build/doxygen/html -name "*.map" | xargs rm -f
+         37 | 
+    >    38 | 	rm -f debian/build/doxygen/html/jquery.js
+         39 | 
+
+
+== libmspack [LOW]
+  libmspack-doc.docs:4  [LOW] commented out
+          1 | doc/html/*.html
+          2 | doc/html/*.css
+          3 | doc/html/*.png
+    >     4 | # jquery.js is generated by doxygen
+          5 | # there is no easy way to replace it with a symlink to a system common version
+          6 | # rationale: /usr/share/doc/doxygen/README.jquery
+          7 | doc/html/*.js
+
+
+== libmypaint [LOW]
+  libmypaint-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/libmypaint-dev/_static/jquery.js
+          2 | usr/share/javascript/underscore/underscore.js usr/share/doc/libmypaint-dev/_static/underscore.js
+
+  rules:29  [LOW] find -delete/-exec
+         26 | 
+         27 | execute_before_dh_install:
+         28 | 	find debian/tmp -name '*.la' -print -delete
+    >    29 | 	find debian/tmp -name jquery.js -print -delete
+         30 | 	find debian/tmp -name underscore.js -print -delete
+         31 | 
+         32 | # Symbols need to be carefully reviewed for this library.
+
+
+== libosl [LOW]
+  rules:24  [LOW] link/rewrite only, no failure on missing file
+         21 | 
+         22 | override_dh_auto_build-indep:
+         23 | 	LANG=C $(MAKE) -C doc
+    >    24 | 	find doc -name \*.html | xargs sed -i -e 's!<script type="text/javascript" src="jquery.js">!<script type="text/javascript" src="/javascript/jquery/jquery.js">!g'
+         25 | 	-rm doc/doxygen.err
+    >    26 | 	-rm doc/html/jquery.js
+         27 | 
+
+  rules:26  [LOW] -rm (error ignored)
+      (shown in the block above)
+
+== libplist [LOW]
+  libplist-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js usr/share/doc/libplist/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== libquicktime [LOW]
+  libquicktime-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/libquicktime-doc/apiref/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== libquvi [LOW]
+  patches/doxygen.patch:9  [LOW] non-build file
+          6 | Forwarded: not-needed
+          7 | 
+          8 | Disable the searchengine in doxygen's HTML output to avoid an embedded copy of
+    >     9 | jquery.js to be pulled in.
+         10 | 
+         11 | Reference: http://bugs.debian.org/622147
+         12 | ---
+
+
+== librsb [LOW]
+  rules:38  [LOW] rm -f
+         35 | 	@echo "blhc: ignore-line-regexp: ^.*CC.*: gcc"
+         36 | 	@echo "blhc: ignore-line-regexp: ^.*LD.*: /usr/bin/ld.*"
+         37 | 	dh_auto_build
+    >    38 | 	rm -f doc/html/jquery.js
+    >    39 | 	ln -s /usr/share/javascript/jquery/jquery.js doc/html/jquery.js
+         40 | 
+         41 | override_dh_auto_install:
+
+  rules:39  [LOW] ln (creates link, no failure on missing target)
+      (shown in the block above)
+
+== libsdl2-gfx [LOW]
+  README.source:18  [LOW] non-build file
+         15 | /usr/share/doc/doxygen/REAMDE.jquery
+         16 | "
+         17 | It is not considered a problem for Doxygen or packages using Doxygen to embed
+    >    18 | jquery. In fact replacing the `jquery.js` file created by Doxygen likely
+         19 | results in broken documentation. Packages doing that are buggy. Lintian will
+    >    20 | have to learn that a `jquery.js` embedded by Doxygen is a normal thing.
+         21 | "
+
+  README.source:20  [LOW] non-build file
+      (shown in the block above)
+
+== libsidplayfp [LOW]
+  libsidplayfp-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js usr/share/doc/libsidplayfp-dev/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== libthai [LOW]
+  libthai-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/libthai0/html/jquery.js
+
+  rules:48  [LOW] -X exclusion
+         45 | endif
+         46 | 
+         47 | override_dh_installdocs-indep:
+    >    48 | 	dh_installdocs -plibthai-doc --doc-main-package=libthai0 -Xjquery.js
+         49 | 	dh_installdocs --remaining-packages -i
+         50 | 
+         51 | override_dh_installchangelogs-arch:
+
+
+== libvigraimpex [LOW]
+  rules:84  [LOW] rm -f
+         81 | 	dh_install $(MAINBDIRO)
+         82 | ifeq ($(filter archonly,$(AMCONFBUILDINDEP)),)
+         83 | 	cd debian/libvigraimpex-doc/usr/share/doc/libvigraimpex-dev/ && \
+    >    84 | 		rm -f html/jquery.js && \
+         85 | 		sed -r -i -e \
+         86 | 		's!(<a href=")LICENSE.txt(">)!\1/usr/share/doc/libvigraimpex-doc/copyright\2!g' \
+         87 | 		html/index.html
+
+
+== libvmime [LOW]
+  libvmime1-doc.links:2  [LOW] non-build file
+          1 | # source                                    # target
+    >     2 | /usr/share/javascript/jquery/jquery.min.js  usr/share/doc/libvmime1-doc/html/jquery.js
+
+
+== libvsqlitepp [LOW]
+  libvsqlitepp-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js  /usr/share/doc/libvsqlitepp-doc/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== libzypp [LOW]
+  libzypp-doc.links:3  [LOW] non-build file
+          1 | usr/share/doc/libzypp/html usr/share/doc/libzypp-doc/html
+          2 | usr/share/doc/libzypp/libzypp.doxytag usr/share/doc/libzypp-doc/libzypp.doxytag
+    >     3 | usr/share/javascript/jquery/jquery.js usr/share/doc/libzypp/html/jquery.js
+
+
+== magma [LOW]
+  source/lintian-overrides:1  [LOW] non-build file
+    >     1 | source: source-is-missing docs/html/jquery.js line length is 12734 characters (>512)
+          2 | source: source-is-missing docs/html/svgpan.js line length is 312 characters (>256)
+          3 | source: source-is-missing docs/html/search/all_63.js line length is 309 characters (>256)
+          4 | source: source-is-missing docs/html/search/all_6c.js line length is 322 characters (>256)
+
+
+== magma-rocm [LOW]
+  source/lintian-overrides:1  [LOW] non-build file
+    >     1 | source: source-is-missing docs/html/jquery.js line length is 12734 characters (>512)
+          2 | source: source-is-missing docs/html/svgpan.js line length is 312 characters (>256)
+          3 | source: source-is-missing docs/html/search/all_63.js line length is 309 characters (>256)
+          4 | source: source-is-missing docs/html/search/all_6c.js line length is 322 characters (>256)
+
+
+== maliit-framework [LOW]
+  maliit-framework-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/maliit-framework/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== mbedtls [LOW]
+  libmbedtls-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/libmbedtls-dev/apidoc/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== mygui [LOW]
+  mygui-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js usr/share/doc/mygui-doc/html/jquery.js
+
+  rules:50  [LOW] -X exclusion
+         47 | 	dh_install -Xlicense.txt -Xttf
+         48 | 
+         49 | override_dh_installdocs:
+    >    50 | 	dh_installdocs -X.md5 -X.map -Xjquery.js
+         51 | 
+         52 | debian/%.docs: debian/%.docs.in
+         53 | 	sed 's/@BUILD_DIR@/$(BUILD_DIR)/g' $< > $@
+
+
+== nifticlib [LOW]
+  libnifti-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js /usr/share/doc/libnifti-doc/html/jquery.js
+
+  rules:49  [LOW] rm -f
+         46 | 	# build api reference
+         47 | 	cd docs && doxygen Doxy_nifti.txt
+         48 | 	# remove jquery (use from package dependency)
+    >    49 | 	rm -f docs/html/jquery.js
+         50 | 
+         51 | override_dh_auto_test:
+         52 | ifeq (,$(findstring nocheck,$(DEB_BUILD_OPTIONS)))
+
+
+== ogre-1.12 [LOW]
+  ogre-1.12-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/ogre-1.12-doc/api/html/jquery.js
+
+  rules:99  [LOW] -X exclusion
+         96 | 	rm -rfv debian/tmp/usr/share/doc/OGRE/api/bib*.aux
+         97 | 	rm -rfv debian/tmp/usr/share/doc/OGRE/api/citelist.doc*
+         98 | 
+    >    99 | 	dh_install -i -Xjquery.js
+        100 | 
+        101 | override_dh_installchangelogs:
+        102 | 	dh_installchangelogs -k $(OGRE_CHANGELOG)
+
+
+== ogre-14 [LOW]
+  ogre-14-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/ogre-14-doc/api/html/jquery.js
+
+  rules:87  [LOW] -X exclusion
+         84 | 	rm -rfv debian/tmp/usr/share/doc/OGRE/api/bib*.aux
+         85 | 	rm -rfv debian/tmp/usr/share/doc/OGRE/api/citelist.doc*
+         86 | 
+    >    87 | 	dh_install -i -Xjquery.js
+         88 | 
+         89 | override_dh_installchangelogs:
+         90 | 	dh_installchangelogs -k $(OGRE_CHANGELOG)
+
+
+== ogre-next [LOW]
+  ogre-next-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/ogre-2.2-doc/api/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== onetbb [LOW]
+  libtbb-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js /usr/share/doc/libtbb-dev/html/_static/jquery.js
+          2 | /usr/share/javascript/underscore/underscore.js /usr/share/doc/libtbb-dev/html/_static/underscore.js
+          3 | usr/share/doc/libtbb-dev/examples usr/share/doc/libtbb-dev/build
+
+
+== openbabel [LOW]
+  libopenbabel-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/libopenbabel-dev/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== opencolorio [LOW]
+  opencolorio-doc.links:1  [LOW] non-build file
+    >     1 | #usr/share/javascript/jquery/jquery.js usr/share/doc/opencolorio/html/_static/jquery.js
+          2 | #usr/share/javascript/underscore/underscore.js usr/share/doc/opencolorio/html/_static/underscore.js
+
+
+== opencv [LOW]
+  patches/change_jquery.js_path:19  [LOW] non-build file
+         16 |  <!--BEGIN !PROJECT_NAME--><title>$title</title><!--END !PROJECT_NAME-->
+         17 |  <link href="$relpath^opencv.ico" rel="shortcut icon" type="image/x-icon" />
+         18 |  <link href="$relpath^tabs.css" rel="stylesheet" type="text/css"/>
+    >    19 | -<script type="text/javascript" src="$relpath^jquery.js"></script>
+    >    20 | +<script type="text/javascript" src="/usr/share/javascript/jquery/jquery.js"></script>
+         21 |  <script type="text/javascript" src="$relpath^dynsections.js"></script>
+         22 |  <script type="text/javascript" src="$relpath^tutorial-utils.js"></script>
+
+  patches/change_jquery.js_path:20  [LOW] non-build file
+      (shown in the block above)
+  patches/series:1  [LOW] non-build file
+    >     1 | change_jquery.js_path
+          2 | cmake-dont-install-inexistent-files.patch
+          3 | 0006-Fix-LAPACK-finding-CMake-code.patch
+          4 | 0008-Do-not-embed-build-directory-in-binaries.patch
+
+  rules:208  [LOW] find -delete/-exec
+        205 | execute_before_dh_install:
+        206 | 	# put the static libs together with the rest of the stuff
+        207 | 	cp -v $(BUILDDIR)-static/lib/*.a debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/
+    >   208 | 	-find debian/tmp -type f -name jquery.js -delete
+        209 | 	-find debian/tmp -type f -name '*.supp' -delete
+        210 | 	-find debian/tmp -type d -empty -delete
+        211 | 	-$(RM) -r $(BUILDDIR)-static
+
+
+== openms [LOW]
+  rules:133  [LOW] rm -f
+        130 | 	# There are two files that we do not want to ship because
+        131 | 	# they exist in their own Debian packages.
+        132 | 
+    >   133 | 	rm -f $(BUILD_DIR)/usr/share/doc/html/jquery.js
+        134 | 
+        135 | 
+        136 | override_dh_auto_test:
+
+
+== openscenegraph [LOW]
+  rules:238  [LOW] commented out
+        235 | override_dh_auto_build-indep:
+        236 | 	mkdir -p html
+        237 | 	doxygen debian/Doxyfile-openscenegraph
+    >   238 | # Use Debian's jquery.js
+    >   239 | 	rm -f html/openscenegraph/jquery.js
+    >   240 | 	find html -name "*.html" -print0 | xargs -0 perl -i -pe 's|src="jquery.js"|src="/usr/share/javascript/jquery/jquery.js"|'
+        241 | 
+
+  rules:239  [LOW] rm -f
+      (shown in the block above)
+  rules:240  [LOW] link/rewrite only, no failure on missing file
+      (shown in the block above)
+
+== ortp [LOW]
+  libortp-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/libortp-doc/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== pcl [LOW]
+  libpcl-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/libpcl-doc/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== pkcs11-helper [LOW]
+  libpkcs11-helper1-dev.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js /usr/share/doc/libpkcs11-helper1-dev/api/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== pocketsphinx [LOW]
+  libpocketsphinx-dev.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js /usr/share/doc/libpocketsphinx-dev/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== portaudio19 [LOW]
+  portaudio19-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.min.js usr/share/doc/portaudio19-doc/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== presage [LOW]
+  libpresage-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/presage/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== primesieve [LOW]
+  adhoc/Makefile:15  [LOW] rm -f
+         12 | 	sed -i -e 's|GENERATE_LATEX\([\ ]*\)=\([\ ]*\)NO|GENERATE_LATEX = YES|' $(ABS_DOCDIR)/Doxyfile
+         13 | 	cd $(<D) && $(DOXYGEN) $(ABS_DOCDIR)/Doxyfile
+         14 | 	cd $(ABS_DOCDIR)/html && { \
+    >    15 | 		rm -f *.md5 jquery.js ; \
+         16 | 		rdfind -outputname /dev/null -makesymlinks true . ; \
+         17 | 		symlinks -r -c -s -v . ; \
+    >    18 | 		ln -sf /usr/share/javascript/jquery/jquery.js ; \
+
+  adhoc/Makefile:18  [LOW] ln (creates link, no failure on missing target)
+      (shown in the block above)
+
+== pstreams [LOW]
+  libpstreams-dev.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/libpstreams-dev/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== python-mbed-host-tests [LOW]
+  python-mbed-host-tests-doc.links:2  [LOW] non-build file
+          1 | # Replace jQuery in doxygen docs
+    >     2 | usr/share/javascript/jquery/jquery.js   usr/share/doc/python-mbed-host-tests-doc/html/jquery.js
+          3 | 
+          4 | # Convenience documentation link to python3-mbed-host-tests package
+          5 | usr/share/doc/python-mbed-host-tests-doc/html/    usr/share/doc/python3-mbed-host-tests/html
+
+  rules:30  [LOW] $(RM) = rm -f
+         27 | 	pandoc debian/mbedflsh.1.md -s -f markdown -t man -o debian/mbedflsh.1
+         28 | 	#  build library documentation
+         29 | 	doxygen doxygen.cfg
+    >    30 | 	$(RM) html/jquery.js
+         31 | 
+         32 | execute_after_dh_installdocs:
+         33 | 	dh_doxygen
+
+
+== python-mbed-ls [LOW]
+  python-mbed-ls-doc.links:2  [LOW] non-build file
+          1 | # Replace jQuery in doxygen docs
+    >     2 | usr/share/javascript/jquery/jquery.js   usr/share/doc/python-mbed-ls-doc/html/jquery.js
+          3 | 
+          4 | # Convenience documentation link to main package
+          5 | usr/share/doc/python-mbed-ls-doc/html/  usr/share/doc/python3-mbed-ls/html
+
+  rules:32  [LOW] $(RM) = rm -f
+         29 | 	pandoc debian/mbedls.1.md -s -f markdown -t man -o debian/mbedls.1
+         30 | 	# build library documentation
+         31 | 	doxygen doxygen.cfg
+    >    32 | 	$(RM) html/jquery.js
+         33 | 
+         34 | execute_after_dh_installdocs:
+         35 | 	dh_doxygen
+
+
+== python-odf [LOW]
+  source/lintian-overrides:2  [LOW] non-build file
+          1 | # The directory doc/ is erased, then rebuilt by doxygen, so the
+    >     2 | # uglified files jquery.js, all_*.js, functions_*.js and variables_*.js
+          3 | # are removed from the package during its compilation
+          4 | # as those files were generated upstream by doxygen too, their contents
+          5 | # cause no license infringement.
+
+  source/lintian-overrides:7  [LOW] non-build file
+          4 | # as those files were generated upstream by doxygen too, their contents
+          5 | # cause no license infringement.
+          6 | 
+    >     7 | python-odf source: source-is-missing [doc/html/jquery.js]
+          8 | python-odf source: source-is-missing [doc/html/search/all_0.js]
+          9 | python-odf source: source-is-missing [doc/html/search/all_13.js]
+         10 | python-odf source: source-is-missing [doc/html/search/all_5.js]
+
+
+== qdjango [LOW]
+  libqdjango-doc.lintian-overrides:5  [LOW] non-build file
+          2 | libqdjango-doc: duplicate-files usr/share/doc/libqdjango-doc/html/*
+          3 | 
+          4 | # See details at /usr/share/doc/doxygen/README.jquery.
+    >     5 | libqdjango-doc: embedded-javascript-library usr/share/doc/libqdjango-doc/html/jquery.js please use libjs-jquery
+
+
+== qgis [LOW]
+  patches/developersmap-use-debian-package.patch:25  [LOW] non-build file
+         22 | -  </script>
+         23 | -  <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+         24 | +  <script src="leaflet/leaflet.js"></script>
+    >    25 | +  <script src="jquery.js"></script>
+         26 |    <link rel="points" type="application/json" href="../resources/data/contributors.json">
+         27 |  </head>
+         28 |  <body>
+
+  qgis-common.links:2  [LOW] non-build file
+          1 | usr/share/common-licenses/GPL-2       usr/share/qgis/doc/LICENSE
+    >     2 | usr/share/javascript/jquery/jquery.js usr/share/qgis/doc/jquery.js
+          3 | usr/share/javascript/leaflet          usr/share/qgis/doc/leaflet
+
+
+== qhttpengine [LOW]
+  libqhttpengine-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/QHttpEngine/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== qpid-proton [LOW]
+  libqpid-proton-cpp12-dev-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.min.js /usr/share/proton-0.22.0/docs/api-cpp/jquery.js
+
+  libqpid-proton11-dev-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.min.js /usr/share/proton-0.22.0/docs/api-c/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== qscintilla2 [LOW]
+  clean:18  [LOW] non-build file
+         15 | doc/html/menu.js
+         16 | doc/html/menudata.js
+         17 | doc/html/tabs.css
+    >    18 | doc/html/jquery.js
+
+  libqscintilla2-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.min.js usr/share/doc/libqscintilla2-doc/html/jquery.js
+
+
+== rdkit [LOW]
+  rules:136  [LOW] ln (creates link, no failure on missing target)
+        133 | 	mkdir -p $(DOCDIR)
+        134 | 	# cp $(CURDIR)/Docs/Book/_build/latex/RDKit.pdf $(DOCDIR)
+        135 | 	cp -a $(CURDIR)/Docs/Book/_build/html $(DOCDIR)
+    >   136 | 	ln -sf /usr/share/javascript/jquery/jquery.js $(DOCDIR)/html/cppapi/jquery.js
+    >   137 | 	ln -sf /usr/share/javascript/jquery/jquery.js $(DOCDIR)/html/_static/jquery.js
+        138 | 	ln -sf /usr/share/javascript/underscore/underscore.js $(DOCDIR)/html/_static/underscore.js
+        139 | 
+
+  rules:137  [LOW] ln (creates link, no failure on missing target)
+      (shown in the block above)
+
+== rtaudio [LOW]
+  librtaudio-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/librtaudio-dev/api_ref/jquery.js
+
+  rules:31  [LOW] rm -f
+         28 | 	dh_auto_configure -- $(CONFIGURE_FLAGS)
+         29 | 
+         30 | override_dh_auto_install:
+    >    31 | 	rm -f doc/html/jquery.js
+         32 | 	dh_auto_install
+         33 | 
+         34 | override_dh_installchangelogs:
+
+
+== rtmidi [LOW]
+  librtmidi-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/librtmidi-dev/api_ref/jquery.js
+
+  rules:24  [LOW] rm -f
+         21 | 	dh_auto_configure -- $(CONFIGURE_FLAGS)
+         22 | 
+         23 | execute_before_dh_auto_install:
+    >    24 | 	rm -f doc/html/jquery.js
+         25 | 
+         26 | execute_before_dh_auto_test:
+         27 | 	mkdir -p tests/Release
+
+
+== scim [LOW]
+  scim-dev-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/scim-dev-doc/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== scolasync [LOW]
+  scolasync.lintian-overrides:1  [LOW] non-build file
+    >     1 | # the library jquery.js comes from the package doxygen, and it must be kept
+          2 | # exactly as it is.
+          3 | 
+    >     4 | scolasync binary: embedded-javascript-library usr/share/scolasync/html/jquery.js please use libjs-jquery
+
+  scolasync.lintian-overrides:4  [LOW] non-build file
+      (shown in the block above)
+  source/lintian-overrides:4  [LOW] non-build file
+          1 | # That javascript code comes from doxygen's run and it must be
+          2 | # kept without alteration
+          3 | 
+    >     4 | scolasync source: source-is-missing [doc/html/jquery.js]
+          5 | scolasync source: source-is-missing [doc/html/search/all_0.js]
+          6 | scolasync source: source-is-missing [doc/html/search/all_13.js]
+          7 | scolasync source: source-is-missing [doc/html/search/all_14.js]
+
+
+== serd [LOW]
+  libserd-doc.lintian-overrides:1  [LOW] non-build file
+    >     1 | embedded-javascript-library please use libjs-jquery [usr/share/doc/libserd-dev/_static/jquery.js]
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== simbody [LOW]
+  simbody-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/simbody/api/Simbody/html/jquery.js
+    >     2 | usr/share/javascript/jquery/jquery.js usr/share/doc/simbody/api/jquery.js
+
+  simbody-doc.links:2  [LOW] non-build file
+      (shown in the block above)
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== siscone [LOW]
+  siscone-doc-html.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/siscone-doc-html/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== sombok [LOW]
+  libsombok-dev.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.min.js usr/share/doc/libsombok-dev/html/jquery.js
+
+  rules:26  [LOW] rm -f
+         23 | 
+         24 | override_dh_install:
+         25 | 	# removing JQuery embedded copy
+    >    26 | 	rm -f debian/tmp/usr/share/doc/sombok/jquery.js
+         27 | 	find debian/tmp/usr/share/doc/sombok -iname '*.md5' -delete
+         28 | 	dh_install
+         29 | 
+
+
+== sord [LOW]
+  libsord-doc.lintian-overrides:1  [LOW] non-build file
+    >     1 | embedded-javascript-library please use libjs-jquery [usr/share/doc/libsord-dev/jquery.js]
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== spandsp [LOW]
+  libspandsp-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/libspandsp-doc/api/html/jquery.js
+
+  rules:32  [LOW] $(RM) = rm -f
+         29 | 	dh_installchangelogs ChangeLog
+         30 | 
+         31 | override_dh_link:
+    >    32 | 	$(RM) -f debian/libspandsp-doc/usr/share/doc/libspandsp-doc/api/html/jquery.js
+         33 | 	dh_link
+
+
+== steghide [LOW]
+  rules:15  [LOW] rm -f
+         12 | 	rm -f $(CURDIR)/debian/steghide/usr/share/doc/steghide/INSTALL.gz
+         13 | 	rm -f $(CURDIR)/debian/steghide/usr/share/doc/steghide/COPYING
+         14 | 	rm -f $(CURDIR)/debian/steghide/usr/share/doc/steghide/COPYING.gz
+    >    15 | 	rm -f $(CURDIR)/debian/steghide-doc/usr/share/doc/steghide-doc/html/jquery.js
+         16 | override_dh_auto_test:
+         17 | 
+         18 | # Dirty hack restoring our patched Makefiles, fixing FTBFS with autoconf 2.73.
+
+  steghide-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/steghide-doc/html/jquery.js
+
+
+== sumo [LOW]
+  sumo-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/sumo/doxygen/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== t4kcommon [LOW]
+  libt4k-common0-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js  /usr/share/doc/libt4k-common0-doc/html/jquery.js
+          2 | /usr/share/doc/libt4k-common0-doc/html  /usr/share/doc/libt4k-common0/html
+
+
+== tinycbor [LOW]
+  rules:37  [LOW] link/rewrite only, no failure on missing file
+         34 | ifeq (,$(filter, nodoc,$(DEB_BUILD_OPTIONS)))
+         35 | 	cd src && VERSION=$(DEB_VERSION_UPSTREAM) doxygen ../Doxyfile
+         36 | 	dh_installdocs
+    >    37 | 	dh_link -plibtinycbor-dev /usr/share/javascript/jquery/jquery.js usr/share/doc/libtinycbor-dev/html/jquery.js
+         38 | endif
+
+
+== tntdb [LOW]
+  rules:9  [LOW] commented out
+          6 | 
+          7 | 
+          8 | #binary-post-install/libtntdb-dev::
+    >     9 | #	rm -f debian/libtntdb-dev/usr/share/doc/libtntdb-dev/html/jquery.js
+    >    10 | #	cd debian/libtntdb-dev/usr/share/doc/libtntdb-dev/html/; ln -s ../../../javascript/jquery/jquery.js jquery.js
+         11 | #ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+         12 | #	cd test; sqlite3 test.db < sqlite-test.sql; ./tntdb-test || /bin/true
+
+  rules:10  [LOW] commented out
+      (shown in the block above)
+  rules:16  [LOW] rm -f
+         13 | #endif
+         14 | 
+         15 | override_dh_install:
+    >    16 | 	rm -f ./debian/tmp/usr/share/doc/tntdb/jquery.js
+    >    17 | 	cd ./debian/tmp/usr/share/doc/tntdb; ln -s ../../../javascript/jquery/jquery.js
+         18 | 	dh_install
+         19 | 
+
+  rules:17  [LOW] ln (creates link, no failure on missing target)
+      (shown in the block above)
+
+== ucommon [LOW]
+  ucommon-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/ucommon-doc/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== vienna-rna [LOW]
+  vienna-rna-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/vienna-rna/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== viennacl [LOW]
+  libviennacl-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/libviennacl-dev/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== vtk9 [LOW]
+  vtk9-doc.links:1  [LOW] non-build file
+    >     1 | usr/share/javascript/jquery/jquery.js usr/share/doc/vtk9/html/jquery.js
+    >     2 | usr/share/javascript/jquery/jquery.js usr/share/doc/vtk9/doxygen/html/jquery.js
+
+  vtk9-doc.links:2  [LOW] non-build file
+      (shown in the block above)
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== wcslib [LOW]
+  not-installed:7  [LOW] non-build file
+          4 | usr/share/doc/wcslib-dev/INSTALL
+          5 | usr/share/doc/wcslib-dev/README
+          6 | usr/share/doc/wcslib-dev/VALIDATION
+    >     7 | usr/share/doc/wcslib-dev/html/jquery.js
+
+  rules:28  [LOW] -X exclusion
+         25 | 	$(MAKE) -C doxygen html
+         26 | 
+         27 | override_dh_install:
+    >    28 | 	dh_install -Xjquery.js
+         29 | 
+         30 | override_dh_installchangelogs:
+         31 | 	dh_installchangelogs CHANGES
+
+
+== wiredtiger [LOW]
+  source/lintian-overrides:2  [LOW] non-build file
+          1 | # unused and uninstalled minified JS files
+    >     2 | wiredtiger source: source-is-missing docs/jquery.js line length is 32401 characters (>512)
+          3 | wiredtiger source: source-is-missing docs/menu.js line length is 695 characters (>512)
+
+
+== wvstreams [LOW]
+  libwvstreams4.6-doc.lintian-override:1  [LOW] non-build file
+    >     1 | # The embedded jquery.js is generated by Doxygen and should not be replaced 
+          2 | # by the one provided by libjs-jquery.  
+          3 | # For a rationale please see src::Doxygen/debian/README.jquery. 
+          4 | libwvstreams4.6-doc binary: embedded-javascript-library
+
+  rules:25  [LOW] commented out
+         22 | PKGDEV=$(CURDIR)/debian/libwvstreams-dev
+         23 | PKGDOC=$(CURDIR)/debian/${base}-doc
+         24 | DOCDIR=$(PKGDOC)/usr/share/doc/$(base)-doc
+    >    25 | # The embedded jquery.js is generated by Doxygen and can not be replaced
+         26 | # by the one provided by libjs-jquery.
+         27 | # For a rationale please see src::Doxygen/debian/README.jquery.
+         28 | 
+
+
+== wxsqlite3 [LOW]
+  README.source:2  [LOW] non-build file
+          1 | Source is repackaged to remove the included Sqlite3 source under sqlite3/ and
+    >     2 | the minified docs/html/jquery.js replaced with the normal file.
+
+  repack.local:4  [LOW] non-build file
+          1 | SUFFIX=~dfsg0
+          2 | rm sqlite3/
+          3 | rm build/.bakefile_gen.state
+    >     4 | rm docs/html/jquery.js
+
+  rules:47  [LOW] link/rewrite only, no failure on missing file
+         44 | 	dh_install
+         45 | ifneq (,$(shell dh_listpackages -i 2>/dev/null))
+         46 | 	chmod -x $(PKGDOCDIR)/usr/share/doc/wxsqlite3-doc/html/*
+    >    47 | 	dh_link -pwxsqlite3-doc /usr/share/javascript/jquery/jquery.js \
+    >    48 | 		/usr/share/doc/wxsqlite3-doc/html/jquery.js
+         49 | endif
+         50 | 
+
+  rules:48  [LOW] continuation of a tolerant command
+      (shown in the block above)
+
+== xdotool [LOW]
+  rules:11  [LOW] rm -f
+          8 | override_dh_auto_build:
+          9 | 	dh_auto_build -- WITHOUT_RPATH_FIX=1
+         10 | 	make docs
+    >    11 | 	rm -f docs/html/jquery.js
+         12 | 
+         13 | override_dh_installchangelogs:
+         14 | 	dh_installchangelogs CHANGELIST
+
+
+== xerces-c [LOW]
+  libxerces-c-doc.lintian-overrides:1  [LOW] non-build file
+    >     1 | libxerces-c-doc: embedded-javascript-library usr/share/doc/libxerces-c-doc/html/apiDocs-3/jquery.js please use libjs-jquery
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== xorg-gtest [LOW]
+  rules:19  [LOW] -X exclusion
+         16 | 
+         17 | override_dh_install:
+         18 | 	rm -rf debian/tmp/usr/include/gtest
+    >    19 | 	dh_install -Xjquery.js
+         20 | 	rdfind -makesymlinks true debian/libxorg-gtest-doc/usr/share/doc/libxorg-gtest-doc/html/search/
+         21 | 	symlinks -c debian/libxorg-gtest-doc/usr/share/doc/libxorg-gtest-doc/html/search/
+         22 | 	# move .pc file to arch-indep path
+
+
+== zipios++ [LOW]
+  libzipios++-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.min.js usr/share/doc/libzipios++-doc/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== zvbi [LOW]
+  libzvbi-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js usr/share/doc/libzvbi-doc/html/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== zycore-c [LOW]
+  libzycore-doc.links:1  [LOW] non-build file
+    >     1 | /usr/share/javascript/jquery/jquery.js usr/share/doc/libzycore-doc/api/jquery.js
+
+  (no context saved for this package: rescan it with scan_debian_dirs.py)
+
+== UNSCANNED (1), grep these too
+  geis
+

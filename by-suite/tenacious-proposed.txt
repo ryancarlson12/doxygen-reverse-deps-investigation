@@ -1,0 +1,5 @@
+LIKELY    llvm-toolchain-21            1:21.1.8-13ubuntu1
+LIKELY    maloc                        1.5-3
+LIKELY    ppl                          1:1.2-10
+CHECK     imagemagick                  8:7.1.2.35+dfsg1-2build1
+CHECK     libhmsbeagle                 4.2.0+dfsg-2

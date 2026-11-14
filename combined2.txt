@@ -1,0 +1,2049 @@
+ryan-carlson@ryan-work:~/llvm-resolute-rebuilds/llvm-22-stonking/llvm-toolchain-22$ for p in $(reverse-depends -b src:doxygen -r tenacious | awk '/^\*/{print $2}' | sort -u); do
+  pull-lp-source "$p" tenacious >/dev/null 2>&1 || continue
+  d=$(ls -d ${p}-*/ | head -1)
+  echo "== $p"
+  grep -rnE 'jquery.js' "$d/debian/" | grep -vE 'changelog|copyright'
+done
+
+
+== 389-ds-base
+389-ds-base-3.3.1//debian/control:179: libjs-jquery-jstree,
+
+== alsa-lib
+alsa-lib-1.2.16.1//debian/libasound2-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/libasound2/html/jquery.js
+
+== angelscript
+angelscript-2.38.0+ds//debian/doxygen/source/new_header.html:11:<script type="text/javascript" src="$relpath^jquery.js"></script>
+
+== apophenia
+apophenia-1.0+ds//debian/patches/debianization-documentation.patch:11: <script type="text/javascript" src="$relpath^jquery.js"></script>
+apophenia-1.0+ds//debian/patches/debianization.patch:17:+	-rm -f html/jquery.js
+apophenia-1.0+ds//debian/apophenia-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/apophenia-doc/html/jquery.js
+
+== argagg
+argagg-0.4.7//debian/argagg-dev-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/argagg/html/jquery.js
+
+== aubio
+aubio-0.4.9//debian/libaubio-doc.links:1:/usr/share/javascript/jquery/jquery.js /usr/share/doc/libaubio-dev/api/jquery.js
+
+== bamtools
+bamtools-2.5.3+dfsg//debian/rules:39:	rm -f debian/libbamtools-doc/usr/share/doc/libbamtools-dev/html/jquery.js
+bamtools-2.5.3+dfsg//debian/rules:40:	ln -s /usr/share/javascript/jquery/jquery.js debian/libbamtools-doc/usr/share/doc/libbamtools-dev/html/jquery.js
+
+== bitwuzla
+bitwuzla-0.8.2//debian/rules:36:	$(RM) -rf $(DOCS_DIR)/cli_usage.txt $(DOCS_DIR)/static/fonts $(DOCS_DIR)/static/jquery.js
+
+== bliss
+bliss-0.77//debian/adhoc/Makefile:37:		rm -f *.md5 jquery.js ; \
+bliss-0.77//debian/adhoc/Makefile:40:		ln -sf /usr/share/javascript/jquery/jquery.js ; \
+
+== bornagain
+bornagain-24.1+ds3//debian/patches/0008-Use-local-rather-than-hosted-assets-in-HTML-docs.patch:108: <script src="/js/jquery.js"></script>
+bornagain-24.1+ds3//debian/patches/0009-Remove-version-switch-code-in-HTML-docs.patch:16: <script src="/js/jquery.js"></script>
+bornagain-24.1+ds3//debian/bornagain-doc.links:4:/usr/share/javascript/jquery/jquery.js /usr/share/doc/bornagain/html/js/jquery.js
+== box2d
+box2d-2.4.1//debian/libbox2d-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/libbox2d-doc/html/jquery.js
+
+== brickos
+brickos-0.9.0.dfsg//debian/rules:44:			$(RM) $(CURDIR)/debian/brickos-doc/usr/share/doc/brickos/html/html-$$l/jquery.js ; \
+brickos-0.9.0.dfsg//debian/rules:45:			ln -s /usr/share/javascript/jquery/jquery.js \
+brickos-0.9.0.dfsg//debian/rules:46:				$(CURDIR)/debian/brickos-doc/usr/share/doc/brickos/html/html-$$l/jquery.js ; \
+== brltty
+brltty-6.9.1+repack//debian/rules:73:	rm -f Documents/BrlAPIref/html/jquery.js
+
+== bullet
+bullet-3.24+dfsg//debian/libbullet-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/libbullet-doc/html/jquery.js
+
+== casacore
+casacore-3.8.2//debian/rules:38:	rm -f doc/html/jquery.js
+== cassiopee
+cassiopee-1.0.9+dfsg//debian/rules:19:	rm -f doc/html/jquery.js
+cassiopee-1.0.9+dfsg//debian/libcassie-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/cassiopee/html/jquery.js
+
+== cctools
+cctools-7.15.9//debian/coop-computing-tools-doc.links:3:/usr/share/javascript/jquery/jquery.js /usr/share/doc/coop-computing-tools/api/jquery.js
+== ciftilib
+== cimg
+cimg-4.0.4+dfsg//debian/cimg-doc.links:1:/usr/share/javascript/jquery/jquery.js	/usr/share/doc/cimg-dev/html/jquery.js
+
+== cmocka
+cmocka-2.0.2//debian/links:8:usr/share/javascript/jquery/jquery.min.js				usr/share/doc/cmocka-doc/html/jquery.js
+
+== coinor-ipopt
+coinor-ipopt-3.14.20//debian/coinor-libipopt-doc.links:1:/usr/share/javascript/jquery/jquery.js usr/share/doc/coinor-libipopt-doc/html/jquery.js
+coinor-ipopt-3.14.20//debian/rules:56:	# Removing the installed jquery.js file, a symlink will be created by dh_link
+coinor-ipopt-3.14.20//debian/rules:58:	find debian/ -name "jquery.js" -delete
+
+== colobot
+colobot-0.2.2//debian/colobot-dev-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/colobot/html/jquery.js
+
+== cpl
+cpl-7.4//debian/rules:19:	dh_installdocs -Xjquery.js
+
+== cubeb
+cubeb-0.0~git20250401.975a727+ds//debian/debputy.manifest:40:        path: usr/share/doc/libcubeb-doc/cubeb/jquery.js
+cubeb-0.0~git20250401.975a727+ds//debian/debputy.manifest:41:        target: /usr/share/javascript/jquery/jquery.js
+== cwidget
+cwidget-0.5.18//debian/rules:28:	dh_install -i -Xjquery.min.js -Xjquery.js
+cwidget-0.5.18//debian/libcwidget-doc.links:2:usr/share/javascript/jquery/jquery.js usr/share/doc/libcwidget-doc/html/documentation/api/jquery.js
+
+== dcmtk
+dcmtk-3.7.0+really3.7.0//debian/rules:109:	dh_link -pdcmtk-doc usr/share/javascript/jquery/jquery.js usr/share/doc/dcmtk-doc/html/jquery.js
+
+== dolfin
+dolfin-2019.2.0~legacy20240219.1c52e83//debian/index.html:26:        <script src="python/_static/jquery.js"></script>
+
+== eccodes
+eccodes-2.50.0//debian/libeccodes-doc.links:1:/usr/share/javascript/jquery/jquery.js /usr/share/doc/libeccodes-doc/html/jquery.js
+
+== editorconfig-core
+editorconfig-core-0.12.10+~0.17.1//debian/editorconfig-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/editorconfig-doc/html/jquery.js
+== efl
+efl-1.29.0//debian/rules:91:	rm -f obj-$(DEB_HOST_GNU_TYPE)/html/jquery.js
+efl-1.29.0//debian/rules:92:	if grep -qr jquery.js obj-$(DEB_HOST_GNU_TYPE)/html/ ; \
+== eigen3
+eigen3-5.0.1//debian/libeigen3-doc.links:2:usr/share/javascript/jquery/jquery.js usr/share/doc/libeigen3-doc/html/jquery.js
+eigen3-5.0.1//debian/libeigen3-doc.links:3:usr/share/javascript/jquery/jquery.js usr/share/doc/libeigen3-doc/html/unsupported/jquery.js
+
+== esys-particle
+esys-particle-2.3.5+dfsg2//debian/esys-particle.links:1:/usr/share/javascript/jquery/jquery.js usr/share/doc/esys-particle/Doc/html/jquery.js
+
+== exiv2
+exiv2-0.28.9+dfsg//debian/rules:35:	find $(CURDIR)/debian -name jquery.js -exec ln -sfv /usr/share/javascript/jquery/jquery.js {} \;
+== fastcdr
+fastcdr-2.3.6//debian/rules:27:	ln -sf /usr/share/javascript/jquery/jquery.min.js debian/libfastcdr-doc/usr/share/doc/libfastcdr-dev/api_reference/jquery.js
+== fastdds
+fastdds-3.3.0+ds//debian/rules:70:	ln -sf /usr/share/javascript/jquery/jquery.min.js debian/tmp/usr/share/doc/libfastdds-dev/api_reference/jquery.js
+== fastjet
+fastjet-3.4.0+dfsg//debian/rules:18:	$(RM) -v html/jquery.js
+fastjet-3.4.0+dfsg//debian/fastjet-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/fastjet-doc/html/jquery.js
+== fcml
+fcml-1.3.0//debian/libfcml-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/libfcml-doc/html/jquery.js
+
+== fenics-dolfinx
+fenics-dolfinx-0.11.0.post0//debian/index.html:26:        <script src="python/_static/jquery.js"></script>
+
+== ffmpeg
+ffmpeg-9.0.2//debian/ffmpeg-doc.links:1:usr/share/javascript/jquery/jquery.min.js usr/share/doc/ffmpeg/api/jquery.js
+== field3d
+field3d-1.7.3//debian/field3d-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/field3d-doc/html/jquery.js
+
+== fosfat
+fosfat-1.0.1//debian/fosfat-dev.links:1:usr/share/javascript/jquery/jquery.js	usr/share/doc/fosfat-dev/html/jquery.js
+
+== freecontact
+freecontact-1.0.21//debian/libfreecontact-doc.links:1:/usr/share/javascript/jquery/jquery.js	/usr/share/doc/libfreecontact-doc/html/jquery.js
+freecontact-1.0.21//debian/rules:56:	find debian -name jquery.js -delete
+freecontact-1.0.21//debian/README.source:10:libfreecontact-doc: embedded-javascript-library usr/share/doc/libfreecontact-doc/html/jquery.js
+freecontact-1.0.21//debian/README.source:13:This jquery.js is copied into the html documentation by the doxygen
+freecontact-1.0.21//debian/README.source:15:(e.g. i n stable) do not copy a jquery.js there.  The jquery.js copied
+freecontact-1.0.21//debian/README.source:17:(1.7.2-1). The jquery.js from doxygen actually is a minified bundle of
+freecontact-1.0.21//debian/README.source:30:Therefore, it is necessary to keep this jquery.js instead of linking to the
+
+== freeimage
+freeimage-3.18.0+ds2//debian/libfreeimageplus-doc.links:1:/usr/share/javascript/jquery/jquery.js usr/share/doc/libfreeimageplus-doc/html/jquery.js
+
+== frei0r
+frei0r-3.6.0//debian/frei0r-plugins-doc.lintian-overrides:1:# the jquery.js is generated during build by doxygen
+frei0r-3.6.0//debian/frei0r-plugins-doc.lintian-overrides:3:frei0r-plugins-doc: embedded-javascript-library usr/share/doc/frei0r-plugins-dev/html/jquery.js
+
+== gammu
+gammu-1.45.0//debian/gammu-doc.links:1:/usr/share/javascript/sphinxdoc/1.0/jquery.js usr/share/doc/gammu/html/_static/jquery.js
+
+== gcc-11
+gcc-11-11.5.0//debian/rules.d/binary-libstdcxx.mk:516:#	rm -f $(d_libd)/$(docdir)/$(p_base)/libstdc++/*/jquery.js
+gcc-11-11.5.0//debian/rules.d/binary-libstdcxx.mk:518:#		/usr/share/javascript/jquery/jquery.js \
+gcc-11-11.5.0//debian/rules.d/binary-libstdcxx.mk:519:#		/$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+gcc-11-11.5.0//debian/rules.d/binary-libstdcxx.mk:520:#		/usr/share/javascript/jquery/jquery.js \
+gcc-11-11.5.0//debian/rules.d/binary-libstdcxx.mk:521:#		/$(docdir)/$(p_base)/libstdc++/user/jquery.js
+== gcc-12
+gcc-12-12.5.0//debian/rules.d/binary-libstdcxx.mk:516:#	rm -f $(d_libd)/$(docdir)/$(p_base)/libstdc++/*/jquery.js
+gcc-12-12.5.0//debian/rules.d/binary-libstdcxx.mk:518:#		/usr/share/javascript/jquery/jquery.js \
+gcc-12-12.5.0//debian/rules.d/binary-libstdcxx.mk:519:#		/$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+gcc-12-12.5.0//debian/rules.d/binary-libstdcxx.mk:520:#		/usr/share/javascript/jquery/jquery.js \
+gcc-12-12.5.0//debian/rules.d/binary-libstdcxx.mk:521:#		/$(docdir)/$(p_base)/libstdc++/user/jquery.js
+== gcc-13
+gcc-13-13.5.0//debian/rules.d/binary-libstdcxx.mk:526:#	rm -f $(d_libd)/$(docdir)/$(p_base)/libstdc++/*/jquery.js
+gcc-13-13.5.0//debian/rules.d/binary-libstdcxx.mk:528:#		/usr/share/javascript/jquery/jquery.js \
+gcc-13-13.5.0//debian/rules.d/binary-libstdcxx.mk:529:#		/$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+gcc-13-13.5.0//debian/rules.d/binary-libstdcxx.mk:530:#		/usr/share/javascript/jquery/jquery.js \
+gcc-13-13.5.0//debian/rules.d/binary-libstdcxx.mk:531:#		/$(docdir)/$(p_base)/libstdc++/user/jquery.js
+== gcc-14
+gcc-14-14.4.0//debian/rules.d/binary-libstdcxx.mk:479:#	rm -f $(d_libd)/$(docdir)/$(p_base)/libstdc++/*/jquery.js
+gcc-14-14.4.0//debian/rules.d/binary-libstdcxx.mk:481:#		/usr/share/javascript/jquery/jquery.js \
+gcc-14-14.4.0//debian/rules.d/binary-libstdcxx.mk:482:#		/$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+gcc-14-14.4.0//debian/rules.d/binary-libstdcxx.mk:483:#		/usr/share/javascript/jquery/jquery.js \
+gcc-14-14.4.0//debian/rules.d/binary-libstdcxx.mk:484:#		/$(docdir)/$(p_base)/libstdc++/user/jquery.js
+== gcc-15
+gcc-15-15.3.0//debian/rules.d/binary-libstdcxx.mk:494:#	rm -f $(d_libd)/$(docdir)/$(p_base)/libstdc++/*/jquery.js
+gcc-15-15.3.0//debian/rules.d/binary-libstdcxx.mk:496:#		/usr/share/javascript/jquery/jquery.js \
+gcc-15-15.3.0//debian/rules.d/binary-libstdcxx.mk:497:#		/$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+gcc-15-15.3.0//debian/rules.d/binary-libstdcxx.mk:498:#		/usr/share/javascript/jquery/jquery.js \
+gcc-15-15.3.0//debian/rules.d/binary-libstdcxx.mk:499:#		/$(docdir)/$(p_base)/libstdc++/user/jquery.js
+== gcc-16
+gcc-16-16.2.0//debian/rules.d/binary-libstdcxx.mk:505:#	rm -f $(d_libd)/$(docdir)/$(p_base)/libstdc++/*/jquery.js
+gcc-16-16.2.0//debian/rules.d/binary-libstdcxx.mk:507:#		/usr/share/javascript/jquery/jquery.js \
+gcc-16-16.2.0//debian/rules.d/binary-libstdcxx.mk:508:#		/$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+gcc-16-16.2.0//debian/rules.d/binary-libstdcxx.mk:509:#		/usr/share/javascript/jquery/jquery.js \
+gcc-16-16.2.0//debian/rules.d/binary-libstdcxx.mk:510:#		/$(docdir)/$(p_base)/libstdc++/user/jquery.js
+== gcc-snapshot
+gcc-snapshot-20260920//debian/rules.d/binary-libstdcxx.mk:505:#	rm -f $(d_libd)/$(docdir)/$(p_base)/libstdc++/*/jquery.js
+gcc-snapshot-20260920//debian/rules.d/binary-libstdcxx.mk:507:#		/usr/share/javascript/jquery/jquery.js \
+gcc-snapshot-20260920//debian/rules.d/binary-libstdcxx.mk:508:#		/$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+gcc-snapshot-20260920//debian/rules.d/binary-libstdcxx.mk:509:#		/usr/share/javascript/jquery/jquery.js \
+gcc-snapshot-20260920//debian/rules.d/binary-libstdcxx.mk:510:#		/$(docdir)/$(p_base)/libstdc++/user/jquery.js
+
+== gdcm
+gdcm-3.0.24//debian/gdcm-doc.lintian-overrides:1:# The embedded jquery.js is generated by Doxygen and can not be replaced 
+
+== gecode
+gecode-6.4.0//debian/rules:35:	rm -f $(CURDIR)/debian/libgecode-doc/usr/share/doc/libgecode-dev/html/jquery.js
+
+== geis
+geis-2.2.17+16.04.20160126//debian/rules:27:	dh_install --fail-missing -X.la -X.a -X.pyo -X.pyc -Xjquery.js
+
+== geographiclib
+geographiclib-2.7//debian/patches/privacy.patch:3: and to disable the search function and avoid copies of jquery.js
+
+== glm
+glm-1.0.1+ds//debian/libglm-doc.links:1:/usr/share/javascript/jquery/jquery.js usr/share/doc/libglm-doc/api/jquery.js
+
+== grass
+grass-8.5.0//debian/grass-dev-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/grass-dev-doc/programming-manual/html/jquery.js
+
+== gr-gsm
+gr-gsm-1.0.0~20220727//debian/rules:17:	rm -f debian/gr-gsm/usr/share/doc/gr-gsm/html/jquery.js
+gr-gsm-1.0.0~20220727//debian/gr-gsm.links:1:/usr/share/javascript/jquery/jquery.min.js /usr/share/doc/gr-gsm/html/jquery.js
+
+== gridtools
+gridtools-2.3.9//debian/source/lintian-overrides:1:gridtools source: source-is-missing docs/_static/jquery.js line length is 32033 characters (>512)
+
+== groonga
+groonga-16.1.3+dfsg//debian/groonga-doc.links:9:usr/share/javascript/jquery/jquery.js usr/share/doc/groonga-doc/en/html/_static/jquery.js
+groonga-16.1.3+dfsg//debian/groonga-doc.links:10:usr/share/javascript/jquery/jquery.js usr/share/doc/groonga-doc/ja/html/_static/jquery.js
+groonga-16.1.3+dfsg//debian/patches/use-libjs-jquery.patch:49:+<script type="text/javascript" src="assets/jquery.js"></script>
+groonga-16.1.3+dfsg//debian/patches/use-libjs-jquery.patch:108:+<script type="text/javascript" src="assets/jquery.js"></script>
+groonga-16.1.3+dfsg//debian/groonga-bin.links:1:usr/share/javascript/jquery/jquery.js usr/share/groonga/html/admin/assets/jquery.js
+
+== gsoap
+gsoap-2.8.142//debian/patches/gsoap-doxygen-tabs.patch:10: <script type="text/javascript" src="jquery.js"></script>
+
+== gutenprint
+gutenprint-5.3.4.20220624T01008808d602//debian/libgutenprint-doc.links:1:/usr/share/javascript/jquery/jquery.min.js	usr/share/doc/libgutenprint-doc/reference/html/jquery.js
+
+== harp
+harp-1.31+ds//debian/source/lintian-overrides:1:#harp source: source-is-missing doc/html/_static/jquery.js *
+
+== hwinfo
+hwinfo-21.82//debian/rules:35:	rm $(DOCDIR)/jquery.js
+hwinfo-21.82//debian/rules:36:	ln -s /usr/share/javascript/jquery/jquery.js $(DOCDIR)/jquery.js
+== hwloc
+hwloc-2.15.0//debian/README.source:3:doc/doxygen-doc/html/jquery.js
+hwloc-2.15.0//debian/libhwloc-doc.links:1:/usr/share/javascript/jquery/jquery.js /usr/share/doc/libhwloc-doc/html/jquery.js
+
+== id3lib3.8.3
+id3lib3.8.3-3.8.3//debian/rules:27:	rm -f doc/api/jquery.js
+== iipimage
+iipimage-1.1//debian/README.source:4:It comes with a minified jquery.js source, I downloaded the original code using:
+iipimage-1.1//debian/README.source:6:wget -O debian/missing-sources/jquery.js http://code.jquery.com/jquery-1.3.2.js
+
+== imagemagick
+imagemagick-7.1.2.35+dfsg1//debian/scripts/dh_doxygen:128:    if(-f "$path/jquery.js") {
+imagemagick-7.1.2.35+dfsg1//debian/scripts/dh_doxygen:129:        ln_sf("/usr/share/javascript/jquery/jquery.js", "$path/jquery.js");
+== imath
+imath-3.2.3//debian/libimath-doc.links:2:usr/share/sphinx/themes/basic/static/jquery.js usr/share/doc/libimath-doc/html/_static/jquery.js
+imath-3.2.3//debian/rules:85:	rm -f $(INSTDIR)/usr/share/doc/Imath/sphinx/_static/jquery.js
+== iniparser
+iniparser-4.3.2//debian/libiniparser-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/libiniparser-doc/html/jquery.js
+
+== janus
+janus-1.4.1+ds//debian/patches/2003_use_packaged_javascript.patch:186: <script type="text/javascript" src="jquery.js" ></script>
+== jaula
+jaula-1.4.0//debian/libjaula-doc.links:1:/usr/share/javascript/jquery/jquery.js usr/share/doc/jaula/html/jquery.js
+
+== json-c
+json-c-0.19+ds//debian/libjson-c-doc.links:1:/usr/share/javascript/jquery/jquery.js usr/share/doc/libjson-c-dev/html/jquery.js
+json-c-0.19+ds//debian/clean:1:doc/html/jquery.js
+
+== krb5
+krb5-1.22.1//debian/rules:68:	ln -sf /usr/share/javascript/jquery/jquery.js build/doc/html_subst/_static/jquery.js
+
+== lammps
+lammps-20260704+dfsg//debian/lammps-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/lammps/html/_static/jquery.js
+
+== lcm
+lcm-1.5.0~repack1//debian/liblcm-doc.links:4:usr/share/javascript/jquery-ui/jquery.js usr/share/doc/liblcm-dev/_build/javadocs/jquery/external/jquery/jquery.js
+
+== libaccounts-qt
+libaccounts-qt-1.17//debian/rules:24:	find debian/tmp -name jquery.js -exec ln -sfv /usr/share/javascript/jquery/jquery.js {} \;
+
+== libambix
+libambix-0.1.2//debian/libambix-doc.lintian-overrides:1:# the jquery.js is generated during build by doxygen
+
+== libbrahe
+libbrahe-1.3.2//debian/rules:27:	rm -f $(CURDIR)/tmp/usr/share/doc/libbrahe/api/jquery.js
+libbrahe-1.3.2//debian/libbrahe-dev.links.in:2:usr/share/javascript/jquery/jquery.js usr/share/doc/libbrahe-dev/html/jquery.js
+
+== libcamera
+libcamera-0.7.0//debian/libcamera-doc.links:1:/usr/share/javascript/jquery/jquery.js /usr/share/doc/libcamera-doc/api-html/jquery.js
+libcamera-0.7.0//debian/libcamera-doc.links:2:/usr/share/javascript/jquery/jquery.js /usr/share/doc/libcamera-doc/html/_static/jquery.js
+
+== libcgicc
+libcgicc-3.2.19//debian/rules:30:	rm -f $(CURDIR)/debian/tmp/usr/share/doc/libcgicc-doc/html/jquery.js
+
+== libclaw
+libclaw-1.7.4//debian/libclaw-doc.links:1:/usr/share/javascript/jquery/jquery.js usr/share/doc/libclaw1/html/jquery.js
+
+== libcoap3
+libcoap3-4.3.5//debian/libcoap3-doc.links:2:/usr/share/javascript/jquery/jquery.min.js  usr/share/doc/libcoap3-doc/html/jquery.js
+
+== libcomps
+libcomps-0.1.24//debian/rules:31:	rm -fv 'build/src/python/docs/html/_static/jquery.js' \
+libcomps-0.1.24//debian/rules:33:		   'build/docs/libcomps-doc/jquery.js' \
+libcomps-0.1.24//debian/libcomps-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/libcomps-doc/html/jquery.js
+libcomps-0.1.24//debian/python-libcomps-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/python-libcomps-doc/html/_static/jquery.js
+
+== libcrypto++
+libcrypto++-8.9.0//debian/libcrypto++-doc.links:1:/usr/share/javascript/jquery/jquery.js /usr/share/doc/libcrypto++-doc/html/jquery.js
+ 
+== libcypher-parser
+libcypher-parser-0.6.2//debian/libcypher-parser-doc.links:1:/usr/share/javascript/jquery/jquery.min.js usr/share/doc/libcypher-parser/jquery.js
+
+== libdap
+libdap-3.21.1//debian/rules:35:	[ -f debian/libdap-doc/usr/share/doc/libdap-doc/html/jquery.js ] && ( \
+libdap-3.21.1//debian/rules:36:		rm debian/libdap-doc/usr/share/doc/libdap-doc/html/jquery.js ; \
+libdap-3.21.1//debian/rules:37:		ln -sf /usr/share/javascript/jquery/jquery.js debian/libdap-doc/usr/share/doc/libdap-doc/html/jquery.js ) \
+== libdatrie
+libdatrie-0.2.14//debian/rules:40:	dh_installdocs -plibdatrie-doc --doc-main-package=libdatrie1 -Xjquery.js
+libdatrie-0.2.14//debian/libdatrie-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/libdatrie1/html/jquery.js
+
+== libdnf
+libdnf-0.76.0//debian/rules:36:	rm -fv 'build/docs/hawkey/html/_static/jquery.js' \
+libdnf-0.76.0//debian/python3-hawkey-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/python3-hawkey-doc/html/_static/jquery.js
+
+== libemf
+libemf-1.0.14//debian/libemf-doc.links:1:/usr/share/javascript/jquery/jquery.js /usr/share/doc/libemf-dev/html/jquery.js
+
+== libevdev
+libevdev-1.14.0+dfsg//debian/patches/remove-remote-resources.patch:12:+        <script type="text/javascript" src="$relpath^jquery.js"></script>
+
+== libgadu
+libgadu-1.12.2//debian/libgadu-doc.lintian-overrides:1:# The jquery.js file is installed by doxygen. Judging from source of doxygen
+libgadu-1.12.2//debian/libgadu-doc.lintian-overrides:10:libgadu-doc binary: embedded-javascript-library usr/share/doc/libgadu-doc/api/jquery.js please use libjs-jquery
+libgadu-1.12.2//debian/TODO:1:libgadu-doc: embedded-javascript-library usr/share/doc/libgadu-doc/api/jquery.js
+== libgig
+libgig-4.6.0//debian/rules:16:	ln -sf /usr/share/javascript/jquery/jquery.js doc/html/jquery.js
+
+== libhmsbeagle
+libhmsbeagle-4.2.0+dfsg//debian/libhmsbeagle-dev.linktrees:1:replace usr/share/javascript/jquery/jquery.js usr/share/doc/libhmsbeagle-dev/html/jquery.js
+
+== libiio
+libiio-0.26//debian/rules:26:	rm -f debian/tmp/usr/share/doc/libiio0-doc/v0.26/python/_static/jquery.js
+libiio-0.26//debian/rules:27:	cd debian/tmp/usr/share/doc/libiio0-doc/v0.26/python/_static/ && ln -s /usr/share/javascript/jquery/jquery.js jquery.js
+
+== libimobiledevice
+libimobiledevice-1.4.0+git20251127//debian/rules:27:	# remove doxygen jquery.js, we link to doxygen-provided file
+libimobiledevice-1.4.0+git20251127//debian/rules:28:	rm -f $(CURDIR)/docs/html/jquery.js
+libimobiledevice-1.4.0+git20251127//debian/libimobiledevice-doc.links:2:/usr/share/javascript/jquery/jquery.js /usr/share/doc/libimobiledevice-doc/libimobiledevice/jquery.js
+== libitpp
+libitpp-4.3.1//debian/libitpp-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/libitpp-dev/html/jquery.js
+
+== libmongo-client
+libmongo-client-0.1.8//debian/libmongo-client-doc.links:1:/usr/share/javascript/jquery/jquery.js usr/share/doc/libmongo-client0/html/jquery.js
+
+== libmsnumpress
+libmsnumpress-1.0.0//debian/rules:38:	rm -f debian/build/doxygen/html/jquery.js
+libmsnumpress-1.0.0//debian/libmsnumpress-dev.links:2:/usr/share/javascript/jquery/jquery.js /usr/share/doc/libmsnumpress-dev/html/jquery.js
+== libmspack
+libmspack-0.11//debian/libmspack-doc.docs:4:# jquery.js is generated by doxygen
+
+== libmypaint
+libmypaint-1.6.0//debian/rules:29:	find debian/tmp -name jquery.js -print -delete
+libmypaint-1.6.0//debian/libmypaint-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/libmypaint-dev/_static/jquery.js
+
+== libosl
+libosl-0.8.0//debian/rules:24:	find doc -name \*.html | xargs sed -i -e 's!<script type="text/javascript" src="jquery.js">!<script type="text/javascript" src="/javascript/jquery/jquery.js">!g'
+libosl-0.8.0//debian/rules:26:	-rm doc/html/jquery.js
+
+== libplist
+libplist-2.7.0+git20250820//debian/libplist-doc.links:1:/usr/share/javascript/jquery/jquery.js usr/share/doc/libplist/html/jquery.js
+
+== libquicktime
+libquicktime-1.2.4//debian/libquicktime-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/libquicktime-doc/apiref/jquery.js
+== libquvi
+libquvi-0.9.4//debian/patches/doxygen.patch:9:jquery.js to be pulled in.
+
+== librepo
+librepo-1.21.2//debian/rules:28:	rm -fv 'build/doc/python/_static/jquery.js' \
+librepo-1.21.2//debian/rules:30:	       'build/doc/c/html/jquery.js' \
+librepo-1.21.2//debian/librepo-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/librepo-doc/html/jquery.js
+librepo-1.21.2//debian/python3-librepo-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/python3-librepo-doc/_static/jquery.js
+
+== librostlab-blast
+librostlab-blast-1.0.1//debian/rules:35:	find debian -name jquery.js -delete
+librostlab-blast-1.0.1//debian/linktrees:5:replace /usr/share/javascript/jquery/jquery.js	/usr/share/doc/librostlab-blast-doc/html/jquery.js
+librostlab-blast-1.0.1//debian/librostlab-blast-doc.links:1:usr/share/javascript/jquery/jquery.js	usr/share/doc/librostlab-blast-doc/html/jquery.js
+== librsb
+librsb-1.3.0.3+dfsg//debian/rules:38:	rm -f doc/html/jquery.js
+librsb-1.3.0.3+dfsg//debian/rules:39:	ln -s /usr/share/javascript/jquery/jquery.js doc/html/jquery.js
+
+== libsdl2-gfx
+libsdl2-gfx-1.0.4+dfsg//debian/README.source:18:jquery. In fact replacing the `jquery.js` file created by Doxygen likely
+libsdl2-gfx-1.0.4+dfsg//debian/README.source:20:have to learn that a `jquery.js` embedded by Doxygen is a normal thing.
+
+== libsidplayfp
+libsidplayfp-2.16.1//debian/libsidplayfp-doc.links:1:/usr/share/javascript/jquery/jquery.js usr/share/doc/libsidplayfp-dev/html/jquery.js
+
+== libstxxl
+libstxxl-1.4.1//debian/rules:3:JQUERY_STXXL_TARGET=/usr/share/doc/libstxxl-doc/html/html/jquery.js
+libstxxl-1.4.1//debian/rules:5:JQUERY_SYS_TARGET=/usr/share/javascript/jquery/jquery.js
+== libthai
+libthai-0.1.30//debian/rules:48:	dh_installdocs -plibthai-doc --doc-main-package=libthai0 -Xjquery.js
+libthai-0.1.30//debian/libthai-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/libthai0/html/jquery.js
+
+== libvigraimpex
+libvigraimpex-1.12.4+dfsg//debian/rules:84:		rm -f html/jquery.js && \
+
+== libvmime
+libvmime-0.9.2//debian/libvmime1-doc.links:2:/usr/share/javascript/jquery/jquery.min.js  usr/share/doc/libvmime1-doc/html/jquery.js
+
+== libvsqlitepp
+libvsqlitepp-0.3.13//debian/libvsqlitepp-doc.links:1:/usr/share/javascript/jquery/jquery.js  /usr/share/doc/libvsqlitepp-doc/html/jquery.js
+
+== libzeem
+libzeem-2.1.2+dfsg//debian/rules:20:	rm debian/tmp/usr/share/doc/zeem/_static/jquery.js
+libzeem-2.1.2+dfsg//debian/libzeem-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/zeem/_static/jquery.js
+
+== libzypp
+libzypp-17.38.16//debian/libzypp-doc.links:3:usr/share/javascript/jquery/jquery.js usr/share/doc/libzypp/html/jquery.js
+
+== llvm-toolchain-17
+llvm-toolchain-17-17.0.6//debian/rules:1098:		cd $$d && rm -f jquery.js && ln -s /usr/share/javascript/jquery/jquery.js && cd -; \
+llvm-toolchain-17-17.0.6//debian/rules:1119:		cd openmp/runtime/doc/doxygen/generated/html/ && rm jquery.js && ln -s /usr/share/javascript/jquery/jquery.js; \
+== llvm-toolchain-18
+llvm-toolchain-18-18.1.8//debian/rules:1152:		cd $$d && rm -f jquery.js && ln -s /usr/share/javascript/jquery/jquery.js && cd -; \
+llvm-toolchain-18-18.1.8//debian/rules:1173:		cd openmp/runtime/doc/doxygen/generated/html/ && rm jquery.js && ln -s /usr/share/javascript/jquery/jquery.js; \
+== llvm-toolchain-19
+llvm-toolchain-19-19.1.7//debian/rules:1410:		cd $$d && rm -f jquery.js && ln -s /usr/share/javascript/jquery/jquery.js && cd -; \
+llvm-toolchain-19-19.1.7//debian/rules:1431:		cd openmp/runtime/doc/doxygen/generated/html/ && rm jquery.js && ln -s /usr/share/javascript/jquery/jquery.js; \
+== llvm-toolchain-20
+llvm-toolchain-20-20.1.8//debian/rules:1454:		cd $$d && rm -f jquery.js && ln -s /usr/share/javascript/jquery/jquery.js && cd -; \
+llvm-toolchain-20-20.1.8//debian/rules:1475:		cd openmp/runtime/doc/doxygen/generated/html/ && rm jquery.js && ln -s /usr/share/javascript/jquery/jquery.js; \
+== llvm-toolchain-21
+llvm-toolchain-21-21.1.8//debian/rules:1523:		cd $$d && rm -f jquery.js && ln -s /usr/share/javascript/jquery/jquery.js && cd -; \
+llvm-toolchain-21-21.1.8//debian/rules:1544:		cd openmp/runtime/doc/doxygen/generated/html/ && rm jquery.js && ln -s /usr/share/javascript/jquery/jquery.js; \
+== llvm-toolchain-22
+llvm-toolchain-22-22.1.8//debian/rules:1449:		rm -f $$d/jquery.js $$d/underscore.js; \
+llvm-toolchain-22-22.1.8//debian/rules:1450:		ln -s /usr/share/javascript/jquery/jquery.js $$d/jquery.js; \
+llvm-toolchain-22-22.1.8//debian/rules:1471:		cd openmp/runtime/doc/doxygen/generated/html/ && rm jquery.js && ln -s /usr/share/javascript/jquery/jquery.js; \
+
+== magma
+magma-2.9.0+ds//debian/source/lintian-overrides:1:source: source-is-missing docs/html/jquery.js line length is 12734 characters (>512)
+== magma-rocm
+magma-rocm-2.9.0+ds//debian/source/lintian-overrides:1:source: source-is-missing docs/html/jquery.js line length is 12734 characters (>512)
+== maliit-framework
+maliit-framework-2.3.0//debian/maliit-framework-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/maliit-framework/html/jquery.js
+
+== mbedtls
+mbedtls-3.6.7//debian/libmbedtls-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/libmbedtls-dev/apidoc/jquery.js
+
+== mygui
+mygui-3.4.4+dfsg//debian/rules:50:	dh_installdocs -X.md5 -X.map -Xjquery.js
+mygui-3.4.4+dfsg//debian/mygui-doc.links:1:/usr/share/javascript/jquery/jquery.js usr/share/doc/mygui-doc/html/jquery.js
+
+== nifticlib
+nifticlib-3.0.1//debian/rules:49:	rm -f docs/html/jquery.js
+nifticlib-3.0.1//debian/libnifti-doc.links:1:/usr/share/javascript/jquery/jquery.js /usr/share/doc/libnifti-doc/html/jquery.js
+
+== ogre-1.12
+ogre-1.12-1.12.10+dfsg2//debian/rules:99:	dh_install -i -Xjquery.js
+ogre-1.12-1.12.10+dfsg2//debian/ogre-1.12-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/ogre-1.12-doc/api/html/jquery.js
+== ogre-14
+ogre-14-14.5.2+dfsg//debian/rules:87:	dh_install -i -Xjquery.js
+ogre-14-14.5.2+dfsg//debian/ogre-14-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/ogre-14-doc/api/html/jquery.js
+== ogre-next
+ogre-next-2.3.3+dfsg//debian/ogre-next-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/ogre-2.2-doc/api/html/jquery.js
+
+== onetbb
+onetbb-2023.1.0//debian/libtbb-doc.links:1:/usr/share/javascript/jquery/jquery.js /usr/share/doc/libtbb-dev/html/_static/jquery.js
+
+== openbabel
+openbabel-3.1.1+dfsg//debian/libopenbabel-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/libopenbabel-dev/html/jquery.js
+
+== opencolorio
+opencolorio-2.5.1+dfsg//debian/opencolorio-doc.links:1:#usr/share/javascript/jquery/jquery.js usr/share/doc/opencolorio/html/_static/jquery.js
+== opencv
+opencv-4.10.0+dfsg//debian/rules:208:	-find debian/tmp -type f -name jquery.js -delete
+opencv-4.10.0+dfsg//debian/patches/change_jquery.js_path:19:-<script type="text/javascript" src="$relpath^jquery.js"></script>
+opencv-4.10.0+dfsg//debian/patches/change_jquery.js_path:20:+<script type="text/javascript" src="/usr/share/javascript/jquery/jquery.js"></script>
+opencv-4.10.0+dfsg//debian/patches/series:1:change_jquery.js_path
+== opengv
+
+openms: openms-2.6.0+cleaned1/debian/rules:133:	rm -f $(BUILD_DIR)/usr/share/doc/html/jquery.js
+openscenegraph: openscenegraph-3.6.5+dfsg1/debian/rules:238:# Use Debian's jquery.js
+openscenegraph: openscenegraph-3.6.5+dfsg1/debian/rules:239:	rm -f html/openscenegraph/jquery.js
+openscenegraph: openscenegraph-3.6.5+dfsg1/debian/rules:240:	find html -name "*.html" -print0 | xargs -0 perl -i -pe 's|src="jquery.js"|src="/usr/share/javascript/jquery/jquery.js"|'
+ortp: ortp-5.3.105/debian/libortp-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/libortp-doc/html/jquery.js
+orthanc: orthanc-1.13.0+dfsg/debian/copyright:44:Files: OrthancServer/OrthancExplorer/libs/jqtree.css OrthancServer/OrthancExplorer/libs/jqtree-icons.png OrthancServer/OrthancExplorer/libs/tree.jquery.js
+pcl: pcl-1.15.1+dfsg/debian/libpcl-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/libpcl-doc/html/jquery.js
+pkcs11-helper: pkcs11-helper-1.31.0/debian/libpkcs11-helper1-dev.links:1:/usr/share/javascript/jquery/jquery.js /usr/share/doc/libpkcs11-helper1-dev/api/jquery.js
+pocketsphinx: pocketsphinx-5.1.1/debian/libpocketsphinx-dev.links:1:/usr/share/javascript/jquery/jquery.js /usr/share/doc/libpocketsphinx-dev/html/jquery.js
+primesieve: primesieve-12.16+ds/debian/adhoc/Makefile:15:		rm -f *.md5 jquery.js ; \
+primesieve: primesieve-12.16+ds/debian/adhoc/Makefile:18:		ln -sf /usr/share/javascript/jquery/jquery.js ; \
+presage: presage-0.9.1/debian/libpresage-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/presage/html/jquery.js
+portaudio19: portaudio19-19.7.0+git20260206.e1b70d33/debian/portaudio19-doc.links:1:usr/share/javascript/jquery/jquery.min.js usr/share/doc/portaudio19-doc/html/jquery.js
+ppl: ppl-1.2/debian/rules:80:	    rm $(DOC_DIR)/html/$$dir/jquery.js; \
+ppl: ppl-1.2/debian/libppl-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/libppl-doc/html/user-manual/jquery.js
+ppl: ppl-1.2/debian/libppl-doc.links:2:usr/share/javascript/jquery/jquery.js usr/share/doc/libppl-doc/html/c-interface/jquery.js
+ppl: ppl-1.2/debian/libppl-doc.links:3:usr/share/javascript/jquery/jquery.js usr/share/doc/libppl-doc/html/prolog-interface/jquery.js
+python-fhs: python-fhs-1.2/debian/rules:11:	rm doxygen-output/html/jquery.js
+python-fhs: python-fhs-1.2/debian/rules:12:	ln -s /usr/share/javascript/jquery/jquery.js doxygen-output/html/
+pstreams: pstreams-1.0.4/debian/libpstreams-dev.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/libpstreams-dev/html/jquery.js
+python-mbed-host-tests: python-mbed-host-tests-1.4.4/debian/rules:30:	$(RM) html/jquery.js
+python-mbed-host-tests: python-mbed-host-tests-1.4.4/debian/python-mbed-host-tests-doc.links:2:usr/share/javascript/jquery/jquery.js   usr/share/doc/python-mbed-host-tests-doc/html/jquery.js
+python-odf: python-odf-1.4.2/debian/source/lintian-overrides:2:# uglified files jquery.js, all_*.js, functions_*.js and variables_*.js
+python-odf: python-odf-1.4.2/debian/source/lintian-overrides:7:python-odf source: source-is-missing [doc/html/jquery.js]
+python-mbed-ls: python-mbed-ls-1.6.2+dfsg/debian/rules:32:	$(RM) html/jquery.js
+python-mbed-ls: python-mbed-ls-1.6.2+dfsg/debian/python-mbed-ls-doc.links:2:usr/share/javascript/jquery/jquery.js   usr/share/doc/python-mbed-ls-doc/html/jquery.js
+python-network: python-network-0.4/debian/rules:11:	rm doxygen-output/html/jquery.js
+python-network: python-network-0.4/debian/rules:12:	ln -s /usr/share/javascript/jquery/jquery.js doxygen-output/html/
+python-websocketd: python-websocketd-0.5/debian/rules:11:	rm doxygen-output/html/jquery.js
+python-websocketd: python-websocketd-0.5/debian/rules:12:	ln -s /usr/share/javascript/jquery/jquery.js doxygen-output/html/
+qhttpengine: qhttpengine-0.1.0+dfsg1/debian/libqhttpengine-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/QHttpEngine/html/jquery.js
+qdjango: qdjango-0.6.2/debian/libqdjango-doc.lintian-overrides:5:libqdjango-doc: embedded-javascript-library usr/share/doc/libqdjango-doc/html/jquery.js please use libjs-jquery
+qpid-proton: qpid-proton-0.37.0/debian/libqpid-proton11-dev-doc.links:1:/usr/share/javascript/jquery/jquery.min.js /usr/share/proton-0.22.0/docs/api-c/jquery.js
+qpid-proton: qpid-proton-0.37.0/debian/libqpid-proton-cpp12-dev-doc.links:1:/usr/share/javascript/jquery/jquery.min.js /usr/share/proton-0.22.0/docs/api-cpp/jquery.js
+qscintilla2: qscintilla2-2.14.1+dfsg/debian/libqscintilla2-doc.links:1:/usr/share/javascript/jquery/jquery.min.js usr/share/doc/libqscintilla2-doc/html/jquery.js
+qscintilla2: qscintilla2-2.14.1+dfsg/debian/copyright:2:Files-Excluded: doc/html/jquery.js
+qscintilla2: qscintilla2-2.14.1+dfsg/debian/copyright:3:# Removed minified jquery.js
+qscintilla2: qscintilla2-2.14.1+dfsg/debian/clean:18:doc/html/jquery.js
+qgis: qgis-3.44.15+dfsg/debian/qgis-common.links:2:usr/share/javascript/jquery/jquery.js usr/share/qgis/doc/jquery.js
+qgis: qgis-3.44.15+dfsg/debian/patches/developersmap-use-debian-package.patch:25:+  <script src="jquery.js"></script>
+rdkit: rdkit-202609.1/debian/rules:144:	ln -sf /usr/share/javascript/jquery/jquery.js $(DOCDIR)/html/cppapi/jquery.js
+rdkit: rdkit-202609.1/debian/rules:145:	ln -sf /usr/share/javascript/jquery/jquery.js $(DOCDIR)/html/_static/jquery.js
+reglookup: reglookup-1.0.1+svn296/debian/rules:35:	rm $(DOCPATH)/pyregfi/jquery.js
+reglookup: reglookup-1.0.1+svn296/debian/reglookup-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/reglookup-doc/pyregfi/jquery.js
+rtmidi: rtmidi-6.0.0/debian/rules:24:	rm -f doc/html/jquery.js
+rtmidi: rtmidi-6.0.0/debian/librtmidi-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/librtmidi-dev/api_ref/jquery.js
+rtaudio: rtaudio-6.0.1~ds/debian/rules:31:	rm -f doc/html/jquery.js
+rtaudio: rtaudio-6.0.1~ds/debian/librtaudio-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/librtaudio-dev/api_ref/jquery.js
+scim: scim-1.4.18+git20211204/debian/scim-dev-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/scim-dev-doc/html/jquery.js
+scolasync: scolasync-5.6/debian/source/lintian-overrides:4:scolasync source: source-is-missing [doc/html/jquery.js]
+scolasync: scolasync-5.6/debian/scolasync.lintian-overrides:1:# the library jquery.js comes from the package doxygen, and it must be kept
+scolasync: scolasync-5.6/debian/scolasync.lintian-overrides:4:scolasync binary: embedded-javascript-library usr/share/scolasync/html/jquery.js please use libjs-jquery
+serd: serd-0.32.10/debian/libserd-doc.lintian-overrides:1:embedded-javascript-library please use libjs-jquery [usr/share/doc/libserd-dev/_static/jquery.js]
+siscone: siscone-3.0.5/debian/siscone-doc-html.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/siscone-doc-html/html/jquery.js
+sombok: sombok-2.4.0/debian/rules:26:	rm -f debian/tmp/usr/share/doc/sombok/jquery.js
+sombok: sombok-2.4.0/debian/libsombok-dev.links:1:/usr/share/javascript/jquery/jquery.min.js usr/share/doc/libsombok-dev/html/jquery.js
+sord: sord-0.16.22/debian/libsord-doc.lintian-overrides:1:embedded-javascript-library please use libjs-jquery [usr/share/doc/libsord-dev/jquery.js]
+spandsp: spandsp-0.0.6+dfsg/debian/rules:32:	$(RM) -f debian/libspandsp-doc/usr/share/doc/libspandsp-doc/api/html/jquery.js
+spandsp: spandsp-0.0.6+dfsg/debian/libspandsp-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/libspandsp-doc/api/html/jquery.js
+steghide: steghide-0.5.1+git20240220/debian/steghide-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/steghide-doc/html/jquery.js
+steghide: steghide-0.5.1+git20240220/debian/rules:15:	rm -f $(CURDIR)/debian/steghide-doc/usr/share/doc/steghide-doc/html/jquery.js
+simbody: simbody-3.7+dfsg/debian/simbody-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/simbody/api/Simbody/html/jquery.js
+simbody: simbody-3.7+dfsg/debian/simbody-doc.links:2:usr/share/javascript/jquery/jquery.js usr/share/doc/simbody/api/jquery.js
+t4kcommon: t4kcommon-0.1.1/debian/libt4k-common0-doc.links:1:/usr/share/javascript/jquery/jquery.js  /usr/share/doc/libt4k-common0-doc/html/jquery.js
+taglib: taglib-2.3.2/debian/rules:60:	    rm builddir/doc/html/jquery.js; \
+taglib: taglib-2.3.2/debian/rules:61:	    ln -s /usr/share/javascript/jquery/jquery.js builddir/doc/html; \
+sumo: sumo-1.27.1+dfsg/debian/sumo-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/sumo/doxygen/jquery.js
+tinycbor: tinycbor-7.0/debian/rules:37:	dh_link -plibtinycbor-dev /usr/share/javascript/jquery/jquery.js usr/share/doc/libtinycbor-dev/html/jquery.js
+tntdb: tntdb-1.4/debian/rules:9:#	rm -f debian/libtntdb-dev/usr/share/doc/libtntdb-dev/html/jquery.js
+tntdb: tntdb-1.4/debian/rules:10:#	cd debian/libtntdb-dev/usr/share/doc/libtntdb-dev/html/; ln -s ../../../javascript/jquery/jquery.js jquery.js
+tntdb: tntdb-1.4/debian/rules:16:	rm -f ./debian/tmp/usr/share/doc/tntdb/jquery.js
+tntdb: tntdb-1.4/debian/rules:17:	cd ./debian/tmp/usr/share/doc/tntdb; ln -s ../../../javascript/jquery/jquery.js
+ucommon: ucommon-7.0.1/debian/ucommon-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/ucommon-doc/html/jquery.js
+trilinos: trilinos-16.1.0/debian/rules:264:		       -e 's#jquery\.js#/usr/share/javascript/jquery/jquery.js#'; \
+trilinos: trilinos-16.1.0/debian/rules:265:	find debian/trilinos-doc/usr/share -name jquery.js -delete; \
+viennacl: viennacl-1.7.1+dfsg1/debian/libviennacl-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/libviennacl-dev/html/jquery.js
+vienna-rna: vienna-rna-2.7.2+dfsg/debian/vienna-rna-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/vienna-rna/html/jquery.js
+vtk9: vtk9-9.6.2+ds/debian/vtk9-doc.links:1:usr/share/javascript/jquery/jquery.js usr/share/doc/vtk9/html/jquery.js
+vtk9: vtk9-9.6.2+ds/debian/vtk9-doc.links:2:usr/share/javascript/jquery/jquery.js usr/share/doc/vtk9/doxygen/html/jquery.js
+wcslib: wcslib-8.10+ds/debian/rules:28:	dh_install -Xjquery.js
+wcslib: wcslib-8.10+ds/debian/not-installed:7:usr/share/doc/wcslib-dev/html/jquery.js
+wiredtiger: wiredtiger-3.2.1/debian/source/lintian-overrides:2:wiredtiger source: source-is-missing docs/jquery.js line length is 32401 characters (>512)
+wvstreams: wvstreams-4.6.1/debian/rules:25:# The embedded jquery.js is generated by Doxygen and can not be replaced
+wvstreams: wvstreams-4.6.1/debian/libwvstreams4.6-doc.lintian-override:1:# The embedded jquery.js is generated by Doxygen and should not be replaced 
+wxsqlite3: wxsqlite3-3.4.1~dfsg/debian/rules:47:	dh_link -pwxsqlite3-doc /usr/share/javascript/jquery/jquery.js \
+wxsqlite3: wxsqlite3-3.4.1~dfsg/debian/rules:48:		/usr/share/doc/wxsqlite3-doc/html/jquery.js
+wxsqlite3: wxsqlite3-3.4.1~dfsg/debian/repack.local:4:rm docs/html/jquery.js
+wxsqlite3: wxsqlite3-3.4.1~dfsg/debian/README.source:2:the minified docs/html/jquery.js replaced with the normal file.
+xdotool: xdotool-3.20160805.1/debian/rules:11:	rm -f docs/html/jquery.js
+xerces-c: xerces-c-3.2.4+debian/debian/libxerces-c-doc.lintian-overrides:1:libxerces-c-doc: embedded-javascript-library usr/share/doc/libxerces-c-doc/html/apiDocs-3/jquery.js please use libjs-jquery
+xorg-gtest: xorg-gtest-0.7.1/debian/rules:19:	dh_install -Xjquery.js
+zycore-c: zycore-c-1.5.2/debian/libzycore-doc.links:1:/usr/share/javascript/jquery/jquery.js usr/share/doc/libzycore-doc/api/jquery.js
+zvbi: zvbi-0.2.46/debian/libzvbi-doc.links:1:/usr/share/javascript/jquery/jquery.js usr/share/doc/libzvbi-doc/html/jquery.js
+zipios++: zipios++-0.1.7/debian/libzipios++-doc.links:1:/usr/share/javascript/jquery/jquery.min.js usr/share/doc/libzipios++-doc/html/jquery.js
+== ace
+
+== actor-framework
+
+== ada-url
+
+== alsaplayer
+
+== analizo
+
+== aoflagger
+
+== aom
+
+== apr
+
+== apr-util
+
+== arm-compute-library
+
+== assimp
+
+== asymptote
+
+== atkmm
+
+== atkmm1.6
+
+== atlas-ecmwf
+
+== attica-kf5
+
+== ausaxs
+
+== avogadro
+
+== avogadrolibs
+
+== avr-libc
+
+== awl
+
+== baloo-kf5
+
+== bash-argsparse
+
+== bcm2835
+
+== bglibs
+
+== biometryd
+
+== bladerf
+
+== bluez-qt
+
+== bmagic
+
+== boost1.92
+
+== breathe
+
+== bstring
+
+== buteo-sync-plugins
+
+== buteo-syncfw
+
+== buteo-syncml
+
+== c-blosc2
+
+== c-munipack
+
+== cairomm
+
+== cairomm1.16
+
+== cal3d
+
+== ccfits
+
+== clamav
+
+== clfft
+
+== clhep
+
+== cli11
+
+== clipper
+
+== clp
+
+== clustalo
+
+== cmake-extras
+
+== cmigemo
+
+== coin3
+
+== coinor-bonmin
+
+== coinor-cbc
+
+== coinor-cgl
+
+== coinor-csdp
+
+== coinor-dylp
+
+== coinor-osi
+
+== coinor-symphony
+
+== coinor-vol
+
+== coinutils
+
+== combblas
+
+== corosync
+
+== cpluff
+
+== cpprest
+
+== cpptest
+
+== cpptoml
+
+== cppunit
+
+== csound
+
+== cyclonedds
+
+== cyrus-imapd
+
+== dar
+
+== dart
+
+== davical
+
+== davix
+
+== dbus
+
+== dbus-c++
+
+== dbus-cpp
+
+== deal.ii
+
+== dime
+
+== dlt-daemon
+
+== doxysphinx
+
+== dpdk
+
+== dpp
+
+== drogon
+
+== dsdp
+
+== dtk6core
+
+== dtk6declarative
+
+== dtk6gui
+
+== dtk6widget
+
+== dtkcore
+
+== dtkdeclarative
+
+== dtkgui
+
+== dune-common
+
+== dune-functions
+
+== dune-geometry
+
+== dune-grid
+
+== dune-grid-glue
+
+== dune-istl
+
+== dune-localfunctions
+
+== dune-typetree
+
+== dyssol
+
+== e17
+
+== ecflow
+
+== eckit
+
+== elastix
+
+== enet
+
+== epr-api
+
+== esmi
+
+== etlcpp
+
+== feather-wallet
+
+== fenics-basix
+
+== fflas-ffpack
+
+== flac
+
+== fltk1.3
+
+== fltk1.4
+
+== fmtlib
+
+== foonathan-memory
+
+== forge
+
+== freecad
+
+== freefem
+
+== freetds
+
+== frobby
+
+== frugen
+
+== ftgl
+
+== ftxui
+
+== g2clib
+
+== g2o
+
+== gatb-core
+
+== gavl
+
+== gdal
+
+== geany
+
+== geeqie
+
+== genparse
+
+== geogram
+
+== geos
+
+== gio-qt
+
+== givaro
+
+== glbinding
+
+== glfw3
+
+== glibmm2.4
+
+== glibmm2.68
+
+== globalplatform
+
+== globus-authz
+
+== globus-authz-callout-error
+
+== globus-callout
+
+== globus-common
+
+== globus-ftp-client
+
+== globus-ftp-control
+
+== globus-gass-cache
+
+== globus-gass-copy
+
+== globus-gass-transfer
+
+== globus-gram-client
+
+== globus-gram-job-manager-callout-error
+
+== globus-gram-protocol
+
+== globus-gridmap-callout-error
+
+== globus-gsi-callback
+
+== globus-gsi-cert-utils
+
+== globus-gsi-credential
+
+== globus-gsi-openssl-error
+
+== globus-gsi-proxy-core
+
+== globus-gsi-proxy-ssl
+
+== globus-gsi-sysconfig
+
+== globus-gss-assist
+
+== globus-gssapi-error
+
+== globus-gssapi-gsi
+
+== globus-net-manager
+
+== globus-openssl-module
+
+== globus-rsl
+
+== globus-scheduler-event-generator
+
+== globus-xio
+
+== globus-xio-gridftp-driver
+
+== globus-xio-gsi-driver
+
+== gloox
+
+== gmerlin
+
+== gmerlin-avdecoder
+
+== gnuradio
+
+== gnustep-corebase
+
+== gr-air-modes
+
+== gr-dab
+
+== gr-fosphor
+
+== gr-funcube
+
+== gr-hpsdr
+
+== gr-iqbal
+
+== gr-limesdr
+
+== gr-osmosdr
+
+== gr-radar
+
+== gr-rds
+
+== gr-satellites
+
+== graphite2
+
+== graphviz
+
+== gridsite
+
+== gromacs
+
+== gsad
+
+== gss-ntlmssp
+
+== gstreamermm-1.0
+
+== gtg-trace
+
+== gtkmm3.0
+
+== gtkmm4.0
+
+== gtkspellmm
+
+== gtsam
+
+== gudhi
+
+== guitarix
+
+== gvm-libs
+
+== gvmd
+
+== gyoto
+
+== halide
+
+== hamlib
+
+== hdf5
+
+== hepmc3
+
+== hipblas
+
+== hipsolver
+
+== hoel
+
+== horizon-eda
+
+== hueplusplus
+
+== iceoryx
+
+== icu
+
+== iir1
+
+== inotify-tools
+
+== ipe
+
+== irrlicht
+
+== ismrmrd
+
+== isospec
+
+== jack-audio-connection-kit
+
+== jpeg-xl
+
+== kactivities-kf5
+
+== kactivities-stats
+
+== karchive
+
+== kauth
+
+== kbookmarks
+
+== kcalcore
+
+== kcmutils
+
+== kcodecs
+
+== kcompletion
+
+== kconfig
+
+== kconfigwidgets
+
+== kcontacts
+
+== kcoreaddons
+
+== kcrash
+
+== kdav
+
+== kdbusaddons
+
+== kdeclarative
+
+== kdesu
+
+== kdnssd-kf5
+
+== kdsoap
+
+== kemoticons
+
+== kernelshark
+
+== kf6-attica
+
+== kf6-baloo
+
+== kf6-bluez-qt
+
+== kf6-karchive
+
+== kf6-kauth
+
+== kf6-kbookmarks
+
+== kf6-kcalendarcore
+
+== kf6-kcmutils
+
+== kf6-kcodecs
+
+== kf6-kcolorscheme
+
+== kf6-kcompletion
+
+== kf6-kconfig
+
+== kf6-kconfigwidgets
+
+== kf6-kcontacts
+
+== kf6-kcoreaddons
+
+== kf6-kcrash
+
+== kf6-kdav
+
+== kf6-kdbusaddons
+
+== kf6-kdeclarative
+
+== kf6-kdesu
+
+== kf6-kdnssd
+
+== kf6-kdoctools
+
+== kf6-kfilemetadata
+
+== kf6-kglobalaccel
+
+== kf6-kguiaddons
+
+== kf6-kholidays
+
+== kf6-ki18n
+
+== kf6-kiconthemes
+
+== kf6-kidletime
+
+== kf6-kio
+
+== kf6-kirigami
+
+== kf6-kitemmodels
+
+== kf6-kitemviews
+
+== kf6-kjobwidgets
+
+== kf6-knewstuff
+
+== kf6-knotifications
+
+== kf6-knotifyconfig
+
+== kf6-kpackage
+
+== kf6-kparts
+
+== kf6-kpeople
+
+== kf6-kplotting
+
+== kf6-kpty
+
+== kf6-krunner
+
+== kf6-kservice
+
+== kf6-kstatusnotifieritem
+
+== kf6-ksvg
+
+== kf6-ktexteditor
+
+== kf6-ktexttemplate
+
+== kf6-ktextwidgets
+
+== kf6-kunitconversion
+
+== kf6-kwallet
+
+== kf6-kwidgetsaddons
+
+== kf6-kwindowsystem
+
+== kf6-kxmlgui
+
+== kf6-modemmanager-qt
+
+== kf6-networkmanager-qt
+
+== kf6-prison
+
+== kf6-solid
+
+== kf6-sonnet
+
+== kf6-syndication
+
+== kf6-syntax-highlighting
+
+== kf6-threadweaver
+
+== kfilemetadata-kf5
+
+== kglobalaccel
+
+== kguiaddons
+
+== kholidays
+
+== khronos-opencl-clhpp
+
+== ki18n
+
+== kicad
+
+== kiconthemes
+
+== kidletime
+
+== kio
+
+== kirigami2
+
+== kitemmodels
+
+== kitemviews
+
+== kjobwidgets
+
+== klatexformula
+
+== knewstuff
+
+== knotifications
+
+== knotifyconfig
+
+== kodi
+
+== kpackage
+
+== kparts
+
+== kpeople
+
+== kplotting
+
+== kpty
+
+== kronosnet
+
+== krunner
+
+== kservice
+
+== ksyntax-highlighting
+
+== ktextaddons
+
+== ktexteditor
+
+== ktextwidgets
+
+== kunitconversion
+
+== kvazaar
+
+== kvirc
+
+== kwallet-kf5
+
+== kwayland
+
+== kwayland5
+
+== kweathercore
+
+== kwidgetsaddons
+
+== kwindowsystem
+
+== kxmlgui
+
+== kxmlrpcclient
+
+== lapack
+
+== lasi
+
+== ldns
+
+== lensfun
+
+== libam7xxx
+
+== libaqbanking
+
+== libassa
+
+== libasyncns
+
+== libbash
+
+== libbigwig
+
+== libbluray
+
+== libcaca
+
+== libcbor
+
+== libccrtp
+
+== libcdr
+
+== libcereal
+
+== libcifpp
+
+== libcmtspeechdata
+
+== libcommuni
+
+== libconfuse
+
+== libcontra
+
+== libcoverart
+
+== libcpuid
+
+== libcsfml
+
+== libcxx-serial
+
+== libcyaml
+
+== libdaemon
+
+== libdc1394
+
+== libdecaf
+
+== libdiscid
+
+== libdrumstick
+
+== libdshconfig
+
+== libdvdnav
+
+== libecoli
+
+== libeconf
+
+== libest
+
+== libexif
+
+== libfakekey
+
+== libfishsound
+
+== libfixbuf
+
+== libfreenect
+
+== libftdi1
+
+== libgphoto2
+
+== libgpiod
+
+== libgtksourceviewmm
+
+== libgwenhywfar
+
+== libical3
+
+== libime-jyutping
+
+== libixion
+
+== libjsoncpp
+
+== libjwt3
+
+== libkate
+
+== libkdumpfile
+
+== libkscreen
+
+== liblemon
+
+== liblo
+
+== liblscp
+
+== libltc
+
+== libm2k
+
+== libmatchbox
+
+== libmediainfo
+
+== libmnl
+
+== libmpdclient
+
+== libmspub
+
+== libmtp
+
+== libmusicbrainz5
+
+== libmwaw
+
+== libnet
+
+== libnetconf2
+
+== libnetfilter-conntrack
+
+== libnetfilter-cthelper
+
+== libnetfilter-cttimeout
+
+== libnetfilter-log
+
+== libnetfilter-queue
+
+== libnftnl
+
+== libnjb
+
+== libocxl
+
+== libodsstream
+
+== libofono-qt
+
+== libofx
+
+== liboggz
+
+== libopencsd
+
+== libopendbx
+
+== libopenmpt
+
+== libopenobex
+
+== libopenshot
+
+== libopenshot-audio
+
+== libopusenc
+
+== liborcus
+
+== libosmium
+
+== libosmo-sccp
+
+== libosmo-sigtran
+
+== libosmocore
+
+== libpappsomspp
+
+== libplasma
+
+== libpqxx
+
+== libqalculate
+
+== libqb
+
+== libquazip1
+
+== libquazip1-qt5
+
+== libquazip1-qt6
+
+== libqxp
+
+== librandom123
+
+== librcc
+
+== librcsb-core-wrapper
+
+== libreoffice
+
+== libresidfp
+
+== librostlab
+
+== libsbml
+
+== libsdl2
+
+== libsdl3
+
+== libserial
+
+== libsfml
+
+== libsigc++-2.0
+
+== libsigc++-3.0
+
+== libsigrok
+
+== libsocket
+
+== libsocketcan
+
+== libsoundio
+
+== libsquish
+
+== libsrtp2
+
+== libssh
+
+== libstaroffice
+
+== libstatgen
+
+== libstrophe
+
+== libtheora
+
+== libthreadar
+
+== libtrace3
+
+== libtrio
+
+== libubootenv
+
+== libunibreak
+
+== libusb-1.0
+
+== libusbgx
+
+== libusermetrics
+
+== libuvc
+
+== libvdpau
+
+== libvisio
+
+== libvpx
+
+== libwpd
+
+== libwpg
+
+== libwps
+
+== libxdg-basedir
+
+== libxeddsa
+
+== libxkbcommon
+
+== libxml++-4.0
+
+== libxml++-5.0
+
+== libxml++2.6
+
+== libxml2
+
+== libyaml
+
+== libyang
+
+== libyang-cpp
+
+== libzeep
+
+== libzen
+
+== lilv
+
+== lime
+
+== limesuite
+
+== linbox
+
+== lirc
+
+== lmdb
+
+== lmdbxx
+
+== log4c
+
+== log4cplus
+
+== log4cxx
+
+== log4shib
+
+== lomiri-action-api
+
+== lomiri-api
+
+== lomiri-content-hub
+
+== lomiri-download-manager
+
+== lomiri-indicator-network
+
+== lomiri-keyboard
+
+== lomiri-location-service
+
+== lomiri-storage-framework
+
+== lomiri-thumbnailer
+
+== lorene
+
+== lucene++
+
+== lutok
+
+== lwip
+
+== lxc
+
+== maliit-keyboard
+
+== maloc
+maloc/debian/rules:9:	rm debian/libmaloc-dev/usr/share/doc/libmaloc-dev/html/jquery.js
+maloc/debian/rules:10:	ln -s /usr/share/javascript/jquery/jquery.js debian/libmaloc-dev/usr/share/doc/libmaloc-dev/html/jquery.js
+
+== martchus-qtforkawesome
+
+== mdds
+
+== meanwhile
+
+== med-fichier
+
+== meson
+
+== metalang99
+
+== mffm-fftw
+
+== mia
+
+== mimetic
+
+== mir
+
+== modemmanager-qt
+
+== monero
+
+== mongo-cxx-driver
+
+== mp3splt
+
+== mpich
+
+== mptcpd
+
+== msgpack-c
+
+== msgpack-cxx
+
+== msgpuck
+
+== musescore3
+
+== nanoflann
+
+== ncbi-vdb
+
+== ne10
+
+== net-cpp
+
+== netcdf
+
+== netcdf-cxx
+
+== netcdf-fortran
+
+== netcdf-parallel
+
+== networkmanager-qt
+
+== nexus
+
+== nfft
+
+== nfstrace
+
+== nlohmann-json3
+
+== nlohmann-json3.12
+
+== notmuch
+
+== numpy
+
+== o2
+
+== obexftp
+
+== odil
+
+== ohcount
+
+== open-vm-tools
+
+== open3d
+
+== openafs
+
+== opencamlib
+
+== opencascade
+
+== opencc
+
+== openigtlink
+
+== openjpeg2
+
+== openjph
+
+== openmesh
+
+== openmha
+
+== openmm
+
+== openni
+
+== openni2
+
+== openorienteering-mapper
+
+== opensaml
+
+== openscap
+
+== opensubdiv
+
+== openvas-scanner
+
+== openvdb
+
+== openvlbi
+
+== opm-common
+
+== opm-grid
+
+== opm-simulators
+
+== opm-upscaling
+
+== opus
+
+== opusfile
+
+== orcania
+
+== otf2
+
+== pacemaker
+
+== pacman-package-manager
+
+== paho.mqtt.cpp
+
+== pangomm
+
+== pangomm2.48
+
+== paraview
+
+== parted
+
+== passenger
+
+== pd-flext
+
+== persistent-cache-cpp
+
+== pico-sdk
+
+== pidgin
+
+== pipewire
+
+== plasma-activities
+
+== plasma-activities-stats
+
+== plasma-framework
+
+== png++
+
+== process-cpp
+
+== prometheus-cpp
+
+== properties-cpp
+
+== protozero
+
+== psocksxx
+
+== pulseaudio
+
+== pulseaudio-qt
+
+== pupnp
+
+== pymilter
+
+== python-gsd
+
+== qca2
+
+== qgpgme
+
+== qjackrcd
+
+== qrupdate
+
+== qtspell
+
+== quickfix
+
+== qwtplot3d
+
+== qxmpp
+
+== range-v3
+
+== rapidfuzz-cpp
+
+== rapidjson
+
+== rccl
+
+== readosm
+
+== regina-normal
+
+== rocalution
+
+== rocsolver
+
+== rocsparse
+
+== rokuecp
+
+== rsskit
+
+== rtl-433
+
+== rtrlib
+
+== sayonara
+
+== scip
+
+== sdbus-cpp
+
+== seastar
+
+== seqan-needle
+
+== seqan-raptor
+
+== seqan3
+
+== shibboleth-sp
+
+== signond
+
+== singular
+
+== soapysdr
+
+== sockperf
+
+== sofia-sip
+
+== sol2
+
+== solid
+
+== sonnet
+
+== soqt
+
+== speech-tools
+
+== speex
+
+== sphde
+
+== sphinxcontrib-doxylink
+
+== starpu
+
+== starpu-contrib
+
+== stellarium
+
+== stk
+
+== subversion
+
+== supernovas
+
+== svxlink
+
+== syncthingtray
+
+== syndication
+
+== sysrepo
+
+== tango
+
+== taskflow
+
+== tdlib
+
+== threadweaver
+
+== tiny-dnn
+
+== tkrzw
+
+== tlfloat
+
+== toulbar2
+
+== tpm2-tss
+
+== trantor
+
+== tulip
+
+== tweeny
+
+== ucc
+
+== ucx
+
+== uhd
+
+== ui-gxmlcpp
+
+== ui-utilcpp
+
+== ukui-notification
+
+== ulfius
+
+== uriparser
+
+== v4l-utils
+
+== vamp-plugin-sdk
+
+== vg
+
+== vips
+
+== visp
+
+== vkd3d
+
+== vlfeat
+
+== volk
+
+== voms
+
+== votca
+
+== vpb-driver
+
+== vulkan-memory-allocator
+
+== wayland
+
+== waylandpp
+
+== websocketpp
+
+== wget2
+
+== wimlib
+
+== wireplumber
+
+== wreport
+
+== wxpython4.0
+
+== wxwidgets3.2
+
+== xalan
+
+== xenium
+
+== xlnx-platformstats
+
+== xmake
+
+== xmlsec1
+
+== xmltooling
+
+== xrootd
+
+== xrt
+
+== xz-utils
+
+== yajl
+
+== yder
+
+== yyjson
+
+== zfcp-hbaapi
+
+== zydis
+
+== apt
+== libdebian-installer
+== libxcb
+== mce-dev
+== nux
+== unity-api

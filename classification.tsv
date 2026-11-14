@@ -1,0 +1,933 @@
+389-ds-base	NONE	
+ace	NONE	
+actor-framework	NONE	
+ada-url	NONE	
+alsa-lib	LOW	libasound2-doc.links:1 non-build file
+alsaplayer	NONE	
+analizo	NONE	
+angelscript	LOW	doxygen/source/new_header.html:11 non-build file
+aoflagger	NONE	
+aom	NONE	
+apophenia	LOW	apophenia-doc.links:1 non-build file
+apr	NONE	
+apr-util	NONE	
+apt	NONE	
+argagg	LOW	argagg-dev-doc.links:1 non-build file
+arm-compute-library	NONE	
+assimp	NONE	
+asymptote	NONE	
+atkmm	NONE	
+atkmm1.6	NONE	
+atlas-ecmwf	NONE	
+attica-kf5	NONE	
+aubio	LOW	libaubio-doc.links:1 non-build file
+ausaxs	NONE	
+avogadro	NONE	
+avogadrolibs	NONE	
+avr-libc	NONE	
+awl	NONE	
+baloo-kf5	NONE	
+bamtools	LOW	rules:39 rm -f
+bash-argsparse	NONE	
+bcm2835	NONE	
+bglibs	NONE	
+biometryd	NONE	
+bitwuzla	LOW	rules:36 $(RM) = rm -f
+bladerf	NONE	
+bliss	LOW	adhoc/Makefile:37 rm -f
+bluez-qt	NONE	
+bmagic	NONE	
+boost1.92	NONE	
+bornagain	LOW	bornagain-doc.links:4 non-build file
+box2d	LOW	libbox2d-doc.links:1 non-build file
+breathe	NONE	
+brickos	LOW	rules:44 $(RM) = rm -f
+brltty	LOW	rules:73 rm -f
+bstring	NONE	
+bullet	LOW	libbullet-doc.links:1 non-build file
+buteo-sync-plugins	NONE	
+buteo-syncfw	NONE	
+buteo-syncml	NONE	
+c-blosc2	NONE	
+c-munipack	NONE	
+cairomm	NONE	
+cairomm1.16	NONE	
+cal3d	NONE	
+casacore	LOW	rules:38 rm -f
+cassiopee	LOW	libcassie-doc.links:1 non-build file
+ccfits	NONE	
+cctools	LOW	coop-computing-tools-doc.links:3 non-build file
+ciftilib	NONE	
+cimg	LOW	cimg-doc.links:1 non-build file
+clamav	NONE	
+clfft	NONE	
+clhep	NONE	
+cli11	NONE	
+clipper	NONE	
+clp	NONE	
+clustalo	NONE	
+cmake-extras	NONE	
+cmigemo	NONE	
+cmocka	LOW	links:8 other
+coin3	NONE	
+coinor-bonmin	NONE	
+coinor-cbc	NONE	
+coinor-cgl	NONE	
+coinor-csdp	NONE	
+coinor-dylp	NONE	
+coinor-ipopt	LOW	coinor-libipopt-doc.links:1 non-build file
+coinor-osi	NONE	
+coinor-symphony	NONE	
+coinor-vol	NONE	
+coinutils	NONE	
+colobot	LOW	colobot-dev-doc.links:1 non-build file
+combblas	NONE	
+corosync	NONE	
+cpl	LOW	rules:19 -X exclusion
+cpluff	NONE	
+cpprest	NONE	
+cpptest	NONE	
+cpptoml	NONE	
+cppunit	NONE	
+csound	NONE	
+cubeb	CHECK	debputy.manifest:40 debputy/linktree handling of missing source
+cwidget	LOW	libcwidget-doc.links:2 non-build file
+cyclonedds	NONE	
+cyrus-imapd	NONE	
+dar	NONE	
+dart	NONE	
+davical	NONE	
+davix	NONE	
+dbus	NONE	
+dbus-c++	NONE	
+dbus-cpp	NONE	
+dcmtk	LOW	rules:109 link/rewrite only, no failure on missing file
+deal.ii	NONE	
+dime	NONE	
+dlt-daemon	NONE	
+dolfin	LOW	index.html:26 non-build file
+doxysphinx	NONE	
+dpdk	NONE	
+dpp	NONE	
+drogon	NONE	
+dsdp	NONE	
+dtk6core	NONE	
+dtk6declarative	NONE	
+dtk6gui	NONE	
+dtk6widget	NONE	
+dtkcore	NONE	
+dtkdeclarative	NONE	
+dtkgui	NONE	
+dune-common	NONE	
+dune-functions	NONE	
+dune-geometry	NONE	
+dune-grid	NONE	
+dune-grid-glue	NONE	
+dune-istl	NONE	
+dune-localfunctions	NONE	
+dune-typetree	NONE	
+dyssol	NONE	
+e17	NONE	
+eccodes	LOW	libeccodes-doc.links:1 non-build file
+ecflow	NONE	
+eckit	NONE	
+editorconfig-core	LOW	editorconfig-doc.links:1 non-build file
+efl	CHECK	rules:92 guard/condition, check exit status
+eigen3	LOW	libeigen3-doc.links:2 non-build file
+elastix	NONE	
+enet	NONE	
+epr-api	NONE	
+esmi	NONE	
+esys-particle	LOW	esys-particle.links:1 non-build file
+etlcpp	NONE	
+exiv2	LOW	rules:35 find -delete/-exec
+fastcdr	LOW	rules:27 ln (creates link, no failure on missing target)
+fastdds	LOW	rules:70 ln (creates link, no failure on missing target)
+fastjet	LOW	fastjet-doc.links:1 non-build file
+fcml	LOW	libfcml-doc.links:1 non-build file
+feather-wallet	NONE	
+fenics-basix	NONE	
+fenics-dolfinx	LOW	index.html:26 non-build file
+fflas-ffpack	NONE	
+ffmpeg	LOW	ffmpeg-doc.links:1 non-build file
+field3d	LOW	field3d-doc.links:1 non-build file
+flac	NONE	
+fltk1.3	NONE	
+fltk1.4	NONE	
+fmtlib	NONE	
+foonathan-memory	NONE	
+forge	NONE	
+fosfat	LOW	fosfat-dev.links:1 non-build file
+freecad	NONE	
+freecontact	LOW	README.source:10 non-build file
+freefem	NONE	
+freeimage	LOW	libfreeimageplus-doc.links:1 non-build file
+freetds	NONE	
+frei0r	LOW	frei0r-plugins-doc.lintian-overrides:1 non-build file
+frobby	NONE	
+frugen	NONE	
+ftgl	NONE	
+ftxui	NONE	
+g2clib	NONE	
+g2o	NONE	
+gammu	LOW	gammu-doc.links:1 non-build file
+gatb-core	NONE	
+gavl	NONE	
+gcc-11	LOW	rules.d/binary-libstdcxx.mk:516 commented out
+gcc-12	LOW	rules.d/binary-libstdcxx.mk:516 commented out
+gcc-13	LOW	rules.d/binary-libstdcxx.mk:526 commented out
+gcc-14	LOW	rules.d/binary-libstdcxx.mk:479 commented out
+gcc-15	LOW	rules.d/binary-libstdcxx.mk:494 commented out
+gcc-16	LOW	rules.d/binary-libstdcxx.mk:505 commented out
+gcc-snapshot	LOW	rules.d/binary-libstdcxx.mk:505 commented out
+gdal	NONE	
+gdcm	LOW	gdcm-doc.lintian-overrides:1 non-build file
+geany	NONE	
+gecode	LOW	rules:35 rm -f
+geeqie	NONE	
+geis	UNSCANNED	not present in results file
+genparse	NONE	
+geogram	NONE	
+geographiclib	LOW	patches/privacy.patch:3 non-build file
+geos	NONE	
+gio-qt	NONE	
+givaro	NONE	
+glbinding	NONE	
+glfw3	NONE	
+glibmm2.4	NONE	
+glibmm2.68	NONE	
+glm	LOW	libglm-doc.links:1 non-build file
+globalplatform	NONE	
+globus-authz	NONE	
+globus-authz-callout-error	NONE	
+globus-callout	NONE	
+globus-common	NONE	
+globus-ftp-client	NONE	
+globus-ftp-control	NONE	
+globus-gass-cache	NONE	
+globus-gass-copy	NONE	
+globus-gass-transfer	NONE	
+globus-gram-client	NONE	
+globus-gram-job-manager-callout-error	NONE	
+globus-gram-protocol	NONE	
+globus-gridmap-callout-error	NONE	
+globus-gsi-callback	NONE	
+globus-gsi-cert-utils	NONE	
+globus-gsi-credential	NONE	
+globus-gsi-openssl-error	NONE	
+globus-gsi-proxy-core	NONE	
+globus-gsi-proxy-ssl	NONE	
+globus-gsi-sysconfig	NONE	
+globus-gss-assist	NONE	
+globus-gssapi-error	NONE	
+globus-gssapi-gsi	NONE	
+globus-net-manager	NONE	
+globus-openssl-module	NONE	
+globus-rsl	NONE	
+globus-scheduler-event-generator	NONE	
+globus-xio	NONE	
+globus-xio-gridftp-driver	NONE	
+globus-xio-gsi-driver	NONE	
+gloox	NONE	
+gmerlin	NONE	
+gmerlin-avdecoder	NONE	
+gnuradio	NONE	
+gnustep-corebase	NONE	
+gr-air-modes	NONE	
+gr-dab	NONE	
+gr-fosphor	NONE	
+gr-funcube	NONE	
+gr-gsm	LOW	gr-gsm.links:1 non-build file
+gr-hpsdr	NONE	
+gr-iqbal	NONE	
+gr-limesdr	NONE	
+gr-osmosdr	NONE	
+gr-radar	NONE	
+gr-rds	NONE	
+gr-satellites	NONE	
+graphite2	NONE	
+graphviz	NONE	
+grass	LOW	grass-dev-doc.links:1 non-build file
+gridsite	NONE	
+gridtools	LOW	source/lintian-overrides:1 non-build file
+gromacs	NONE	
+groonga	LOW	groonga-bin.links:1 non-build file
+gsad	NONE	
+gsoap	LOW	patches/gsoap-doxygen-tabs.patch:10 non-build file
+gss-ntlmssp	NONE	
+gstreamermm-1.0	NONE	
+gtg-trace	NONE	
+gtkmm3.0	NONE	
+gtkmm4.0	NONE	
+gtkspellmm	NONE	
+gtsam	NONE	
+gudhi	NONE	
+guitarix	NONE	
+gutenprint	LOW	libgutenprint-doc.links:1 non-build file
+gvm-libs	NONE	
+gvmd	NONE	
+gyoto	NONE	
+halide	NONE	
+hamlib	NONE	
+harp	LOW	source/lintian-overrides:1 non-build file
+hdf5	NONE	
+hepmc3	NONE	
+hipblas	NONE	
+hipsolver	NONE	
+hoel	NONE	
+horizon-eda	NONE	
+hueplusplus	NONE	
+hwinfo	LIKELY	rules:35 unguarded rm
+hwloc	LOW	README.source:3 non-build file
+iceoryx	NONE	
+icu	NONE	
+id3lib3.8.3	LOW	rules:27 rm -f
+iipimage	LOW	README.source:4 non-build file
+iir1	NONE	
+imagemagick	CHECK	scripts/dh_doxygen:128 other reference in build file
+imath	LOW	libimath-doc.links:2 non-build file
+iniparser	LOW	libiniparser-doc.links:1 non-build file
+inotify-tools	NONE	
+ipe	NONE	
+irrlicht	NONE	
+ismrmrd	NONE	
+isospec	NONE	
+jack-audio-connection-kit	NONE	
+janus	LOW	patches/2003_use_packaged_javascript.patch:186 non-build file
+jaula	LOW	libjaula-doc.links:1 non-build file
+jpeg-xl	NONE	
+json-c	LOW	clean:1 non-build file
+kactivities-kf5	NONE	
+kactivities-stats	NONE	
+karchive	NONE	
+kauth	NONE	
+kbookmarks	NONE	
+kcalcore	NONE	
+kcmutils	NONE	
+kcodecs	NONE	
+kcompletion	NONE	
+kconfig	NONE	
+kconfigwidgets	NONE	
+kcontacts	NONE	
+kcoreaddons	NONE	
+kcrash	NONE	
+kdav	NONE	
+kdbusaddons	NONE	
+kdeclarative	NONE	
+kdesu	NONE	
+kdnssd-kf5	NONE	
+kdsoap	NONE	
+kemoticons	NONE	
+kernelshark	NONE	
+kf6-attica	NONE	
+kf6-baloo	NONE	
+kf6-bluez-qt	NONE	
+kf6-karchive	NONE	
+kf6-kauth	NONE	
+kf6-kbookmarks	NONE	
+kf6-kcalendarcore	NONE	
+kf6-kcmutils	NONE	
+kf6-kcodecs	NONE	
+kf6-kcolorscheme	NONE	
+kf6-kcompletion	NONE	
+kf6-kconfig	NONE	
+kf6-kconfigwidgets	NONE	
+kf6-kcontacts	NONE	
+kf6-kcoreaddons	NONE	
+kf6-kcrash	NONE	
+kf6-kdav	NONE	
+kf6-kdbusaddons	NONE	
+kf6-kdeclarative	NONE	
+kf6-kdesu	NONE	
+kf6-kdnssd	NONE	
+kf6-kdoctools	NONE	
+kf6-kfilemetadata	NONE	
+kf6-kglobalaccel	NONE	
+kf6-kguiaddons	NONE	
+kf6-kholidays	NONE	
+kf6-ki18n	NONE	
+kf6-kiconthemes	NONE	
+kf6-kidletime	NONE	
+kf6-kio	NONE	
+kf6-kirigami	NONE	
+kf6-kitemmodels	NONE	
+kf6-kitemviews	NONE	
+kf6-kjobwidgets	NONE	
+kf6-knewstuff	NONE	
+kf6-knotifications	NONE	
+kf6-knotifyconfig	NONE	
+kf6-kpackage	NONE	
+kf6-kparts	NONE	
+kf6-kpeople	NONE	
+kf6-kplotting	NONE	
+kf6-kpty	NONE	
+kf6-krunner	NONE	
+kf6-kservice	NONE	
+kf6-kstatusnotifieritem	NONE	
+kf6-ksvg	NONE	
+kf6-ktexteditor	NONE	
+kf6-ktexttemplate	NONE	
+kf6-ktextwidgets	NONE	
+kf6-kunitconversion	NONE	
+kf6-kwallet	NONE	
+kf6-kwidgetsaddons	NONE	
+kf6-kwindowsystem	NONE	
+kf6-kxmlgui	NONE	
+kf6-modemmanager-qt	NONE	
+kf6-networkmanager-qt	NONE	
+kf6-prison	NONE	
+kf6-solid	NONE	
+kf6-sonnet	NONE	
+kf6-syndication	NONE	
+kf6-syntax-highlighting	NONE	
+kf6-threadweaver	NONE	
+kfilemetadata-kf5	NONE	
+kglobalaccel	NONE	
+kguiaddons	NONE	
+kholidays	NONE	
+khronos-opencl-clhpp	NONE	
+ki18n	NONE	
+kicad	NONE	
+kiconthemes	NONE	
+kidletime	NONE	
+kio	NONE	
+kirigami2	NONE	
+kitemmodels	NONE	
+kitemviews	NONE	
+kjobwidgets	NONE	
+klatexformula	NONE	
+knewstuff	NONE	
+knotifications	NONE	
+knotifyconfig	NONE	
+kodi	NONE	
+kpackage	NONE	
+kparts	NONE	
+kpeople	NONE	
+kplotting	NONE	
+kpty	NONE	
+krb5	LOW	rules:68 ln (creates link, no failure on missing target)
+kronosnet	NONE	
+krunner	NONE	
+kservice	NONE	
+ksyntax-highlighting	NONE	
+ktextaddons	NONE	
+ktexteditor	NONE	
+ktextwidgets	NONE	
+kunitconversion	NONE	
+kvazaar	NONE	
+kvirc	NONE	
+kwallet-kf5	NONE	
+kwayland	NONE	
+kwayland5	NONE	
+kweathercore	NONE	
+kwidgetsaddons	NONE	
+kwindowsystem	NONE	
+kxmlgui	NONE	
+kxmlrpcclient	NONE	
+lammps	LOW	lammps-doc.links:1 non-build file
+lapack	NONE	
+lasi	NONE	
+lcm	LOW	liblcm-doc.links:4 non-build file
+ldns	NONE	
+lensfun	NONE	
+libaccounts-qt	LOW	rules:24 find -delete/-exec
+libam7xxx	NONE	
+libambix	LOW	libambix-doc.lintian-overrides:1 non-build file
+libaqbanking	NONE	
+libassa	NONE	
+libasyncns	NONE	
+libbash	NONE	
+libbigwig	NONE	
+libbluray	NONE	
+libbrahe	LOW	libbrahe-dev.links.in:2 non-build file
+libcaca	NONE	
+libcamera	LOW	libcamera-doc.links:1 non-build file
+libcbor	NONE	
+libccrtp	NONE	
+libcdr	NONE	
+libcereal	NONE	
+libcgicc	LOW	rules:30 rm -f
+libcifpp	NONE	
+libclaw	LOW	libclaw-doc.links:1 non-build file
+libcmtspeechdata	NONE	
+libcoap3	LOW	libcoap3-doc.links:2 non-build file
+libcommuni	NONE	
+libcomps	CHECK	rules:33 other reference in build file
+libconfuse	NONE	
+libcontra	NONE	
+libcoverart	NONE	
+libcpuid	NONE	
+libcrypto++	LOW	libcrypto++-doc.links:1 non-build file
+libcsfml	NONE	
+libcxx-serial	NONE	
+libcyaml	NONE	
+libcypher-parser	LOW	libcypher-parser-doc.links:1 non-build file
+libdaemon	NONE	
+libdap	CHECK	rules:35 guard/condition, check exit status
+libdatrie	LOW	libdatrie-doc.links:1 non-build file
+libdc1394	NONE	
+libdebian-installer	NONE	
+libdecaf	NONE	
+libdiscid	NONE	
+libdnf	LOW	python3-hawkey-doc.links:1 non-build file
+libdrumstick	NONE	
+libdshconfig	NONE	
+libdvdnav	NONE	
+libecoli	NONE	
+libeconf	NONE	
+libemf	LOW	libemf-doc.links:1 non-build file
+libest	NONE	
+libevdev	LOW	patches/remove-remote-resources.patch:12 non-build file
+libexif	NONE	
+libfakekey	NONE	
+libfishsound	NONE	
+libfixbuf	NONE	
+libfreenect	NONE	
+libftdi1	NONE	
+libgadu	LOW	TODO:1 non-build file
+libgig	LOW	rules:16 ln (creates link, no failure on missing target)
+libgphoto2	NONE	
+libgpiod	NONE	
+libgtksourceviewmm	NONE	
+libgwenhywfar	NONE	
+libhmsbeagle	CHECK	libhmsbeagle-dev.linktrees:1 debputy/linktree handling of missing source
+libical3	NONE	
+libiio	LOW	rules:26 rm -f
+libime-jyutping	NONE	
+libimobiledevice	LOW	libimobiledevice-doc.links:2 non-build file
+libitpp	LOW	libitpp-doc.links:1 non-build file
+libixion	NONE	
+libjsoncpp	NONE	
+libjwt3	NONE	
+libkate	NONE	
+libkdumpfile	NONE	
+libkscreen	NONE	
+liblemon	NONE	
+liblo	NONE	
+liblscp	NONE	
+libltc	NONE	
+libm2k	NONE	
+libmatchbox	NONE	
+libmediainfo	NONE	
+libmnl	NONE	
+libmongo-client	LOW	libmongo-client-doc.links:1 non-build file
+libmpdclient	NONE	
+libmsnumpress	LOW	libmsnumpress-dev.links:2 non-build file
+libmspack	LOW	libmspack-doc.docs:4 commented out
+libmspub	NONE	
+libmtp	NONE	
+libmusicbrainz5	NONE	
+libmwaw	NONE	
+libmypaint	LOW	libmypaint-doc.links:1 non-build file
+libnet	NONE	
+libnetconf2	NONE	
+libnetfilter-conntrack	NONE	
+libnetfilter-cthelper	NONE	
+libnetfilter-cttimeout	NONE	
+libnetfilter-log	NONE	
+libnetfilter-queue	NONE	
+libnftnl	NONE	
+libnjb	NONE	
+libocxl	NONE	
+libodsstream	NONE	
+libofono-qt	NONE	
+libofx	NONE	
+liboggz	NONE	
+libopencsd	NONE	
+libopendbx	NONE	
+libopenmpt	NONE	
+libopenobex	NONE	
+libopenshot	NONE	
+libopenshot-audio	NONE	
+libopusenc	NONE	
+liborcus	NONE	
+libosl	LOW	rules:24 link/rewrite only, no failure on missing file
+libosmium	NONE	
+libosmo-sccp	NONE	
+libosmo-sigtran	NONE	
+libosmocore	NONE	
+libpappsomspp	NONE	
+libplasma	NONE	
+libplist	LOW	libplist-doc.links:1 non-build file
+libpqxx	NONE	
+libqalculate	NONE	
+libqb	NONE	
+libquazip1	NONE	
+libquazip1-qt5	NONE	
+libquazip1-qt6	NONE	
+libquicktime	LOW	libquicktime-doc.links:1 non-build file
+libquvi	LOW	patches/doxygen.patch:9 non-build file
+libqxp	NONE	
+librandom123	NONE	
+librcc	NONE	
+librcsb-core-wrapper	NONE	
+libreoffice	NONE	
+librepo	CHECK	rules:30 other reference in build file
+libresidfp	NONE	
+librostlab	NONE	
+librostlab-blast	CHECK	linktrees:5 debputy/linktree handling of missing source
+librsb	LOW	rules:38 rm -f
+libsbml	NONE	
+libsdl2	NONE	
+libsdl2-gfx	LOW	README.source:18 non-build file
+libsdl3	NONE	
+libserial	NONE	
+libsfml	NONE	
+libsidplayfp	LOW	libsidplayfp-doc.links:1 non-build file
+libsigc++-2.0	NONE	
+libsigc++-3.0	NONE	
+libsigrok	NONE	
+libsocket	NONE	
+libsocketcan	NONE	
+libsoundio	NONE	
+libsquish	NONE	
+libsrtp2	NONE	
+libssh	NONE	
+libstaroffice	NONE	
+libstatgen	NONE	
+libstrophe	NONE	
+libstxxl	CHECK	rules:3 path held in a variable
+libthai	LOW	libthai-doc.links:1 non-build file
+libtheora	NONE	
+libthreadar	NONE	
+libtrace3	NONE	
+libtrio	NONE	
+libubootenv	NONE	
+libunibreak	NONE	
+libusb-1.0	NONE	
+libusbgx	NONE	
+libusermetrics	NONE	
+libuvc	NONE	
+libvdpau	NONE	
+libvigraimpex	LOW	rules:84 rm -f
+libvisio	NONE	
+libvmime	LOW	libvmime1-doc.links:2 non-build file
+libvpx	NONE	
+libvsqlitepp	LOW	libvsqlitepp-doc.links:1 non-build file
+libwpd	NONE	
+libwpg	NONE	
+libwps	NONE	
+libxcb	NONE	
+libxdg-basedir	NONE	
+libxeddsa	NONE	
+libxkbcommon	NONE	
+libxml++-4.0	NONE	
+libxml++-5.0	NONE	
+libxml++2.6	NONE	
+libxml2	NONE	
+libyaml	NONE	
+libyang	NONE	
+libyang-cpp	NONE	
+libzeem	LIKELY	rules:20 unguarded rm
+libzeep	NONE	
+libzen	NONE	
+libzypp	LOW	libzypp-doc.links:3 non-build file
+lilv	NONE	
+lime	NONE	
+limesuite	NONE	
+linbox	NONE	
+lirc	NONE	
+llvm-toolchain-17	LIKELY	rules:1119 unguarded rm
+llvm-toolchain-18	LIKELY	rules:1173 unguarded rm
+llvm-toolchain-19	LIKELY	rules:1431 unguarded rm
+llvm-toolchain-20	LIKELY	rules:1475 unguarded rm
+llvm-toolchain-21	LIKELY	rules:1557 unguarded rm
+llvm-toolchain-22	LIKELY	rules:1471 unguarded rm
+lmdb	NONE	
+lmdbxx	NONE	
+log4c	NONE	
+log4cplus	NONE	
+log4cxx	NONE	
+log4shib	NONE	
+lomiri-action-api	NONE	
+lomiri-api	NONE	
+lomiri-content-hub	NONE	
+lomiri-download-manager	NONE	
+lomiri-indicator-network	NONE	
+lomiri-keyboard	NONE	
+lomiri-location-service	NONE	
+lomiri-storage-framework	NONE	
+lomiri-thumbnailer	NONE	
+lorene	NONE	
+lucene++	NONE	
+lutok	NONE	
+lwip	NONE	
+lxc	NONE	
+magma	LOW	source/lintian-overrides:1 non-build file
+magma-rocm	LOW	source/lintian-overrides:1 non-build file
+maliit-framework	LOW	maliit-framework-doc.links:1 non-build file
+maliit-keyboard	NONE	
+maloc	LIKELY	rules:9 unguarded rm
+martchus-qtforkawesome	NONE	
+mbedtls	LOW	libmbedtls-doc.links:1 non-build file
+mce-dev	NONE	
+mdds	NONE	
+meanwhile	NONE	
+med-fichier	NONE	
+meson	NONE	
+metalang99	NONE	
+mffm-fftw	NONE	
+mia	NONE	
+mimetic	NONE	
+mir	NONE	
+modemmanager-qt	NONE	
+monero	NONE	
+mongo-cxx-driver	NONE	
+mp3splt	NONE	
+mpich	NONE	
+mptcpd	NONE	
+msgpack-c	NONE	
+msgpack-cxx	NONE	
+msgpuck	NONE	
+musescore3	NONE	
+mygui	LOW	mygui-doc.links:1 non-build file
+nanoflann	NONE	
+ncbi-vdb	NONE	
+ne10	NONE	
+net-cpp	NONE	
+netcdf	NONE	
+netcdf-cxx	NONE	
+netcdf-fortran	NONE	
+netcdf-parallel	NONE	
+networkmanager-qt	NONE	
+nexus	NONE	
+nfft	NONE	
+nfstrace	NONE	
+nifticlib	LOW	libnifti-doc.links:1 non-build file
+nlohmann-json3	NONE	
+nlohmann-json3.12	NONE	
+notmuch	NONE	
+numpy	NONE	
+nux	NONE	
+o2	NONE	
+obexftp	NONE	
+odil	NONE	
+ogre-1.12	LOW	ogre-1.12-doc.links:1 non-build file
+ogre-14	LOW	ogre-14-doc.links:1 non-build file
+ogre-next	LOW	ogre-next-doc.links:1 non-build file
+ohcount	NONE	
+onetbb	LOW	libtbb-doc.links:1 non-build file
+open-vm-tools	NONE	
+open3d	NONE	
+openafs	NONE	
+openbabel	LOW	libopenbabel-doc.links:1 non-build file
+opencamlib	NONE	
+opencascade	NONE	
+opencc	NONE	
+opencolorio	LOW	opencolorio-doc.links:1 non-build file
+opencv	LOW	patches/change_jquery.js_path:19 non-build file
+opengv	NONE	
+openigtlink	NONE	
+openjpeg2	NONE	
+openjph	NONE	
+openmesh	NONE	
+openmha	NONE	
+openmm	NONE	
+openms	LOW	rules:133 rm -f
+openni	NONE	
+openni2	NONE	
+openorienteering-mapper	NONE	
+opensaml	NONE	
+openscap	NONE	
+openscenegraph	LOW	rules:238 commented out
+opensubdiv	NONE	
+openvas-scanner	NONE	
+openvdb	NONE	
+openvlbi	NONE	
+opm-common	NONE	
+opm-grid	NONE	
+opm-simulators	NONE	
+opm-upscaling	NONE	
+opus	NONE	
+opusfile	NONE	
+orcania	NONE	
+orthanc	LIKELY	rules:88 unguarded rm
+ortp	LOW	libortp-doc.links:1 non-build file
+otf2	NONE	
+pacemaker	NONE	
+pacman-package-manager	NONE	
+paho.mqtt.cpp	NONE	
+pangomm	NONE	
+pangomm2.48	NONE	
+paraview	NONE	
+parted	NONE	
+passenger	NONE	
+pcl	LOW	libpcl-doc.links:1 non-build file
+pd-flext	NONE	
+persistent-cache-cpp	NONE	
+pico-sdk	NONE	
+pidgin	NONE	
+pipewire	NONE	
+pkcs11-helper	LOW	libpkcs11-helper1-dev.links:1 non-build file
+plasma-activities	NONE	
+plasma-activities-stats	NONE	
+plasma-framework	NONE	
+png++	NONE	
+pocketsphinx	LOW	libpocketsphinx-dev.links:1 non-build file
+portaudio19	LOW	portaudio19-doc.links:1 non-build file
+ppl	LIKELY	rules:84 unguarded rm
+presage	LOW	libpresage-doc.links:1 non-build file
+primesieve	LOW	adhoc/Makefile:15 rm -f
+process-cpp	NONE	
+prometheus-cpp	NONE	
+properties-cpp	NONE	
+protozero	NONE	
+psocksxx	NONE	
+pstreams	LOW	libpstreams-dev.links:1 non-build file
+pulseaudio	NONE	
+pulseaudio-qt	NONE	
+pupnp	NONE	
+pymilter	NONE	
+python-fhs	LIKELY	rules:11 unguarded rm
+python-gsd	NONE	
+python-mbed-host-tests	LOW	python-mbed-host-tests-doc.links:2 non-build file
+python-mbed-ls	LOW	python-mbed-ls-doc.links:2 non-build file
+python-network	LIKELY	rules:11 unguarded rm
+python-odf	LOW	source/lintian-overrides:2 non-build file
+python-websocketd	LIKELY	rules:11 unguarded rm
+qca2	NONE	
+qdjango	LOW	libqdjango-doc.lintian-overrides:5 non-build file
+qgis	LOW	patches/developersmap-use-debian-package.patch:25 non-build file
+qgpgme	NONE	
+qhttpengine	LOW	libqhttpengine-doc.links:1 non-build file
+qjackrcd	NONE	
+qpid-proton	LOW	libqpid-proton-cpp12-dev-doc.links:1 non-build file
+qrupdate	NONE	
+qscintilla2	LOW	clean:18 non-build file
+qtspell	NONE	
+quickfix	NONE	
+qwtplot3d	NONE	
+qxmpp	NONE	
+range-v3	NONE	
+rapidfuzz-cpp	NONE	
+rapidjson	NONE	
+rccl	NONE	
+rdkit	LOW	rules:136 ln (creates link, no failure on missing target)
+readosm	NONE	
+regina-normal	NONE	
+reglookup	LIKELY	rules:35 unguarded rm
+rocalution	NONE	
+rocsolver	NONE	
+rocsparse	NONE	
+rokuecp	NONE	
+rsskit	NONE	
+rtaudio	LOW	librtaudio-doc.links:1 non-build file
+rtl-433	NONE	
+rtmidi	LOW	librtmidi-doc.links:1 non-build file
+rtrlib	NONE	
+sayonara	NONE	
+scim	LOW	scim-dev-doc.links:1 non-build file
+scip	NONE	
+scolasync	LOW	scolasync.lintian-overrides:1 non-build file
+sdbus-cpp	NONE	
+seastar	NONE	
+seqan-needle	NONE	
+seqan-raptor	NONE	
+seqan3	NONE	
+serd	LOW	libserd-doc.lintian-overrides:1 non-build file
+shibboleth-sp	NONE	
+signond	NONE	
+simbody	LOW	simbody-doc.links:1 non-build file
+singular	NONE	
+siscone	LOW	siscone-doc-html.links:1 non-build file
+soapysdr	NONE	
+sockperf	NONE	
+sofia-sip	NONE	
+sol2	NONE	
+solid	NONE	
+sombok	LOW	libsombok-dev.links:1 non-build file
+sonnet	NONE	
+soqt	NONE	
+sord	LOW	libsord-doc.lintian-overrides:1 non-build file
+spandsp	LOW	libspandsp-doc.links:1 non-build file
+speech-tools	NONE	
+speex	NONE	
+sphde	NONE	
+sphinxcontrib-doxylink	NONE	
+starpu	NONE	
+starpu-contrib	NONE	
+steghide	LOW	rules:15 rm -f
+stellarium	NONE	
+stk	NONE	
+subversion	NONE	
+sumo	LOW	sumo-doc.links:1 non-build file
+supernovas	NONE	
+svxlink	NONE	
+syncthingtray	NONE	
+syndication	NONE	
+sysrepo	NONE	
+t4kcommon	LOW	libt4k-common0-doc.links:1 non-build file
+taglib	LIKELY	rules:60 unguarded rm
+tango	NONE	
+taskflow	NONE	
+tdlib	NONE	
+threadweaver	NONE	
+tiny-dnn	NONE	
+tinycbor	LOW	rules:37 link/rewrite only, no failure on missing file
+tkrzw	NONE	
+tlfloat	NONE	
+tntdb	LOW	rules:9 commented out
+toulbar2	NONE	
+tpm2-tss	NONE	
+trantor	NONE	
+trilinos	CHECK	rules:264 other reference in build file
+tulip	NONE	
+tweeny	NONE	
+ucc	NONE	
+ucommon	LOW	ucommon-doc.links:1 non-build file
+ucx	NONE	
+uhd	NONE	
+ui-gxmlcpp	NONE	
+ui-utilcpp	NONE	
+ukui-notification	NONE	
+ulfius	NONE	
+unity-api	NONE	
+uriparser	NONE	
+v4l-utils	NONE	
+vamp-plugin-sdk	NONE	
+vg	NONE	
+vienna-rna	LOW	vienna-rna-doc.links:1 non-build file
+viennacl	LOW	libviennacl-doc.links:1 non-build file
+vips	NONE	
+visp	NONE	
+vkd3d	NONE	
+vlfeat	NONE	
+volk	NONE	
+voms	NONE	
+votca	NONE	
+vpb-driver	NONE	
+vtk9	LOW	vtk9-doc.links:1 non-build file
+vulkan-memory-allocator	NONE	
+wayland	NONE	
+waylandpp	NONE	
+wcslib	LOW	not-installed:7 non-build file
+websocketpp	NONE	
+wget2	NONE	
+wimlib	NONE	
+wiredtiger	LOW	source/lintian-overrides:2 non-build file
+wireplumber	NONE	
+wreport	NONE	
+wvstreams	LOW	libwvstreams4.6-doc.lintian-override:1 non-build file
+wxpython4.0	NONE	
+wxsqlite3	LOW	README.source:2 non-build file
+wxwidgets3.2	NONE	
+xalan	NONE	
+xdotool	LOW	rules:11 rm -f
+xenium	NONE	
+xerces-c	LOW	libxerces-c-doc.lintian-overrides:1 non-build file
+xlnx-platformstats	NONE	
+xmake	NONE	
+xmlsec1	NONE	
+xmltooling	NONE	
+xorg-gtest	LOW	rules:19 -X exclusion
+xrootd	NONE	
+xrt	NONE	
+xz-utils	NONE	
+yajl	NONE	
+yder	NONE	
+yyjson	NONE	
+zfcp-hbaapi	NONE	
+zipios++	LOW	libzipios++-doc.links:1 non-build file
+zvbi	LOW	libzvbi-doc.links:1 non-build file
+zycore-c	LOW	libzycore-doc.links:1 non-build file
+zydis	NONE	

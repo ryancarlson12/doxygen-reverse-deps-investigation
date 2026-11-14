@@ -1,0 +1,332 @@
+package	tier	file	line	reason	text
+alsa-lib	LOW	libasound2-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libasound2/html/jquery.js
+angelscript	LOW	doxygen/source/new_header.html	11	non-build file	<script type="text/javascript" src="$relpath^jquery.js"></script>
+apophenia	LOW	apophenia-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/apophenia-doc/html/jquery.js
+apophenia	LOW	patches/debianization-documentation.patch	11	non-build file	<script type="text/javascript" src="$relpath^jquery.js"></script>
+apophenia	LOW	patches/debianization.patch	17	non-build file	+ -rm -f html/jquery.js
+argagg	LOW	argagg-dev-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/argagg/html/jquery.js
+aubio	LOW	libaubio-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js /usr/share/doc/libaubio-dev/api/jquery.js
+bamtools	LOW	rules	39	rm -f	rm -f debian/libbamtools-doc/usr/share/doc/libbamtools-dev/html/jquery.js
+bamtools	LOW	rules	40	ln (creates link, no failure on missing target)	ln -s /usr/share/javascript/jquery/jquery.js debian/libbamtools-doc/usr/share/doc/libbamtools-dev/html/jquery.js
+bitwuzla	LOW	rules	36	$(RM) = rm -f	$(RM) -rf $(DOCS_DIR)/cli_usage.txt $(DOCS_DIR)/static/fonts $(DOCS_DIR)/static/jquery.js
+bliss	LOW	adhoc/Makefile	37	rm -f	rm -f *.md5 jquery.js ; \
+bliss	LOW	adhoc/Makefile	40	ln (creates link, no failure on missing target)	ln -sf /usr/share/javascript/jquery/jquery.js ; \
+bornagain	LOW	bornagain-doc.links	4	non-build file	/usr/share/javascript/jquery/jquery.js /usr/share/doc/bornagain/html/js/jquery.js
+bornagain	LOW	patches/0008-Use-local-rather-than-hosted-assets-in-HTML-docs.patch	108	non-build file	<script src="/js/jquery.js"></script>
+bornagain	LOW	patches/0009-Remove-version-switch-code-in-HTML-docs.patch	16	non-build file	<script src="/js/jquery.js"></script>
+box2d	LOW	libbox2d-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libbox2d-doc/html/jquery.js
+brickos	LOW	rules	44	$(RM) = rm -f	$(RM) $(CURDIR)/debian/brickos-doc/usr/share/doc/brickos/html/html-$$l/jquery.js ; \
+brickos	LOW	rules	45	ln (creates link, no failure on missing target)	ln -s /usr/share/javascript/jquery/jquery.js \
+brickos	LOW	rules	46	continuation of a tolerant command	$(CURDIR)/debian/brickos-doc/usr/share/doc/brickos/html/html-$$l/jquery.js ; \
+brltty	LOW	rules	73	rm -f	rm -f Documents/BrlAPIref/html/jquery.js
+bullet	LOW	libbullet-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libbullet-doc/html/jquery.js
+casacore	LOW	rules	38	rm -f	rm -f doc/html/jquery.js
+cassiopee	LOW	libcassie-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/cassiopee/html/jquery.js
+cassiopee	LOW	rules	19	rm -f	rm -f doc/html/jquery.js
+cctools	LOW	coop-computing-tools-doc.links	3	non-build file	/usr/share/javascript/jquery/jquery.js /usr/share/doc/coop-computing-tools/api/jquery.js
+cimg	LOW	cimg-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js /usr/share/doc/cimg-dev/html/jquery.js
+cmocka	LOW	links	8	other	usr/share/javascript/jquery/jquery.min.js    usr/share/doc/cmocka-doc/html/jquery.js
+coinor-ipopt	LOW	coinor-libipopt-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js usr/share/doc/coinor-libipopt-doc/html/jquery.js
+coinor-ipopt	LOW	rules	56	commented out	# Removing the installed jquery.js file, a symlink will be created by dh_link
+coinor-ipopt	LOW	rules	58	find -delete/-exec	find debian/ -name "jquery.js" -delete
+colobot	LOW	colobot-dev-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/colobot/html/jquery.js
+cpl	LOW	rules	19	-X exclusion	dh_installdocs -Xjquery.js
+cubeb	CHECK	debputy.manifest	40	debputy/linktree handling of missing source	path: usr/share/doc/libcubeb-doc/cubeb/jquery.js
+cubeb	CHECK	debputy.manifest	41	debputy/linktree handling of missing source	target: /usr/share/javascript/jquery/jquery.js
+cwidget	LOW	libcwidget-doc.links	2	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libcwidget-doc/html/documentation/api/jquery.js
+cwidget	LOW	rules	28	-X exclusion	dh_install -i -Xjquery.min.js -Xjquery.js
+dcmtk	LOW	rules	109	link/rewrite only, no failure on missing file	dh_link -pdcmtk-doc usr/share/javascript/jquery/jquery.js usr/share/doc/dcmtk-doc/html/jquery.js
+dolfin	LOW	index.html	26	non-build file	<script src="python/_static/jquery.js"></script>
+eccodes	LOW	libeccodes-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js /usr/share/doc/libeccodes-doc/html/jquery.js
+editorconfig-core	LOW	editorconfig-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/editorconfig-doc/html/jquery.js
+efl	LOW	rules	91	rm -f	rm -f obj-$(DEB_HOST_GNU_TYPE)/html/jquery.js
+efl	CHECK	rules	92	guard/condition, check exit status	if grep -qr jquery.js obj-$(DEB_HOST_GNU_TYPE)/html/ ; \
+eigen3	LOW	libeigen3-doc.links	2	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libeigen3-doc/html/jquery.js
+eigen3	LOW	libeigen3-doc.links	3	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libeigen3-doc/html/unsupported/jquery.js
+esys-particle	LOW	esys-particle.links	1	non-build file	/usr/share/javascript/jquery/jquery.js usr/share/doc/esys-particle/Doc/html/jquery.js
+exiv2	LOW	rules	35	find -delete/-exec	find $(CURDIR)/debian -name jquery.js -exec ln -sfv /usr/share/javascript/jquery/jquery.js {} \;
+fastcdr	LOW	rules	27	ln (creates link, no failure on missing target)	ln -sf /usr/share/javascript/jquery/jquery.min.js debian/libfastcdr-doc/usr/share/doc/libfastcdr-dev/api_reference/jquery.js
+fastdds	LOW	rules	70	ln (creates link, no failure on missing target)	ln -sf /usr/share/javascript/jquery/jquery.min.js debian/tmp/usr/share/doc/libfastdds-dev/api_reference/jquery.js
+fastjet	LOW	fastjet-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/fastjet-doc/html/jquery.js
+fastjet	LOW	rules	18	$(RM) = rm -f	$(RM) -v html/jquery.js
+fcml	LOW	libfcml-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libfcml-doc/html/jquery.js
+fenics-dolfinx	LOW	index.html	26	non-build file	<script src="python/_static/jquery.js"></script>
+ffmpeg	LOW	ffmpeg-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.min.js usr/share/doc/ffmpeg/api/jquery.js
+field3d	LOW	field3d-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/field3d-doc/html/jquery.js
+fosfat	LOW	fosfat-dev.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/fosfat-dev/html/jquery.js
+freecontact	LOW	README.source	10	non-build file	libfreecontact-doc: embedded-javascript-library usr/share/doc/libfreecontact-doc/html/jquery.js
+freecontact	LOW	README.source	13	non-build file	This jquery.js is copied into the html documentation by the doxygen
+freecontact	LOW	README.source	15	non-build file	(e.g. i n stable) do not copy a jquery.js there.  The jquery.js copied
+freecontact	LOW	README.source	17	non-build file	(1.7.2-1). The jquery.js from doxygen actually is a minified bundle of
+freecontact	LOW	README.source	30	non-build file	Therefore, it is necessary to keep this jquery.js instead of linking to the
+freecontact	LOW	libfreecontact-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js /usr/share/doc/libfreecontact-doc/html/jquery.js
+freecontact	LOW	rules	56	find -delete/-exec	find debian -name jquery.js -delete
+freeimage	LOW	libfreeimageplus-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js usr/share/doc/libfreeimageplus-doc/html/jquery.js
+frei0r	LOW	frei0r-plugins-doc.lintian-overrides	1	non-build file	# the jquery.js is generated during build by doxygen
+frei0r	LOW	frei0r-plugins-doc.lintian-overrides	3	non-build file	frei0r-plugins-doc: embedded-javascript-library usr/share/doc/frei0r-plugins-dev/html/jquery.js
+gammu	LOW	gammu-doc.links	1	non-build file	/usr/share/javascript/sphinxdoc/1.0/jquery.js usr/share/doc/gammu/html/_static/jquery.js
+gcc-11	LOW	rules.d/binary-libstdcxx.mk	516	commented out	# rm -f $(d_libd)/$(docdir)/$(p_base)/libstdc++/*/jquery.js
+gcc-11	LOW	rules.d/binary-libstdcxx.mk	518	commented out	#  /usr/share/javascript/jquery/jquery.js \
+gcc-11	LOW	rules.d/binary-libstdcxx.mk	519	commented out	#  /$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+gcc-11	LOW	rules.d/binary-libstdcxx.mk	520	commented out	#  /usr/share/javascript/jquery/jquery.js \
+gcc-11	LOW	rules.d/binary-libstdcxx.mk	521	commented out	#  /$(docdir)/$(p_base)/libstdc++/user/jquery.js
+gcc-12	LOW	rules.d/binary-libstdcxx.mk	516	commented out	# rm -f $(d_libd)/$(docdir)/$(p_base)/libstdc++/*/jquery.js
+gcc-12	LOW	rules.d/binary-libstdcxx.mk	518	commented out	#  /usr/share/javascript/jquery/jquery.js \
+gcc-12	LOW	rules.d/binary-libstdcxx.mk	519	commented out	#  /$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+gcc-12	LOW	rules.d/binary-libstdcxx.mk	520	commented out	#  /usr/share/javascript/jquery/jquery.js \
+gcc-12	LOW	rules.d/binary-libstdcxx.mk	521	commented out	#  /$(docdir)/$(p_base)/libstdc++/user/jquery.js
+gcc-13	LOW	rules.d/binary-libstdcxx.mk	526	commented out	# rm -f $(d_libd)/$(docdir)/$(p_base)/libstdc++/*/jquery.js
+gcc-13	LOW	rules.d/binary-libstdcxx.mk	528	commented out	#  /usr/share/javascript/jquery/jquery.js \
+gcc-13	LOW	rules.d/binary-libstdcxx.mk	529	commented out	#  /$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+gcc-13	LOW	rules.d/binary-libstdcxx.mk	530	commented out	#  /usr/share/javascript/jquery/jquery.js \
+gcc-13	LOW	rules.d/binary-libstdcxx.mk	531	commented out	#  /$(docdir)/$(p_base)/libstdc++/user/jquery.js
+gcc-14	LOW	rules.d/binary-libstdcxx.mk	479	commented out	# rm -f $(d_libd)/$(docdir)/$(p_base)/libstdc++/*/jquery.js
+gcc-14	LOW	rules.d/binary-libstdcxx.mk	481	commented out	#  /usr/share/javascript/jquery/jquery.js \
+gcc-14	LOW	rules.d/binary-libstdcxx.mk	482	commented out	#  /$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+gcc-14	LOW	rules.d/binary-libstdcxx.mk	483	commented out	#  /usr/share/javascript/jquery/jquery.js \
+gcc-14	LOW	rules.d/binary-libstdcxx.mk	484	commented out	#  /$(docdir)/$(p_base)/libstdc++/user/jquery.js
+gcc-15	LOW	rules.d/binary-libstdcxx.mk	494	commented out	# rm -f $(d_libd)/$(docdir)/$(p_base)/libstdc++/*/jquery.js
+gcc-15	LOW	rules.d/binary-libstdcxx.mk	496	commented out	#  /usr/share/javascript/jquery/jquery.js \
+gcc-15	LOW	rules.d/binary-libstdcxx.mk	497	commented out	#  /$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+gcc-15	LOW	rules.d/binary-libstdcxx.mk	498	commented out	#  /usr/share/javascript/jquery/jquery.js \
+gcc-15	LOW	rules.d/binary-libstdcxx.mk	499	commented out	#  /$(docdir)/$(p_base)/libstdc++/user/jquery.js
+gcc-16	LOW	rules.d/binary-libstdcxx.mk	505	commented out	# rm -f $(d_libd)/$(docdir)/$(p_base)/libstdc++/*/jquery.js
+gcc-16	LOW	rules.d/binary-libstdcxx.mk	507	commented out	#  /usr/share/javascript/jquery/jquery.js \
+gcc-16	LOW	rules.d/binary-libstdcxx.mk	508	commented out	#  /$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+gcc-16	LOW	rules.d/binary-libstdcxx.mk	509	commented out	#  /usr/share/javascript/jquery/jquery.js \
+gcc-16	LOW	rules.d/binary-libstdcxx.mk	510	commented out	#  /$(docdir)/$(p_base)/libstdc++/user/jquery.js
+gcc-snapshot	LOW	rules.d/binary-libstdcxx.mk	505	commented out	# rm -f $(d_libd)/$(docdir)/$(p_base)/libstdc++/*/jquery.js
+gcc-snapshot	LOW	rules.d/binary-libstdcxx.mk	507	commented out	#  /usr/share/javascript/jquery/jquery.js \
+gcc-snapshot	LOW	rules.d/binary-libstdcxx.mk	508	commented out	#  /$(docdir)/$(p_base)/libstdc++/html/jquery.js \
+gcc-snapshot	LOW	rules.d/binary-libstdcxx.mk	509	commented out	#  /usr/share/javascript/jquery/jquery.js \
+gcc-snapshot	LOW	rules.d/binary-libstdcxx.mk	510	commented out	#  /$(docdir)/$(p_base)/libstdc++/user/jquery.js
+gdcm	LOW	gdcm-doc.lintian-overrides	1	non-build file	# The embedded jquery.js is generated by Doxygen and can not be replaced
+gecode	LOW	rules	35	rm -f	rm -f $(CURDIR)/debian/libgecode-doc/usr/share/doc/libgecode-dev/html/jquery.js
+geographiclib	LOW	patches/privacy.patch	3	non-build file	and to disable the search function and avoid copies of jquery.js
+glm	LOW	libglm-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js usr/share/doc/libglm-doc/api/jquery.js
+gr-gsm	LOW	gr-gsm.links	1	non-build file	/usr/share/javascript/jquery/jquery.min.js /usr/share/doc/gr-gsm/html/jquery.js
+gr-gsm	LOW	rules	17	rm -f	rm -f debian/gr-gsm/usr/share/doc/gr-gsm/html/jquery.js
+grass	LOW	grass-dev-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/grass-dev-doc/programming-manual/html/jquery.js
+gridtools	LOW	source/lintian-overrides	1	non-build file	gridtools source: source-is-missing docs/_static/jquery.js line length is 32033 characters (>512)
+groonga	LOW	groonga-bin.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/groonga/html/admin/assets/jquery.js
+groonga	LOW	groonga-doc.links	9	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/groonga-doc/en/html/_static/jquery.js
+groonga	LOW	groonga-doc.links	10	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/groonga-doc/ja/html/_static/jquery.js
+groonga	LOW	patches/use-libjs-jquery.patch	49	non-build file	+<script type="text/javascript" src="assets/jquery.js"></script>
+groonga	LOW	patches/use-libjs-jquery.patch	108	non-build file	+<script type="text/javascript" src="assets/jquery.js"></script>
+gsoap	LOW	patches/gsoap-doxygen-tabs.patch	10	non-build file	<script type="text/javascript" src="jquery.js"></script>
+gutenprint	LOW	libgutenprint-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.min.js usr/share/doc/libgutenprint-doc/reference/html/jquery.js
+harp	LOW	source/lintian-overrides	1	non-build file	#harp source: source-is-missing doc/html/_static/jquery.js *
+hwinfo	LIKELY	rules	35	unguarded rm	rm $(DOCDIR)/jquery.js
+hwinfo	LOW	rules	36	ln (creates link, no failure on missing target)	ln -s /usr/share/javascript/jquery/jquery.js $(DOCDIR)/jquery.js
+hwloc	LOW	README.source	3	non-build file	doc/doxygen-doc/html/jquery.js
+hwloc	LOW	libhwloc-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js /usr/share/doc/libhwloc-doc/html/jquery.js
+id3lib3.8.3	LOW	rules	27	rm -f	rm -f doc/api/jquery.js
+iipimage	LOW	README.source	4	non-build file	It comes with a minified jquery.js source, I downloaded the original code using:
+iipimage	LOW	README.source	6	non-build file	wget -O debian/missing-sources/jquery.js http://code.jquery.com/jquery-1.3.2.js
+imagemagick	CHECK	scripts/dh_doxygen	128	other reference in build file	if(-f "$path/jquery.js") {
+imagemagick	CHECK	scripts/dh_doxygen	129	other reference in build file	ln_sf("/usr/share/javascript/jquery/jquery.js", "$path/jquery.js");
+imath	LOW	libimath-doc.links	2	non-build file	usr/share/sphinx/themes/basic/static/jquery.js usr/share/doc/libimath-doc/html/_static/jquery.js
+imath	LOW	rules	45	rm -f	rm -f $(INSTDIR)/usr/share/doc/Imath/sphinx/_static/jquery.js
+iniparser	LOW	libiniparser-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libiniparser-doc/html/jquery.js
+janus	LOW	patches/2003_use_packaged_javascript.patch	186	non-build file	<script type="text/javascript" src="jquery.js" ></script>
+jaula	LOW	libjaula-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js usr/share/doc/jaula/html/jquery.js
+json-c	LOW	clean	1	non-build file	doc/html/jquery.js
+json-c	LOW	libjson-c-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js usr/share/doc/libjson-c-dev/html/jquery.js
+krb5	LOW	rules	68	ln (creates link, no failure on missing target)	ln -sf /usr/share/javascript/jquery/jquery.js build/doc/html_subst/_static/jquery.js
+lammps	LOW	lammps-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/lammps/html/_static/jquery.js
+lcm	LOW	liblcm-doc.links	4	non-build file	usr/share/javascript/jquery-ui/jquery.js usr/share/doc/liblcm-dev/_build/javadocs/jquery/external/jquery/jquery.js
+libaccounts-qt	LOW	rules	24	find -delete/-exec	find debian/tmp -name jquery.js -exec ln -sfv /usr/share/javascript/jquery/jquery.js {} \;
+libambix	LOW	libambix-doc.lintian-overrides	1	non-build file	# the jquery.js is generated during build by doxygen
+libbrahe	LOW	libbrahe-dev.links.in	2	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libbrahe-dev/html/jquery.js
+libbrahe	LOW	rules	27	rm -f	rm -f $(CURDIR)/tmp/usr/share/doc/libbrahe/api/jquery.js
+libcamera	LOW	libcamera-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js /usr/share/doc/libcamera-doc/api-html/jquery.js
+libcamera	LOW	libcamera-doc.links	2	non-build file	/usr/share/javascript/jquery/jquery.js /usr/share/doc/libcamera-doc/html/_static/jquery.js
+libcgicc	LOW	rules	30	rm -f	rm -f $(CURDIR)/debian/tmp/usr/share/doc/libcgicc-doc/html/jquery.js
+libclaw	LOW	libclaw-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js usr/share/doc/libclaw1/html/jquery.js
+libcoap3	LOW	libcoap3-doc.links	2	non-build file	/usr/share/javascript/jquery/jquery.min.js  usr/share/doc/libcoap3-doc/html/jquery.js
+libcomps	LOW	libcomps-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libcomps-doc/html/jquery.js
+libcomps	LOW	python-libcomps-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/python-libcomps-doc/html/_static/jquery.js
+libcomps	LOW	rules	31	rm -f	rm -fv 'build/src/python/docs/html/_static/jquery.js' \
+libcomps	CHECK	rules	33	other reference in build file	'build/docs/libcomps-doc/jquery.js' \
+libcrypto++	LOW	libcrypto++-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js /usr/share/doc/libcrypto++-doc/html/jquery.js
+libcypher-parser	LOW	libcypher-parser-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.min.js usr/share/doc/libcypher-parser/jquery.js
+libdap	CHECK	rules	35	guard/condition, check exit status	[ -f debian/libdap-doc/usr/share/doc/libdap-doc/html/jquery.js ] && ( \
+libdap	CHECK	rules	36	rm inside [ -f ] guard, check exit status	rm debian/libdap-doc/usr/share/doc/libdap-doc/html/jquery.js ; \
+libdap	LOW	rules	37	ln (creates link, no failure on missing target)	ln -sf /usr/share/javascript/jquery/jquery.js debian/libdap-doc/usr/share/doc/libdap-doc/html/jquery.js ) \
+libdatrie	LOW	libdatrie-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libdatrie1/html/jquery.js
+libdatrie	LOW	rules	40	-X exclusion	dh_installdocs -plibdatrie-doc --doc-main-package=libdatrie1 -Xjquery.js
+libdnf	LOW	python3-hawkey-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/python3-hawkey-doc/html/_static/jquery.js
+libdnf	LOW	rules	36	rm -f	rm -fv 'build/docs/hawkey/html/_static/jquery.js' \
+libemf	LOW	libemf-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js /usr/share/doc/libemf-dev/html/jquery.js
+libevdev	LOW	patches/remove-remote-resources.patch	12	non-build file	+        <script type="text/javascript" src="$relpath^jquery.js"></script>
+libgadu	LOW	TODO	1	non-build file	libgadu-doc: embedded-javascript-library usr/share/doc/libgadu-doc/api/jquery.js
+libgadu	LOW	libgadu-doc.lintian-overrides	1	non-build file	# The jquery.js file is installed by doxygen. Judging from source of doxygen
+libgadu	LOW	libgadu-doc.lintian-overrides	10	non-build file	libgadu-doc binary: embedded-javascript-library usr/share/doc/libgadu-doc/api/jquery.js please use libjs-jquery
+libgig	LOW	rules	16	ln (creates link, no failure on missing target)	ln -sf /usr/share/javascript/jquery/jquery.js doc/html/jquery.js
+libhmsbeagle	CHECK	libhmsbeagle-dev.linktrees	1	debputy/linktree handling of missing source	replace usr/share/javascript/jquery/jquery.js usr/share/doc/libhmsbeagle-dev/html/jquery.js
+libiio	LOW	rules	26	rm -f	rm -f debian/tmp/usr/share/doc/libiio0-doc/v0.26/python/_static/jquery.js
+libiio	LOW	rules	27	ln (creates link, no failure on missing target)	cd debian/tmp/usr/share/doc/libiio0-doc/v0.26/python/_static/ && ln -s /usr/share/javascript/jquery/jquery.js jquery.js
+libimobiledevice	LOW	libimobiledevice-doc.links	2	non-build file	/usr/share/javascript/jquery/jquery.js /usr/share/doc/libimobiledevice-doc/libimobiledevice/jquery.js
+libimobiledevice	LOW	rules	21	commented out	# remove doxygen jquery.js, we link to doxygen-provided file
+libimobiledevice	LOW	rules	22	rm -f	rm -f $(CURDIR)/docs/html/jquery.js
+libitpp	LOW	libitpp-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libitpp-dev/html/jquery.js
+libmongo-client	LOW	libmongo-client-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js usr/share/doc/libmongo-client0/html/jquery.js
+libmsnumpress	LOW	libmsnumpress-dev.links	2	non-build file	/usr/share/javascript/jquery/jquery.js /usr/share/doc/libmsnumpress-dev/html/jquery.js
+libmsnumpress	LOW	rules	38	rm -f	rm -f debian/build/doxygen/html/jquery.js
+libmspack	LOW	libmspack-doc.docs	4	commented out	# jquery.js is generated by doxygen
+libmypaint	LOW	libmypaint-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libmypaint-dev/_static/jquery.js
+libmypaint	LOW	rules	29	find -delete/-exec	find debian/tmp -name jquery.js -print -delete
+libosl	LOW	rules	24	link/rewrite only, no failure on missing file	find doc -name \*.html | xargs sed -i -e 's!<script type="text/javascript" src="jquery.js">!<script type="text/javascript" src="/javascript/jquery/jquery.js">!g'
+libosl	LOW	rules	26	-rm (error ignored)	-rm doc/html/jquery.js
+libplist	LOW	libplist-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js usr/share/doc/libplist/html/jquery.js
+libquicktime	LOW	libquicktime-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libquicktime-doc/apiref/jquery.js
+libquvi	LOW	patches/doxygen.patch	9	non-build file	jquery.js to be pulled in.
+librepo	LOW	librepo-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/librepo-doc/html/jquery.js
+librepo	LOW	python3-librepo-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/python3-librepo-doc/_static/jquery.js
+librepo	LOW	rules	28	rm -f	rm -fv 'build/doc/python/_static/jquery.js' \
+librepo	CHECK	rules	30	other reference in build file	'build/doc/c/html/jquery.js' \
+librostlab-blast	LOW	librostlab-blast-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/librostlab-blast-doc/html/jquery.js
+librostlab-blast	CHECK	linktrees	5	debputy/linktree handling of missing source	replace /usr/share/javascript/jquery/jquery.js /usr/share/doc/librostlab-blast-doc/html/jquery.js
+librostlab-blast	LOW	rules	35	find -delete/-exec	find debian -name jquery.js -delete
+librsb	LOW	rules	38	rm -f	rm -f doc/html/jquery.js
+librsb	LOW	rules	39	ln (creates link, no failure on missing target)	ln -s /usr/share/javascript/jquery/jquery.js doc/html/jquery.js
+libsdl2-gfx	LOW	README.source	18	non-build file	jquery. In fact replacing the `jquery.js` file created by Doxygen likely
+libsdl2-gfx	LOW	README.source	20	non-build file	have to learn that a `jquery.js` embedded by Doxygen is a normal thing.
+libsidplayfp	LOW	libsidplayfp-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js usr/share/doc/libsidplayfp-dev/html/jquery.js
+libstxxl	CHECK	rules	3	path held in a variable	JQUERY_STXXL_TARGET=/usr/share/doc/libstxxl-doc/html/html/jquery.js
+libstxxl	CHECK	rules	5	path held in a variable	JQUERY_SYS_TARGET=/usr/share/javascript/jquery/jquery.js
+libthai	LOW	libthai-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libthai0/html/jquery.js
+libthai	LOW	rules	48	-X exclusion	dh_installdocs -plibthai-doc --doc-main-package=libthai0 -Xjquery.js
+libvigraimpex	LOW	rules	84	rm -f	rm -f html/jquery.js && \
+libvmime	LOW	libvmime1-doc.links	2	non-build file	/usr/share/javascript/jquery/jquery.min.js  usr/share/doc/libvmime1-doc/html/jquery.js
+libvsqlitepp	LOW	libvsqlitepp-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js  /usr/share/doc/libvsqlitepp-doc/html/jquery.js
+libzeem	LOW	libzeem-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/zeem/_static/jquery.js
+libzeem	LIKELY	rules	20	unguarded rm	rm debian/tmp/usr/share/doc/zeem/_static/jquery.js
+libzypp	LOW	libzypp-doc.links	3	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libzypp/html/jquery.js
+llvm-toolchain-17	LOW	rules	1098	rm -f	cd $$d && rm -f jquery.js && ln -s /usr/share/javascript/jquery/jquery.js && cd -; \
+llvm-toolchain-17	LIKELY	rules	1119	unguarded rm	cd openmp/runtime/doc/doxygen/generated/html/ && rm jquery.js && ln -s /usr/share/javascript/jquery/jquery.js; \
+llvm-toolchain-18	LOW	rules	1152	rm -f	cd $$d && rm -f jquery.js && ln -s /usr/share/javascript/jquery/jquery.js && cd -; \
+llvm-toolchain-18	LIKELY	rules	1173	unguarded rm	cd openmp/runtime/doc/doxygen/generated/html/ && rm jquery.js && ln -s /usr/share/javascript/jquery/jquery.js; \
+llvm-toolchain-19	LOW	rules	1410	rm -f	cd $$d && rm -f jquery.js && ln -s /usr/share/javascript/jquery/jquery.js && cd -; \
+llvm-toolchain-19	LIKELY	rules	1431	unguarded rm	cd openmp/runtime/doc/doxygen/generated/html/ && rm jquery.js && ln -s /usr/share/javascript/jquery/jquery.js; \
+llvm-toolchain-20	LOW	rules	1454	rm -f	cd $$d && rm -f jquery.js && ln -s /usr/share/javascript/jquery/jquery.js && cd -; \
+llvm-toolchain-20	LIKELY	rules	1475	unguarded rm	cd openmp/runtime/doc/doxygen/generated/html/ && rm jquery.js && ln -s /usr/share/javascript/jquery/jquery.js; \
+llvm-toolchain-21	LOW	rules	1536	rm -f	cd $$d && rm -f jquery.js && ln -s /usr/share/javascript/jquery/jquery.js && cd -; \
+llvm-toolchain-21	LIKELY	rules	1557	unguarded rm	cd openmp/runtime/doc/doxygen/generated/html/ && rm jquery.js && ln -s /usr/share/javascript/jquery/jquery.js; \
+llvm-toolchain-22	LOW	rules	1449	rm -f	rm -f $$d/jquery.js $$d/underscore.js; \
+llvm-toolchain-22	LOW	rules	1450	ln (creates link, no failure on missing target)	ln -s /usr/share/javascript/jquery/jquery.js $$d/jquery.js; \
+llvm-toolchain-22	LIKELY	rules	1471	unguarded rm	cd openmp/runtime/doc/doxygen/generated/html/ && rm jquery.js && ln -s /usr/share/javascript/jquery/jquery.js; \
+magma	LOW	source/lintian-overrides	1	non-build file	source: source-is-missing docs/html/jquery.js line length is 12734 characters (>512)
+magma-rocm	LOW	source/lintian-overrides	1	non-build file	source: source-is-missing docs/html/jquery.js line length is 12734 characters (>512)
+maliit-framework	LOW	maliit-framework-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/maliit-framework/html/jquery.js
+maloc	LIKELY	rules	9	unguarded rm	rm debian/libmaloc-dev/usr/share/doc/libmaloc-dev/html/jquery.js
+maloc	LOW	rules	10	ln (creates link, no failure on missing target)	ln -s /usr/share/javascript/jquery/jquery.js debian/libmaloc-dev/usr/share/doc/libmaloc-dev/html/jquery.js
+mbedtls	LOW	libmbedtls-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libmbedtls-dev/apidoc/jquery.js
+mygui	LOW	mygui-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js usr/share/doc/mygui-doc/html/jquery.js
+mygui	LOW	rules	50	-X exclusion	dh_installdocs -X.md5 -X.map -Xjquery.js
+nifticlib	LOW	libnifti-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js /usr/share/doc/libnifti-doc/html/jquery.js
+nifticlib	LOW	rules	49	rm -f	rm -f docs/html/jquery.js
+ogre-1.12	LOW	ogre-1.12-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/ogre-1.12-doc/api/html/jquery.js
+ogre-1.12	LOW	rules	99	-X exclusion	dh_install -i -Xjquery.js
+ogre-14	LOW	ogre-14-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/ogre-14-doc/api/html/jquery.js
+ogre-14	LOW	rules	87	-X exclusion	dh_install -i -Xjquery.js
+ogre-next	LOW	ogre-next-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/ogre-2.2-doc/api/html/jquery.js
+onetbb	LOW	libtbb-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js /usr/share/doc/libtbb-dev/html/_static/jquery.js
+openbabel	LOW	libopenbabel-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libopenbabel-dev/html/jquery.js
+opencolorio	LOW	opencolorio-doc.links	1	non-build file	#usr/share/javascript/jquery/jquery.js usr/share/doc/opencolorio/html/_static/jquery.js
+opencv	LOW	patches/change_jquery.js_path	19	non-build file	-<script type="text/javascript" src="$relpath^jquery.js"></script>
+opencv	LOW	patches/change_jquery.js_path	20	non-build file	+<script type="text/javascript" src="/usr/share/javascript/jquery/jquery.js"></script>
+opencv	LOW	patches/series	1	non-build file	change_jquery.js_path
+opencv	LOW	rules	208	find -delete/-exec	-find debian/tmp -type f -name jquery.js -delete
+openms	LOW	rules	133	rm -f	rm -f $(BUILD_DIR)/usr/share/doc/html/jquery.js
+openscenegraph	LOW	rules	238	commented out	# Use Debian's jquery.js
+openscenegraph	LOW	rules	239	rm -f	rm -f html/openscenegraph/jquery.js
+openscenegraph	LOW	rules	240	link/rewrite only, no failure on missing file	find html -name "*.html" -print0 | xargs -0 perl -i -pe 's|src="jquery.js"|src="/usr/share/javascript/jquery/jquery.js"|'
+orthanc	LOW	rules	87	commented out	# usr/share/doc/orthanc/OrthancPlugin/jquery.js please use libjs-jquery"
+orthanc	LIKELY	rules	88	unguarded rm	rm BuildServer/OrthancPluginDocumentation/doc/jquery.js
+orthanc	LOW	rules	89	ln (creates link, no failure on missing target)	ln -s /usr/share/javascript/jquery/jquery.min.js BuildServer/OrthancPluginDocumentation/doc/jquery.js
+ortp	LOW	libortp-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libortp-doc/html/jquery.js
+pcl	LOW	libpcl-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libpcl-doc/html/jquery.js
+pkcs11-helper	LOW	libpkcs11-helper1-dev.links	1	non-build file	/usr/share/javascript/jquery/jquery.js /usr/share/doc/libpkcs11-helper1-dev/api/jquery.js
+pocketsphinx	LOW	libpocketsphinx-dev.links	1	non-build file	/usr/share/javascript/jquery/jquery.js /usr/share/doc/libpocketsphinx-dev/html/jquery.js
+portaudio19	LOW	portaudio19-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.min.js usr/share/doc/portaudio19-doc/html/jquery.js
+ppl	LOW	libppl-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libppl-doc/html/user-manual/jquery.js
+ppl	LIKELY	rules	84	unguarded rm	rm $(DOC_DIR)/html/user-manual/jquery.js
+presage	LOW	libpresage-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/presage/html/jquery.js
+primesieve	LOW	adhoc/Makefile	15	rm -f	rm -f *.md5 jquery.js ; \
+primesieve	LOW	adhoc/Makefile	18	ln (creates link, no failure on missing target)	ln -sf /usr/share/javascript/jquery/jquery.js ; \
+pstreams	LOW	libpstreams-dev.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libpstreams-dev/html/jquery.js
+python-fhs	LIKELY	rules	11	unguarded rm	rm doxygen-output/html/jquery.js
+python-fhs	LOW	rules	12	ln (creates link, no failure on missing target)	ln -s /usr/share/javascript/jquery/jquery.js doxygen-output/html/
+python-mbed-host-tests	LOW	python-mbed-host-tests-doc.links	2	non-build file	usr/share/javascript/jquery/jquery.js   usr/share/doc/python-mbed-host-tests-doc/html/jquery.js
+python-mbed-host-tests	LOW	rules	30	$(RM) = rm -f	$(RM) html/jquery.js
+python-mbed-ls	LOW	python-mbed-ls-doc.links	2	non-build file	usr/share/javascript/jquery/jquery.js   usr/share/doc/python-mbed-ls-doc/html/jquery.js
+python-mbed-ls	LOW	rules	32	$(RM) = rm -f	$(RM) html/jquery.js
+python-network	LIKELY	rules	11	unguarded rm	rm doxygen-output/html/jquery.js
+python-network	LOW	rules	12	ln (creates link, no failure on missing target)	ln -s /usr/share/javascript/jquery/jquery.js doxygen-output/html/
+python-odf	LOW	source/lintian-overrides	2	non-build file	# uglified files jquery.js, all_*.js, functions_*.js and variables_*.js
+python-odf	LOW	source/lintian-overrides	7	non-build file	python-odf source: source-is-missing [doc/html/jquery.js]
+python-websocketd	LIKELY	rules	11	unguarded rm	rm doxygen-output/html/jquery.js
+python-websocketd	LOW	rules	12	ln (creates link, no failure on missing target)	ln -s /usr/share/javascript/jquery/jquery.js doxygen-output/html/
+qdjango	LOW	libqdjango-doc.lintian-overrides	5	non-build file	libqdjango-doc: embedded-javascript-library usr/share/doc/libqdjango-doc/html/jquery.js please use libjs-jquery
+qgis	LOW	patches/developersmap-use-debian-package.patch	25	non-build file	+  <script src="jquery.js"></script>
+qgis	LOW	qgis-common.links	2	non-build file	usr/share/javascript/jquery/jquery.js usr/share/qgis/doc/jquery.js
+qhttpengine	LOW	libqhttpengine-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/QHttpEngine/html/jquery.js
+qpid-proton	LOW	libqpid-proton-cpp12-dev-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.min.js /usr/share/proton-0.22.0/docs/api-cpp/jquery.js
+qpid-proton	LOW	libqpid-proton11-dev-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.min.js /usr/share/proton-0.22.0/docs/api-c/jquery.js
+qscintilla2	LOW	clean	18	non-build file	doc/html/jquery.js
+qscintilla2	LOW	libqscintilla2-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.min.js usr/share/doc/libqscintilla2-doc/html/jquery.js
+rdkit	LOW	rules	136	ln (creates link, no failure on missing target)	ln -sf /usr/share/javascript/jquery/jquery.js $(DOCDIR)/html/cppapi/jquery.js
+rdkit	LOW	rules	137	ln (creates link, no failure on missing target)	ln -sf /usr/share/javascript/jquery/jquery.js $(DOCDIR)/html/_static/jquery.js
+reglookup	LOW	reglookup-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/reglookup-doc/pyregfi/jquery.js
+reglookup	LIKELY	rules	35	unguarded rm	rm $(DOCPATH)/pyregfi/jquery.js
+rtaudio	LOW	librtaudio-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/librtaudio-dev/api_ref/jquery.js
+rtaudio	LOW	rules	31	rm -f	rm -f doc/html/jquery.js
+rtmidi	LOW	librtmidi-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/librtmidi-dev/api_ref/jquery.js
+rtmidi	LOW	rules	24	rm -f	rm -f doc/html/jquery.js
+scim	LOW	scim-dev-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/scim-dev-doc/html/jquery.js
+scolasync	LOW	scolasync.lintian-overrides	1	non-build file	# the library jquery.js comes from the package doxygen, and it must be kept
+scolasync	LOW	scolasync.lintian-overrides	4	non-build file	scolasync binary: embedded-javascript-library usr/share/scolasync/html/jquery.js please use libjs-jquery
+scolasync	LOW	source/lintian-overrides	4	non-build file	scolasync source: source-is-missing [doc/html/jquery.js]
+serd	LOW	libserd-doc.lintian-overrides	1	non-build file	embedded-javascript-library please use libjs-jquery [usr/share/doc/libserd-dev/_static/jquery.js]
+simbody	LOW	simbody-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/simbody/api/Simbody/html/jquery.js
+simbody	LOW	simbody-doc.links	2	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/simbody/api/jquery.js
+siscone	LOW	siscone-doc-html.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/siscone-doc-html/html/jquery.js
+sombok	LOW	libsombok-dev.links	1	non-build file	/usr/share/javascript/jquery/jquery.min.js usr/share/doc/libsombok-dev/html/jquery.js
+sombok	LOW	rules	26	rm -f	rm -f debian/tmp/usr/share/doc/sombok/jquery.js
+sord	LOW	libsord-doc.lintian-overrides	1	non-build file	embedded-javascript-library please use libjs-jquery [usr/share/doc/libsord-dev/jquery.js]
+spandsp	LOW	libspandsp-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libspandsp-doc/api/html/jquery.js
+spandsp	LOW	rules	32	$(RM) = rm -f	$(RM) -f debian/libspandsp-doc/usr/share/doc/libspandsp-doc/api/html/jquery.js
+steghide	LOW	rules	15	rm -f	rm -f $(CURDIR)/debian/steghide-doc/usr/share/doc/steghide-doc/html/jquery.js
+steghide	LOW	steghide-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/steghide-doc/html/jquery.js
+sumo	LOW	sumo-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/sumo/doxygen/jquery.js
+t4kcommon	LOW	libt4k-common0-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js  /usr/share/doc/libt4k-common0-doc/html/jquery.js
+taglib	LIKELY	rules	60	unguarded rm	rm builddir/doc/html/jquery.js; \
+taglib	LOW	rules	61	ln (creates link, no failure on missing target)	ln -s /usr/share/javascript/jquery/jquery.js builddir/doc/html; \
+tinycbor	LOW	rules	37	link/rewrite only, no failure on missing file	dh_link -plibtinycbor-dev /usr/share/javascript/jquery/jquery.js usr/share/doc/libtinycbor-dev/html/jquery.js
+tntdb	LOW	rules	9	commented out	# rm -f debian/libtntdb-dev/usr/share/doc/libtntdb-dev/html/jquery.js
+tntdb	LOW	rules	10	commented out	# cd debian/libtntdb-dev/usr/share/doc/libtntdb-dev/html/; ln -s ../../../javascript/jquery/jquery.js jquery.js
+tntdb	LOW	rules	16	rm -f	rm -f ./debian/tmp/usr/share/doc/tntdb/jquery.js
+tntdb	LOW	rules	17	ln (creates link, no failure on missing target)	cd ./debian/tmp/usr/share/doc/tntdb; ln -s ../../../javascript/jquery/jquery.js
+trilinos	CHECK	rules	264	other reference in build file	-e 's#jquery\.js#/usr/share/javascript/jquery/jquery.js#'; \
+trilinos	LOW	rules	265	find -delete/-exec	find debian/trilinos-doc/usr/share -name jquery.js -delete; \
+ucommon	LOW	ucommon-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/ucommon-doc/html/jquery.js
+vienna-rna	LOW	vienna-rna-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/vienna-rna/html/jquery.js
+viennacl	LOW	libviennacl-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/libviennacl-dev/html/jquery.js
+vtk9	LOW	vtk9-doc.links	1	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/vtk9/html/jquery.js
+vtk9	LOW	vtk9-doc.links	2	non-build file	usr/share/javascript/jquery/jquery.js usr/share/doc/vtk9/doxygen/html/jquery.js
+wcslib	LOW	not-installed	7	non-build file	usr/share/doc/wcslib-dev/html/jquery.js
+wcslib	LOW	rules	28	-X exclusion	dh_install -Xjquery.js
+wiredtiger	LOW	source/lintian-overrides	2	non-build file	wiredtiger source: source-is-missing docs/jquery.js line length is 32401 characters (>512)
+wvstreams	LOW	libwvstreams4.6-doc.lintian-override	1	non-build file	# The embedded jquery.js is generated by Doxygen and should not be replaced
+wvstreams	LOW	rules	25	commented out	# The embedded jquery.js is generated by Doxygen and can not be replaced
+wxsqlite3	LOW	README.source	2	non-build file	the minified docs/html/jquery.js replaced with the normal file.
+wxsqlite3	LOW	repack.local	4	non-build file	rm docs/html/jquery.js
+wxsqlite3	LOW	rules	47	link/rewrite only, no failure on missing file	dh_link -pwxsqlite3-doc /usr/share/javascript/jquery/jquery.js \
+wxsqlite3	LOW	rules	48	continuation of a tolerant command	/usr/share/doc/wxsqlite3-doc/html/jquery.js
+xdotool	LOW	rules	11	rm -f	rm -f docs/html/jquery.js
+xerces-c	LOW	libxerces-c-doc.lintian-overrides	1	non-build file	libxerces-c-doc: embedded-javascript-library usr/share/doc/libxerces-c-doc/html/apiDocs-3/jquery.js please use libjs-jquery
+xorg-gtest	LOW	rules	19	-X exclusion	dh_install -Xjquery.js
+zipios++	LOW	libzipios++-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.min.js usr/share/doc/libzipios++-doc/html/jquery.js
+zvbi	LOW	libzvbi-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js usr/share/doc/libzvbi-doc/html/jquery.js
+zycore-c	LOW	libzycore-doc.links	1	non-build file	/usr/share/javascript/jquery/jquery.js usr/share/doc/libzycore-doc/api/jquery.js

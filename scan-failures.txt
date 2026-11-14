@@ -1,0 +1,7 @@
+apt	native package (debian/ is inside the main tarball)
+geis	old 1.0 format (.diff.gz), not scanned
+libdebian-installer	native package (debian/ is inside the main tarball)
+libxcb	old 1.0 format (.diff.gz), not scanned
+mce-dev	old 1.0 format (.diff.gz), not scanned
+nux	old 1.0 format (.diff.gz), not scanned
+unity-api	old 1.0 format (.diff.gz), not scanned
